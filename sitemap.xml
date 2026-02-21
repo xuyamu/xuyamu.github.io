@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://xuyamu.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://xuyamu.com/profile.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xuyamu.com/dossier.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xuyamu.com/bio-code.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xuyamu.com/logic-matrix.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xuyamu.com/narrative-parallel.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://xuyamu.com/visual-synapse.html</loc>
+    <priority>0.8</priority>
+  </url>
+</urlset>
