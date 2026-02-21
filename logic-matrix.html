@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAMU | Logic Matrix - 思辨之林</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+
+        :root { --accent-blue: #608BC1; }
+        body, html { 
+            margin: 0; padding: 0; 
+            background: #020205 !important; 
+            color: #e5e5e5; 
+            font-family: 'Inter', sans-serif; 
+        }
+    </style>
+</head>
+<body>
+    <div id="page-content" class="w-full">
+        <style>
+            .motto-font { font-family: 'Noto Serif SC', serif; }
+            
+
+            .filter-btn {
+                font-size: 12px; 
+                letter-spacing: 0.2em;
+                padding: 10px 0;
+                border-bottom: 1px solid transparent;
+                transition: all 0.4s ease;
+                cursor: pointer;
+                color: #555;
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+            
+            .filter-btn.active {
+                color: #608BC1;
+                border-bottom-color: #608BC1;
+            }
+            
+            .filter-btn:hover:not(.active) {
+                color: #e5e5e5;
+            }
+
+            /* 磨砂玻璃卡片 */
+            .glass-item {
+                transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+                border: 1px solid rgba(255, 255, 255, 0.12) !important;
+                background: rgba(255, 255, 255, 0.04) !important;
+                backdrop-filter: blur(25px) saturate(180%) !important;
+                -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+            }
+            
+            .no-scrollbar::-webkit-scrollbar { display: none; }
+        </style>
+
+        <header class="max-w-7xl mx-auto mb-16 pt-32 px-10 w-full">
+            <button onclick="navigate('index.html')" 
+                class="group flex items-center gap-4 text-gray-600 hover:text-[#608BC1] transition-all mb-12">
+                <span class="w-8 h-[1px] bg-gray-800 group-hover:w-12 group-hover:bg-[#608BC1] transition-all"></span>
+                <span class="font-mono text-[14px] tracking-widest uppercase" data-i18n="nav_back_nexus">BACK TO NEXUS</span>
+            </button>
+
+            <span class="text-[#608BC1] font-mono tracking-widest uppercase text-xs" data-i18n="layer_02_tag">Layer 02 / Logic Matrix</span>
+            <h1 class="motto-font text-3xl md:text-4xl text-white mt-4" data-i18n="logic_page_title">思辨之林</h1>
+            <p class="text-gray-400 mt-6 max-w-2xl leading-relaxed" data-i18n="logic_page_desc">
+                跨越学科的边界，在哲学与技术的交汇点上寻找逻辑的共振。
+            </p>
+        </header>
+
+        <div class="max-w-7xl mx-auto px-10 mb-16 w-full">
+            <div class="flex flex-nowrap gap-10 border-b border-white/5 no-scrollbar overflow-x-auto pb-px">
+                <div class="filter-btn active" onclick="handleFilterClick(this, 'all')" data-i18n="filter_all">ALL / 全部</div>
+                <div class="filter-btn" onclick="handleFilterClick(this, 'philosophy')" data-i18n="filter_phi">PHILOSOPHY / 哲学</div>
+                <div class="filter-btn" onclick="handleFilterClick(this, 'art')" data-i18n="filter_art">ART / 艺术</div>
+                <div class="filter-btn" onclick="handleFilterClick(this, 'literature')" data-i18n="filter_lit">LITERATURE / 文学</div>
+                <div class="filter-btn" onclick="handleFilterClick(this, 'games')" data-i18n="filter_games">GAMES / 游戏</div>
+                <div class="filter-btn" onclick="handleFilterClick(this, 'psychology')" data-i18n="filter_psy">PSYCHOLOGY / 心理学</div>
+                <div class="filter-btn" onclick="handleFilterClick(this, 'ai')" data-i18n="filter_ai">AI / 人工智能</div>
+            </div>
+        </div>
+
+        <main class="max-w-7xl mx-auto px-10 pb-32 w-full">
+            <div id="article-list" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                </div>
+        </main>
+
+        <script>
+            function renderArticles(filter = 'all') {
+                const listContainer = document.getElementById('article-list');
+                if (!listContainer || typeof logicData === 'undefined') {
+                    setTimeout(() => renderArticles(filter), 100);
+                    return;
+                }
+
+                // --- 判断语言状态 ---
+                const isEn = (window.currentLang === 'en');
+                const actionText = isEn ? "Read Analysis" : "Read Analysis";
+
+                listContainer.innerHTML = '';
+                let list = [];
+
+                if (filter === 'all') {
+                    Object.keys(logicData).forEach(cat => {
+                        logicData[cat].forEach(art => list.push({ ...art, cat }));
+                    });
+                    list.sort((a, b) => new Date(b.date) - new Date(a.date));
+                } else {
+                    if (logicData[filter]) {
+                        list = logicData[filter].map(art => ({ ...art, cat: filter }));
+                    }
+                }
+
+                list.forEach((art, i) => {
+                    const displayTitle = (isEn && art.title_en) ? art.title_en : art.title;
+                    const displayExcerpt = (isEn && art.excerpt_en) ? art.excerpt_en : art.excerpt;
+
+                    const card = document.createElement('div');
+                    card.className = 'glass-item p-8 group cursor-pointer opacity-0 translate-y-4 transition-all duration-700';
+                    card.innerHTML = `
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="text-[10px] text-[#608BC1] font-mono tracking-widest uppercase border border-[#608BC1]/30 px-2 py-1">${art.cat}</span>
+                            <span class="text-xs text-gray-600 font-mono italic">${art.date}</span>
+                        </div>
+                        <h3 class="text-[20px] font-semibold text-white group-hover:text-[#608BC1] transition-colors mb-4 leading-tight">${displayTitle}</h3>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-8">${displayExcerpt}</p>
+                        <div class="text-[10px] text-[#608BC1] font-bold tracking-[0.2em] uppercase flex items-center gap-2">
+                            ${actionText} <span class="w-4 h-[1px] bg-[#608BC1] transition-all group-hover:w-8"></span>
+                        </div>
+                    `;
+                    card.onclick = () => navigate(`dossier.html?id=${art.id}`);
+                    listContainer.appendChild(card);
+                    setTimeout(() => card.classList.remove('opacity-0', 'translate-y-4'), i * 80);
+                });
+            }
+
+            function handleFilterClick(el, filter) {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                el.classList.add('active');
+                
+                // 将当前选中的分类保存到 sessionStorage 中
+                sessionStorage.setItem('logicMatrixFilter', filter);
+                
+                renderArticles(filter);
+            }
+
+            // 【核心修复】使用块级作用域 {} 隔离变量，防止 SPA 路由下重复声明 const 导致代码崩溃
+            {
+                const savedFilter = sessionStorage.getItem('logicMatrixFilter') || 'all';
+                
+                const btnToActivate = document.querySelector(`.filter-btn[onclick*="'${savedFilter}'"]`);
+                if (btnToActivate) {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    btnToActivate.classList.add('active');
+                }
+
+                renderArticles(savedFilter);
+            }
+
+            // 【附带优化】防止每次后退都重复绑定监听器导致性能泄漏
+            if (!window._logicLangBound) {
+                window.addEventListener('langChanged', () => {
+                    // 如果不在当前页面，不执行渲染
+                    if (!document.getElementById('article-list')) return; 
+
+                    const activeBtn = document.querySelector('.filter-btn.active');
+                    let currentFilter = 'all';
+                    if (activeBtn) {
+                        const match = activeBtn.getAttribute('onclick').match(/'([^']+)'/);
+                        if (match) currentFilter = match[1];
+                    }
+                    renderArticles(currentFilter);
+                });
+                window._logicLangBound = true;
+            }
+
+        </script>
+    </div>
+</body>
+</html>

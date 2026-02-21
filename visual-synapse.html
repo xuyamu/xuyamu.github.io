@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAMU | Perception - 感官重构</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --accent-blue: #608BC1; }
+        body, html { margin: 0; padding: 0; background: #020205 !important; color: #e5e5e5; font-family: 'Inter', sans-serif; }
+        .motto-font { font-family: 'Noto Serif SC', serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body>
+    <div id="page-content" class="w-full">
+        
+        <style>
+            .filter-btn {
+                font-size: 10px; letter-spacing: 0.2em; padding: 8px 20px;
+                border: 1px solid rgba(255,255,255,0.1); transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+                cursor: pointer; white-space: nowrap; color: #888; text-transform: uppercase;
+            }
+            .filter-btn.active { border-color: #608BC1; color: #608BC1; background: rgba(96, 139, 193, 0.1); }
+            .filter-btn:hover:not(.active) { border-color: rgba(255,255,255,0.4); color: #fff; }
+
+            .work-card {
+                position: relative; overflow: hidden; 
+                background: rgba(255, 255, 255, 0.03) !important;
+                aspect-ratio: 4 / 3; transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+                border: 1px solid rgba(255, 255, 255, 0.1) !important; 
+                backdrop-filter: blur(20px) saturate(180%) !important;
+                -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+                opacity: 0; transform: translateY(20px); cursor: pointer;
+            }
+            .work-card.loaded { opacity: 1; transform: translateY(0); }
+            .work-card img, .work-card video { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s ease; }
+            .work-card:hover img { transform: scale(1.08); }
+
+            #lightbox {
+                position: fixed; inset: 0; z-index: 200; background: rgba(2, 2, 5, 0.98);
+                backdrop-filter: blur(25px); display: none; justify-content: center; align-items: center;
+                opacity: 0; transition: opacity 0.5s ease;
+            }
+            #lightbox.active { display: flex; opacity: 1; }
+        </style>
+
+        <header class="max-w-7xl mx-auto mb-10 pt-32 px-10 w-full">
+            <button onclick="navigate('index.html')" 
+                class="group flex items-center gap-4 text-gray-600 hover:text-[#608BC1] transition-all mb-10">
+                <span class="w-8 h-px bg-gray-800 group-hover:w-12 group-hover:bg-[#608BC1] transition-all"></span>
+                <span class="font-mono text-[14px] tracking-widest uppercase" data-i18n="nav_back_nexus">Back To Nexus</span>
+            </button>
+
+            <span class="text-[#608BC1] font-mono tracking-widest uppercase text-xs" data-i18n="layer_03_tag">Layer 03 / Perception</span>
+            <h1 class="motto-font text-3xl md:text-4xl text-white mt-4" data-i18n="gallery_page_title">感官重构</h1>
+            <p class="text-gray-400 mt-6 max-w-2xl leading-relaxed" data-i18n="gallery_page_desc">以视觉语言赋予深刻思考具象之美。通过 3D 渲染、实验视觉与摄影，复刻世界的本质。</p>
+        </header>
+
+        <div class="max-w-7xl mx-auto px-10 mb-10 w-full">
+            <div class="flex gap-3 overflow-x-auto no-scrollbar pb-4 border-b border-white/5">
+                <div class="filter-btn active" onclick="handleGalleryFilter(this, 'all')" data-i18n="gal_filter_all">ALL</div>
+                <div class="filter-btn" onclick="handleGalleryFilter(this, 'render')" data-i18n="gal_filter_render">3D RENDER</div>
+                <div class="filter-btn" onclick="handleGalleryFilter(this, 'anim')" data-i18n="gal_filter_anim">3D ANIM</div>
+                <div class="filter-btn" onclick="handleGalleryFilter(this, 'fractal')" data-i18n="gal_filter_fractal">FRACTAL</div>
+                <div class="filter-btn" onclick="handleGalleryFilter(this, 'photo')" data-i18n="gal_filter_photo">PHOTO</div>
+                <div class="filter-btn" onclick="handleGalleryFilter(this, 'gamephoto')" data-i18n="gal_filter_gamephoto">GAME PHOTO</div>
+                <div class="filter-btn" onclick="handleGalleryFilter(this, 'video')" data-i18n="gal_filter_video">VIDEO</div>
+                <div class="filter-btn" onclick="handleGalleryFilter(this, 'cg')" data-i18n="gal_filter_cg">CG ART</div>
+                <div class="filter-btn" onclick="handleGalleryFilter(this, 'fineart')" data-i18n="gal_filter_fineart">FINE ART</div>
+                <div class="filter-btn" onclick="handleGalleryFilter(this, 'handicraft')" data-i18n="gal_filter_handicraft">HANDICRAFT</div>
+            </div>
+        </div>
+
+        <main class="max-w-7xl mx-auto px-10 pb-32 w-full">
+            <div id="gallery-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Javascript将在此处注入内容 -->
+            </div>
+        </main>
+
+        <div id="lightbox" onclick="closeLightbox()">
+            <div class="flex flex-col items-center justify-center p-4 w-full max-w-5xl" onclick="event.stopPropagation()">
+                <div id="lightbox-media-container" class="relative"></div>
+                <div class="mt-8 text-center px-6 w-full border-t border-white/10 pt-8">
+                    <h3 id="lightbox-title" class="motto-font text-3xl text-white tracking-widest"></h3>
+                    <p id="lightbox-cat" class="text-[#608BC1] font-mono text-[10px] uppercase mt-3 tracking-[0.4em]"></p>
+                    <p id="lightbox-desc" class="text-gray-400 text-sm mt-6 max-w-2xl mx-auto italic font-light"></p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            /**
+             * 渲染画廊逻辑 (包含位置修正 + 多语言支持)
+             */
+            function renderGallery(filter = 'all') {
+                const grid = document.getElementById('gallery-grid');
+                if (!grid) return;
+
+                if (typeof galleryData === 'undefined') {
+                    console.warn("GalleryData Syncing...");
+                    setTimeout(() => renderGallery(filter), 100);
+                    return;
+                }
+
+                // 1. 检查当前语言 (依赖全局变量 currentLang)
+                const isEn = (typeof currentLang !== 'undefined' && currentLang === 'en');
+
+                grid.innerHTML = '';
+                let list = [];
+
+                if (filter === 'all') {
+                    Object.keys(galleryData).forEach(cat => {
+                        galleryData[cat].forEach(work => list.push({ ...work, cat }));
+                    });
+                } else {
+                    if (galleryData[filter]) {
+                        list = galleryData[filter].map(work => ({ ...work, cat: filter }));
+                    }
+                }
+
+                list.forEach((work, i) => {
+                    const card = document.createElement('div');
+                    card.className = 'work-card';
+                    const isVideo = work.path.toLowerCase().endsWith('.mp4');
+
+                    // 2. 获取多语言内容 (如果字段不存在则回退)
+                    const displayTitle = (isEn && work.title_en) ? work.title_en : work.title;
+                    
+                    // 3. 处理图片自定义位置 pos
+                    const positionStyle = work.pos ? `style="object-position: ${work.pos}"` : '';
+                    
+                    card.innerHTML = `
+                        ${isVideo 
+                            ? `<video loop muted playsinline class="w-full h-full object-cover"><source src="${work.path}" type="video/mp4"></video>` 
+                            : `<img src="${work.path}" alt="${displayTitle}" loading="lazy" ${positionStyle}>`
+                        }
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
+                            <span class="text-[9px] text-[#608BC1] font-mono mb-2 uppercase tracking-widest">${work.cat}</span>
+                            <h3 class="text-sm font-bold tracking-widest text-white uppercase">${displayTitle}</h3>
+                        </div>
+                    `;
+
+                    if(isVideo) {
+                        card.addEventListener('mouseenter', () => card.querySelector('video').play());
+                        card.addEventListener('mouseleave', () => card.querySelector('video').pause());
+                    }
+                    
+                    card.onclick = () => openLightbox(work);
+                    grid.appendChild(card);
+                    setTimeout(() => card.classList.add('loaded'), i * 60);
+                });
+            }
+
+            function openLightbox(work) {
+                const lb = document.getElementById('lightbox');
+                const container = document.getElementById('lightbox-media-container');
+                const isVideo = work.path.toLowerCase().endsWith('.mp4');
+                const isEn = (typeof currentLang !== 'undefined' && currentLang === 'en');
+
+                // 获取多语言数据
+                const displayTitle = (isEn && work.title_en) ? work.title_en : work.title;
+                const displayDesc = (isEn && work.desc_en) ? work.desc_en : (work.desc || "");
+
+                container.innerHTML = isVideo 
+                    ? `<video controls autoplay class="max-w-full max-h-[70vh]"><source src="${work.path}" type="video/mp4"></video>`
+                    : `<img src="${work.path}" class="max-w-full max-h-[70vh] shadow-2xl border border-white/10">`;
+
+                document.getElementById('lightbox-title').innerText = displayTitle;
+                document.getElementById('lightbox-cat').innerText = work.cat || "";
+                document.getElementById('lightbox-desc').innerText = displayDesc;
+                
+                lb.style.display = 'flex';
+                setTimeout(() => lb.classList.add('active'), 10);
+            }
+
+            function closeLightbox() {
+                const lb = document.getElementById('lightbox');
+                lb.classList.remove('active');
+                setTimeout(() => lb.style.display = 'none', 500);
+            }
+
+            function handleGalleryFilter(el, filter) {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                el.classList.add('active');
+                renderGallery(filter);
+            }
+
+            // 初始化：渲染画廊并应用静态文本翻译
+            renderGallery('all');
+            
+            // 确保静态 UI 文本更新为当前语言 (调用 i18n.js 的全局函数)
+            if (typeof updateContent === 'function') {
+                updateContent();
+            }
+        </script>
+    </div>
+</body>
+</html>

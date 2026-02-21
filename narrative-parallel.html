@@ -1,0 +1,180 @@
+<div id="page-content" class="w-full">
+    <style>
+        .motto-font { font-family: 'Noto Serif SC', serif; }
+        
+        /* 导航按钮样式 */
+        .filter-btn {
+            font-size: 12px; 
+            letter-spacing: 0.2em;
+            padding: 10px 0;
+            border-bottom: 1px solid transparent;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            color: #555;
+            text-transform: uppercase;
+        }
+        
+        .filter-btn.active {
+            color: #608BC1;
+            border-bottom-color: #608BC1;
+        }
+        
+        .filter-btn:hover:not(.active) {
+            color: #e5e5e5;
+        }
+
+        /* 标准磨砂卡片 */
+        .glass-item {
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            border: 1px solid rgba(255, 255, 255, 0.12) !important;
+            background: rgba(255, 255, 255, 0.04) !important;
+            backdrop-filter: blur(25px) saturate(180%) !important;
+            -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+        }
+
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+
+    <header class="max-w-7xl mx-auto mb-16 pt-32 px-10 w-full">
+        <button onclick="navigate('index.html')" 
+            class="group flex items-center gap-4 text-gray-600 hover:text-[#608BC1] transition-all mb-12">
+            <span class="w-8 h-[1px] bg-gray-800 group-hover:w-12 group-hover:bg-[#608BC1] transition-all"></span>
+            <span class="font-mono text-[14px] tracking-widest uppercase" data-i18n="nav_back_nexus">BACK TO NEXUS</span>
+        </button>
+
+        <span class="text-[#608BC1] font-mono tracking-widest uppercase text-xs" data-i18n="card_04_label">Layer 04 / Narrative Parallel</span>
+        <h1 class="motto-font text-3xl md:text-4xl text-white mt-4" data-i18n="card_04_title">叙事实验</h1>
+        <p class="text-gray-400 mt-6 max-w-2xl leading-relaxed" data-i18n="card_04_desc">
+            在无尽好奇心驱动下，构建超越当下维度的平行现实空间。散文、诗词与虚构文本的交错演化。
+        </p>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-10 mb-16 w-full">
+        <div class="flex flex-nowrap gap-10 border-b border-white/5 no-scrollbar overflow-x-auto pb-px">
+            <div class="filter-btn active" onclick="handleFilterClick(this, 'all')" data-i18n="filter_all">ALL / 全部</div>
+            <div class="filter-btn" onclick="handleFilterClick(this, 'poetry')" data-i18n="filter_poetry">POETRY / 诗词</div>
+            <div class="filter-btn" onclick="handleFilterClick(this, 'novel')" data-i18n="filter_novel">NOVEL / 小说</div>
+            <div class="filter-btn" onclick="handleFilterClick(this, 'prose')" data-i18n="filter_prose">PROSE / 散文</div>
+        </div>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-10 pb-32 w-full">
+        <div id="narrative-list" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            </div>
+    </main>
+
+    <script>
+        /**
+         * 渲染叙事实验页面内容
+         * @param {string} filter - 分类过滤关键字
+         */
+        function renderNarrative(filter = 'all') {
+            const listContainer = document.getElementById('narrative-list');
+            
+            // 确保数据已加载
+            if (!listContainer || typeof narrativeData === 'undefined') {
+                setTimeout(() => renderNarrative(filter), 100);
+                return;
+            }
+
+            // 获取当前语言状态（从 i18n.js 管理的全局变量获取）
+            const isEn = (window.currentLang === 'en');
+
+            listContainer.innerHTML = '';
+            let list = [];
+
+            // 1. 数据过滤与合并
+            if (filter === 'all') {
+                Object.keys(narrativeData).forEach(cat => {
+                    narrativeData[cat].forEach(art => list.push({ ...art, cat }));
+                });
+                // 按日期倒序排列
+                list.sort((a, b) => new Date(b.date) - new Date(a.date));
+            } else {
+                if (narrativeData[filter]) {
+                    list = narrativeData[filter].map(art => ({ ...art, cat: filter }));
+                }
+            }
+
+            // 2. 生成 HTML 结构
+            list.forEach((art, i) => {
+                const card = document.createElement('div');
+                card.className = 'glass-item p-8 group cursor-pointer opacity-0 translate-y-4 transition-all duration-700';
+                
+                // 多语言字段处理
+                const displayTitle = (isEn && art.title_en) ? art.title_en : art.title;
+                const displayExcerpt = (isEn && art.excerpt_en) ? art.excerpt_en : art.excerpt;
+                const displayAction = isEn ? "Enter World" : "Enter World";
+                
+                card.innerHTML = `
+                    <div class="flex justify-between items-start mb-6">
+                        <span class="text-[10px] text-[#608BC1] font-mono tracking-widest uppercase border border-[#608BC1]/30 px-2 py-1">${art.cat}</span>
+                        <span class="text-xs text-gray-600 font-mono italic">${art.date}</span>
+                    </div>
+                    <h3 class="text-[20px] font-semibold text-white group-hover:text-[#608BC1] transition-colors mb-4 leading-tight">
+                        ${displayTitle}
+                    </h3>
+                    <p class="text-sm text-gray-500 leading-relaxed mb-8">
+                        ${displayExcerpt}
+                    </p>
+                    <div class="text-[10px] text-[#608BC1] font-bold tracking-[0.2em] uppercase flex items-center gap-2">
+                        ${displayAction} <span class="w-4 h-[1px] bg-[#608BC1] transition-all group-hover:w-8"></span>
+                    </div>
+                `;
+                
+                card.onclick = () => navigate(`dossier.html?id=${art.id}`);
+                listContainer.appendChild(card);
+                
+                // 渐进式进场动画
+                setTimeout(() => card.classList.remove('opacity-0', 'translate-y-4'), i * 80);
+            });
+        }
+
+        /**
+         * 处理分类按钮点击
+         */
+        function handleFilterClick(el, filter) {
+            // 切换按钮激活状态
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            el.classList.add('active');
+            
+            // 【新增】保存当前分类状态到 sessionStorage
+            sessionStorage.setItem('narrativeFilter', filter);
+            
+            // 重新渲染列表
+            renderNarrative(filter);
+        }
+
+        // 【核心修复】块级作用域隔离，防止 SPA 重复加载导致的变量冲突
+        {
+            const savedFilter = sessionStorage.getItem('narrativeFilter') || 'all';
+            
+            const btnToActivate = document.querySelector(`.filter-btn[onclick*="'${savedFilter}'"]`);
+            if (btnToActivate) {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btnToActivate.classList.add('active');
+            }
+
+            renderNarrative(savedFilter);
+        }
+
+        // 【优化】防止事件监听器重复绑定
+        if (!window._narrativeLangBound) {
+            window.addEventListener('langChanged', () => {
+                // 如果当前容器不存在（说明用户已经跳到了别的页面），则跳过执行
+                if (!document.getElementById('narrative-list')) return;
+
+                const activeBtn = document.querySelector('.filter-btn.active');
+                let currentFilter = 'all';
+                
+                if (activeBtn) {
+                    const match = activeBtn.getAttribute('onclick').match(/'([^']+)'/);
+                    if (match) currentFilter = match[1];
+                }
+                
+                renderNarrative(currentFilter);
+            });
+            window._narrativeLangBound = true;
+        }
+    </script>
+</div>
