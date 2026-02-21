@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YAMU | 雅牧 - 卷宗</title>
     
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="assets/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
@@ -20,6 +20,7 @@
             .motto-font { font-family: 'Noto Serif SC', serif; }
 
             /* 核心：磨砂玻璃卡片样式 */
+            /* --- PC端样式保持不动，仅修正原代码中的 min-width 问题 --- */
             .prose-box { 
                 background: rgba(255, 255, 255, 0.03); 
                 backdrop-filter: blur(25px) saturate(180%); /* 增加饱和度补偿，有助于在 0.03 透明度下显现磨砂感 */
