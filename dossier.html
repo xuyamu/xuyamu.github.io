@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAMU | 雅牧 - 卷宗</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root { --accent-blue: #608BC1; --bg-dark: #020205; }
+        body, html { margin: 0; padding: 0; background: var(--bg-dark) !important; color: #e5e5e5; font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body>
+
+    <div id="page-content">
+        <style>
+            .motto-font { font-family: 'Noto Serif SC', serif; }
+
+            /* 核心：磨砂玻璃卡片样式 */
+            .prose-box { 
+                background: rgba(255, 255, 255, 0.03); 
+                backdrop-filter: blur(25px); 
+                -webkit-backdrop-filter: blur(25px);
+                border: 1px solid rgba(255, 255, 255, 0.1); 
+                border-radius: 12px; 
+                padding: 45px; 
+                min-height: 400px;
+                min-width: 400px;
+                margin-bottom: 5rem; 
+            }
+
+            /* --- 只针对手机端进行布局修正，不改动视觉参数 --- */
+            @media (max-width: 768px) {
+                .prose-box {
+                    min-width: 0;       /* 关键：取消固定宽度，允许容器缩放至屏幕大小 */
+                    width: 100%;        /* 宽度自适应 */
+                    padding: 24px 16px; /* 必须减小内边距，否则手机端文字两边会留白太多，且背景被撑破 */
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .prose-content { color: #b0b0b0; line-height: 1.8; font-size: 1.05rem; }
+            
+            /* Markdown 渲染排版规范 */
+            .prose-content h1, 
+            .prose-content h2, 
+            .prose-content h3 { 
+                color: #fff; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1.2rem; 
+            }
+            .prose-content h2 { 
+                font-size: 1.5rem; 
+                border-left: 4px solid #608BC1; 
+                padding-left: 1rem; 
+            }
+            .prose-content p { margin-bottom: 1.5rem; text-align: justify; }
+            .prose-content strong { color: #fff; font-weight: 600; }
+            .prose-content blockquote {
+                border-left: 1px solid rgba(96, 139, 193, 0.5);
+                padding-left: 1rem;
+                color: #8E9AAF;
+                font-style: italic;
+                margin: 1.5rem 0;
+            }
+
+            /* --- 新增：自定义水平分割线 (---) 的样式 --- */
+            .prose-content hr {
+                border: none; /* 清除默认边框 */
+                height: 1px;  /* 设定高度为极细的 1px */
+                /* 使用半透明白色背景，透明度 20%，使其隐约可见而不突兀 */
+                background-color: rgba(255, 255, 255, 0.2); 
+                margin: 3rem 0; /* 增加上下的间距 */
+            }
+            /* ---------------------------------------- */
+            
+            .prose-content img { 
+                max-width: 100%; height: auto; display: block; margin: 2rem auto; 
+                border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.1); 
+            }
+            .prose-content ol { list-style-type: decimal !important; margin-left: 2rem !important; margin-bottom: 1.5rem; }
+            .prose-content ul { list-style-type: disc !important; margin-left: 2rem !important; margin-bottom: 1.5rem; }
+            .prose-content li { margin-bottom: 0.5rem; }
+            
+            .prose-content a { color: #608BC1; text-decoration: underline; text-underline-offset: 4px; }
+            .prose-content a:hover { color: #fff; }
+
+
+            /* --- 基础段落设置 --- */
+            .prose-content p { 
+                margin-bottom: 1.5rem; 
+                text-align: justify; 
+                line-height: 1.8;
+            }
+
+            /* 1. 容器：控制整组图片和说明的上下间距 */
+            .prose-content figure {
+                margin: 2.5rem 0 !important;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center; /* 确保图片和文字都居中 */
+            }
+
+            /* 2. 图片：去掉底部间距 */
+            .prose-content figure img {
+                margin: 0 !important;
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            /* 3. 图注：紧贴图片，样式独立 */
+            .prose-content figcaption {
+                margin-top: 0.6rem !important; /* 精准控制距离 */
+                font-size: 0.9rem !important;
+                color: #888 !important;
+                text-align: center !important;
+                text-indent: 0 !important;    /* 彻底消除缩进导致的歪斜 */
+                line-height: 1.4;
+            }
+        </style>
+
+        <article class="max-w-4xl mx-auto pt-40 pb-32 px-8 relative z-10">
+            
+            <header class="mb-10">
+                <button id="back-button" class="group flex items-center gap-2 text-[#608BC1] text-[10px] tracking-[0.4em] uppercase hover:text-white transition-all">
+                    <span class="transition-transform group-hover:-translate-x-1">←</span> <span id="back-text">RETURN</span>
+                </button>
+                
+                <h1 id="art-title" class="motto-font text-2xl md:text-3xl text-white mt-12 leading-tight">载入中...</h1>
+                
+                <div class="mt-8 flex flex-col md:flex-row md:items-center gap-4 md:gap-8">
+                    <div id="art-meta" class="text-gray-500 font-mono text-xs italic tracking-widest uppercase">DATE: -- / AUTHOR: YAMU</div>
+                    
+                    <a id="art-link" href="" target="_blank" class="hidden group flex items-center gap-2 text-[10px] text-[#608BC1] tracking-[0.2em] uppercase hover:text-white transition-colors">
+                        <span class="w-3 h-[1px] bg-[#608BC1] group-hover:w-6 transition-all"></span>
+                        <span data-i18n="art_orig_source">Original Source</span>
+                    </a>
+                </div>
+            </header>
+
+            <div class="prose-box">
+                <div id="art-content" class="prose-content">
+                    <div class="animate-pulse text-gray-600 font-mono text-sm" data-i18n="art_loading">正在检索底层数据...</div>
+                </div>
+            </div>
+
+            <footer class="mt-16 pt-12 border-t border-white/5 flex justify-center">
+                <button onclick="if(document.getElementById('view-scroller')){document.getElementById('view-scroller').scrollTo({top: 0, behavior: 'smooth'})}else{window.scrollTo({top: 0, behavior: 'smooth'})}" 
+                        class="text-[10px] text-gray-600 hover:text-[#608BC1] tracking-[0.4em] uppercase transition-colors" data-i18n="art_end">
+                    End of File / Return to Top
+                </button>
+            </footer>
+        </article>
+
+        <script src="assets/js/bio-data.js"></script>
+        <script src="assets/js/logic-data.js"></script>
+        <script src="assets/js/narrative-data.js"></script>
+        <script src="assets/js/lang-data.js"></script>
+        <script src="assets/js/i18n.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+        <script>
+            async function loadArticle() {
+                const params = new URLSearchParams(window.location.search);
+                const artId = params.get('id');
+                const titleEl = document.getElementById('art-title');
+                const metaEl = document.getElementById('art-meta');
+                const contentEl = document.getElementById('art-content');
+                const linkEl = document.getElementById('art-link');
+                const backBtn = document.getElementById('back-button');
+                const backText = document.getElementById('back-text');
+
+                if (!artId) return;
+
+                // 1. 获取语言状态
+                const isEn = (window.currentLang === 'en');
+
+                // 2. 文件夹路径识别
+                let subFolder = "";
+                let backTarget = "index.html";
+                let backLabel = isEn ? "RETURN TO NEXUS" : "返回主枢纽";
+
+                if (artId.startsWith('bio-') || artId.startsWith('paper-')) {
+                    subFolder = "bio-data/";
+                    backTarget = "bio-code.html";
+                    backLabel = isEn ? "RETURN TO BIO-CODE" : "返回生命科学";
+                } 
+                else if (artId.startsWith('philosophy-') || artId.startsWith('art-') || artId.startsWith('literature-') || artId.startsWith('games-') || artId.startsWith('psychology-') || artId.startsWith('ai-')) {
+                    subFolder = "logic-data/";
+                    backTarget = "logic-matrix.html";
+                    backLabel = isEn ? "RETURN TO LOGIC MATRIX" : "返回思辨之林";
+                } 
+                else if (artId.startsWith('poetry-') || artId.startsWith('fiction-') || artId.startsWith('narrative-') || artId.startsWith('novel-') || artId.startsWith('prose-')) {
+                    subFolder = "narrative-data/";
+                    backTarget = "narrative-parallel.html";
+                    backLabel = isEn ? "RETURN TO NARRATIVE" : "返回叙事实验";
+                }
+
+                backBtn.onclick = () => {
+                    // 优先使用浏览器的后退功能，这会触发 router.js 里的 scrollRestore 逻辑
+                    if (window.history.length > 1) {
+                        history.back();
+                    } else {
+                        window.navigate(backTarget);
+                    }
+                };
+                
+                backText.innerText = backLabel;
+
+                // 3. 查找元数据
+                let currentArt = null;
+                const sources = [
+                    typeof bioData !== 'undefined' ? bioData : null,
+                    typeof logicData !== 'undefined' ? logicData : null,
+                    typeof narrativeData !== 'undefined' ? narrativeData : null
+                ].filter(s => s !== null);
+
+                sources.forEach(source => {
+                    Object.values(source).forEach(categoryList => {
+                        const found = categoryList.find(a => a.id === artId);
+                        if (found) currentArt = found;
+                    });
+                });
+
+                if (currentArt) {
+                    titleEl.innerText = (isEn && currentArt.title_en) ? currentArt.title_en : currentArt.title;
+                    metaEl.innerText = `DATE: ${currentArt.date} / AUTHOR: YAMU`;
+                    if (currentArt.link && currentArt.link.trim() !== "") {
+                        linkEl.href = currentArt.link;
+                        linkEl.classList.remove('hidden');
+                    } else {
+                        linkEl.classList.add('hidden');
+                    }
+                }
+
+                // 4. 异步获取 Markdown
+                const targetFile = isEn ? `${artId}-en` : artId;
+                let finalPath = `assets/articles/docs/${subFolder}${targetFile}.md`;
+                
+                try {
+                    let response = await fetch(finalPath);
+                    // 英文版缺失回退
+                    if (!response.ok && isEn) {
+                        finalPath = `assets/articles/docs/${subFolder}${artId}.md`;
+                        response = await fetch(finalPath);
+                    }
+
+                    if (response.ok) {
+                        const markdownText = await response.text();
+                        contentEl.innerHTML = marked.parse(markdownText, { breaks: true });
+                    } else {
+                        contentEl.innerHTML = `<div class="text-center py-20 text-gray-500 font-mono">[ERROR: 404] 档案文件不存在。</div>`;
+                    }
+                } catch (e) {
+                    contentEl.innerHTML = `<div class="text-center py-20 text-red-900/50 font-mono">[ACCESS ERROR] 数据请求被拒绝。</div>`;
+                }
+            }
+
+            // --- 核心修复：监听全局语言切换事件 ---
+            window.addEventListener('langChanged', () => {
+                loadArticle();
+            });
+
+            // 初始化加载
+            loadArticle();
+        </script>
+    </div>
+</body>
+</html>
