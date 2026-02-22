@@ -91,22 +91,18 @@
         </div>
 
         <script>
-            /**
-             * 渲染画廊逻辑 (包含位置修正 + 多语言支持)
-             */
+             // 渲染画廊逻辑 
+             
             function renderGallery(filter = 'all') {
                 const grid = document.getElementById('gallery-grid');
                 if (!grid) return;
 
                 if (typeof galleryData === 'undefined') {
-                    console.warn("GalleryData Syncing...");
                     setTimeout(() => renderGallery(filter), 100);
                     return;
                 }
 
-                // 1. 检查当前语言 (依赖全局变量 currentLang)
                 const isEn = (typeof currentLang !== 'undefined' && currentLang === 'en');
-
                 grid.innerHTML = '';
                 let list = [];
 
@@ -125,17 +121,24 @@
                     card.className = 'work-card';
                     const isVideo = work.path.toLowerCase().endsWith('.mp4');
 
-                    // 2. 获取多语言内容 (如果字段不存在则回退)
                     const displayTitle = (isEn && work.title_en) ? work.title_en : work.title;
-                    
-                    // 3. 处理图片自定义位置 pos
                     const positionStyle = work.pos ? `style="object-position: ${work.pos}"` : '';
                     
+                    // --- 核心修改：处理视频多源加载 ---
+                    let videoContent = '';
+                    if (isVideo) {
+                        videoContent = `
+                            <video loop muted playsinline class="w-full h-full object-cover">
+                                ${work.path_cf ? `<source src="${work.path_cf}" type="video/mp4">` : ''}
+                                <source src="${work.path}" type="video/mp4">
+                            </video>`;
+                    } else {
+                        videoContent = `<img src="${work.path}" alt="${displayTitle}" loading="lazy" ${positionStyle}>`;
+                    }
+                    // ------------------------------
+
                     card.innerHTML = `
-                        ${isVideo 
-                            ? `<video loop muted playsinline class="w-full h-full object-cover"><source src="${work.path}" type="video/mp4"></video>` 
-                            : `<img src="${work.path}" alt="${displayTitle}" loading="lazy" ${positionStyle}>`
-                        }
+                        ${videoContent}
                         <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent opacity-0 hover:opacity-100 transition-opacity flex flex-col justify-end p-8">
                             <span class="text-[9px] text-[#608BC1] font-mono mb-2 uppercase tracking-widest">${work.cat}</span>
                             <h3 class="text-sm font-bold tracking-widest text-white uppercase">${displayTitle}</h3>
@@ -153,19 +156,27 @@
                 });
             }
 
+            // 打开灯箱
             function openLightbox(work) {
                 const lb = document.getElementById('lightbox');
                 const container = document.getElementById('lightbox-media-container');
                 const isVideo = work.path.toLowerCase().endsWith('.mp4');
                 const isEn = (typeof currentLang !== 'undefined' && currentLang === 'en');
 
-                // 获取多语言数据
                 const displayTitle = (isEn && work.title_en) ? work.title_en : work.title;
                 const displayDesc = (isEn && work.desc_en) ? work.desc_en : (work.desc || "");
 
-                container.innerHTML = isVideo 
-                    ? `<video controls autoplay class="max-w-full max-h-[70vh]"><source src="${work.path}" type="video/mp4"></video>`
-                    : `<img src="${work.path}" class="max-w-full max-h-[70vh] shadow-2xl border border-white/10">`;
+                // --- 核心修改：灯箱内的视频多源处理 ---
+                if (isVideo) {
+                    container.innerHTML = `
+                        <video controls autoplay class="max-w-full max-h-[70vh]">
+                            ${work.path_cf ? `<source src="${work.path_cf}" type="video/mp4">` : ''}
+                            <source src="${work.path}" type="video/mp4">
+                        </video>`;
+                } else {
+                    container.innerHTML = `<img src="${work.path}" class="max-w-full max-h-[70vh] shadow-2xl border border-white/10">`;
+                }
+                // ----------------------------------
 
                 document.getElementById('lightbox-title').innerText = displayTitle;
                 document.getElementById('lightbox-cat').innerText = work.cat || "";

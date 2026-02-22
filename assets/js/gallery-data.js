@@ -232,6 +232,7 @@ const galleryData = {
             title: "黑神话：悟空·千年", 
             title_en: "Black Myth: Wukong · Millennia", 
             path: "assets/img/game-photo/千年·二郎显圣真君念故人06.mp4", 
+            path_cf: "https://pub-xxx.r2.dev/千年·二郎显圣真君念故人压缩.mp4", 
             desc: "《黑神话悟空》同人歌曲，日期：2025年3月", 
             desc_en: "Fan-made music video for 'Black Myth: Wukong'; Date: March 2025" 
         },
@@ -239,6 +240,7 @@ const galleryData = {
             title: "黑神话：悟空·二郎神慢动作剪辑", 
             title_en: "Black Myth: Wukong · Erlang Shen Slow-mo Edit", 
             path: "assets/img/game-photo/二郎神慢动作.mp4", 
+            path_cf: "https://pub-xxx.r2.dev/二郎神慢动作压缩.mp4", 
             desc: "日期：2024年10月", 
             desc_en: "Slow-motion cinematic edit of Erlang Shen; Date: October 2024" 
         },
@@ -291,6 +293,7 @@ const galleryData = {
             title: "索菲娅在新月集小酒馆", 
             title_en: "Sophia at the Crescent Gathering Bistro",
             path: "assets/video/footage/2020.1.11(新月集小酒馆).mp4", 
+            path_cf: "https://media.xuyamu.com/2020.1.11(%E6%96%B0%E6%9C%88%E9%9B%86%E5%B0%8F%E9%85%92%E9%A6%86).mp4", 
             desc: "索菲娅在转塘镇新月集小酒馆；日期：2020年1月11日",
             desc_en: "Sophia at the Xinyueji (Crescent Gathering) Bistro in Zhuantang Town; Date: Jan 11, 2020"
         },
