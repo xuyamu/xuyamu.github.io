@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAMU | 雅牧</title>
+    
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+    <style>
+        /* 强制主背景始终为黑色 */
+        :root { 
+            --accent-blue: #608BC1; 
+            --bg-dark: #020205;
+        }
+
+        body, html { 
+            margin: 0; 
+            padding: 0;
+            background-color: var(--bg-dark) !important; 
+            color: #e5e5e5; 
+            font-family: 'Inter', sans-serif; 
+            overflow: hidden; 
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* [持久层] 背景动画容器 */
+        #bio-canvas-container { 
+            position: fixed; 
+            top: 0; left: 0; 
+            width: 100vw; height: 100vh; 
+            z-index: 0; 
+            pointer-events: none; 
+        }
+        
+        /* [核心层] 页面滚动容器 */
+        #view-scroller { 
+            position: absolute; 
+            top: 0; left: 0; 
+            width: 100%; height: 100vh; 
+            overflow-y: scroll; 
+            overflow-x: hidden;
+            z-index: 10; 
+            scroll-behavior: smooth; 
+            background: transparent; 
+        }
+        
+        #page-content { 
+            position: relative; 
+            width: 100%; 
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; 
+            transition: opacity 0.4s ease;
+        }
+
+        .motto-font { font-family: 'Noto Serif SC', serif; }
+
+        /* 统一磨砂玻璃卡片样式 */
+        .glass-item { 
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1); 
+            border: 1px solid rgba(255,255,255,0.12); 
+            background: rgba(255, 255, 255, 0.04); 
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            backdrop-filter: blur(25px) saturate(180%); 
+        }
+        .glass-item:hover { 
+            border-color: var(--accent-blue); 
+            background: rgba(96, 139, 193, 0.1);
+            transform: translateY(-8px); 
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6); 
+        }
+
+        .card-title { transition: color 0.3s ease; }
+        .glass-item:hover .card-title { color: var(--accent-blue) !important; }
+
+        .site-footer {
+            position: relative;
+            z-index: 20;
+            background: rgba(2, 2, 5, 0.85);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: auto;
+        }
+  
+        /* 全局滚动条美化 */
+        ::-webkit-scrollbar { 
+            width: 6px;  /* 垂直滚动条宽度 */
+            height: 4px; /* 水平滚动条高度 - 稍微调细一点显得更精致 */
+        }
+
+        /* 滑块部分：极简磨砂质感 */
+        ::-webkit-scrollbar-thumb { 
+            /* 将 0.15 降低到 0.08，让它几乎半透明 */
+            background: rgba(255, 255, 255, 0.08); 
+            
+            /* 边框也调得更淡，仅保留一丝丝轮廓 */
+            border: 1px solid rgba(255, 255, 255, 0.05); 
+            border-radius: 10px; 
+            
+            /* 这里的 transition 在 VS Code 显示红色是正常的语法高亮 */
+            transition: background 0.3s ease;
+        }
+
+        /* 鼠标悬停时稍微显现，方便操作 */
+        ::-webkit-scrollbar-thumb:hover { 
+            background: rgba(255, 255, 255, 0.2); 
+            border-color: rgba(255, 255, 255, 0.15);
+        }
+
+        /* 彻底隐藏轨道背景 */
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="bio-canvas-container"></div>
+    <audio id="bg-music" loop><source src="assets/audio/gymnopedie-no1.mp3" type="audio/mpeg"></audio>
+    <audio id="sound-hover"><source src="assets/audio/hover.mp3" type="audio/mpeg"></audio>
+    <audio id="sound-click"><source src="assets/audio/click.mp3" type="audio/mpeg"></audio>
+
+    <!-- 导航栏：增加语言切换功能 -->
+    <nav class="fixed w-full z-[100] px-8 py-10 flex justify-between items-center pointer-events-none">
+        
+        <!-- [修正处] 这里已改为 profile.html -->
+        <div class="nav-link group text-2xl font-bold tracking-[0.3em] text-white pointer-events-auto cursor-pointer transition-all duration-500 ease-out hover:tracking-[0.45em]" 
+        onclick="navigate('profile.html')">
+       
+       <!-- 文字部分：悬停变蓝 + 增加辉光 -->
+       <span class="transition-colors duration-300 group-hover:text-[#608BC1] group-hover:drop-shadow-[0_0_10px_rgba(96,139,193,0.8)]">
+           雅牧 YAMU
+       </span>
+   
+       <!-- 句号部分：悬停变白 (颜色反转) -->
+       <span class="text-[#608BC1] transition-colors duration-300 group-hover:text-white group-hover:drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">
+           .
+       </span>
+   </div>
+        
+        <div class="flex gap-6 pointer-events-auto items-center">
+            <!-- 语言切换按钮 -->
+            <button id="lang-toggle" onclick="toggleLanguage()" class="text-[10px] tracking-[0.3em] text-gray-500 hover:text-white transition-all font-mono">
+                <span class="text-white">CN</span> / EN
+            </button>
+            
+            <div class="w-[1px] h-3 bg-gray-700"></div>
+
+            <!-- 声音开关 -->
+            <button id="music-toggle" class="text-[10px] tracking-[0.3em] text-gray-500 hover:text-white transition-all font-mono">
+                <span data-i18n="sound_off">SOUND: OFF</span>
+            </button>
+        </div>
+    </nav>
+
+    <div id="view-scroller">
+        <div id="page-content">
+            
+            <section class="min-h-screen flex flex-col justify-center items-center px-4">
+                <h1 id="hero-title" class="motto-font text-3xl md:text-6xl text-white text-center tracking-[0.15em] mb-16">
+                    <span class="block" data-i18n="hero_line_1">人类有限的人生，</span>
+                    <span class="block mt-4 md:mt-6" data-i18n="hero_line_2">怎么能满足我无尽的好奇心呢？</span>
+                </h1>
+                <p class="text-[#608BC1] tracking-[0.6em] text-xs uppercase font-semibold opacity-80" data-i18n="hero_subtitle">
+                    Curiosity Is the Only Cure for Entropy
+                </p>
+            </section>
+
+            <section class="max-w-7xl mx-auto px-10 pb-40 w-full">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <!-- Card 01: Bio -->
+                    <div class="glass-item p-10 flex flex-col justify-between min-h-[420px] group cursor-pointer" onclick="navigate('bio-code.html')">
+                        <div>
+                            <span class="text-xs text-[#608BC1] font-mono tracking-widest uppercase opacity-70" data-i18n="card_01_label">01 / Organic Layer</span>
+                            <h2 class="card-title text-3xl mt-6 font-bold text-white" data-i18n="card_01_title">生命科学</h2>
+                            <p class="text-sm mt-8 text-gray-400 leading-loose" data-i18n="card_01_desc">抗衰老机制研究、论文集及生物科普。从第一性原理出发，构建通往长生的潜在路径。</p>
+                        </div>
+                        <span class="text-[#608BC1] text-xs font-bold tracking-widest mt-8 uppercase" data-i18n="card_01_action">Access Repository -></span>
+                    </div>
+
+                    <!-- Card 02: Logic -->
+                    <div class="glass-item p-10 flex flex-col justify-between min-h-[420px] group cursor-pointer" onclick="navigate('logic-matrix.html')">
+                        <div>
+                            <span class="text-xs text-[#608BC1] font-mono tracking-widest uppercase opacity-70" data-i18n="card_02_label">02 / Logic Layer</span>
+                            <h2 class="card-title text-3xl mt-6 font-bold text-white" data-i18n="card_02_title">思辨之林</h2>
+                            <p class="text-sm mt-8 text-gray-400 leading-loose" data-i18n="card_02_desc">人工智能演化分析、游戏叙事评论、人格心理学与哲学评论。探索智能边界，解析后人类时代的意识代码。</p>
+                        </div>
+                        <span class="text-[#608BC1] text-xs font-bold tracking-widest mt-8 uppercase" data-i18n="card_02_action">Read Essays -></span>
+                    </div>
+
+                    <!-- Card 03: Gallery -->
+                    <div class="glass-item p-10 flex flex-col justify-between min-h-[420px] group cursor-pointer" onclick="navigate('visual-synapse.html')">
+                        <div>
+                            <span class="text-xs text-[#608BC1] font-mono tracking-widest uppercase opacity-70" data-i18n="card_03_label">03 / Perception Layer</span>
+                            <h2 class="card-title text-3xl mt-6 font-bold text-white" data-i18n="card_03_title">感官重构</h2>
+                            <p class="text-sm mt-8 text-gray-400 leading-loose" data-i18n="card_03_desc">3D 渲染、摄影与绘画。以视觉语言赋予深刻思考具象之美，复刻世界原貌。</p>
+                        </div>
+                        <span class="text-[#608BC1] text-xs font-bold tracking-widest mt-8 uppercase" data-i18n="card_03_action">View Gallery -></span>
+                    </div>
+
+                    <!-- Card 04: Narrative -->
+                    <div class="glass-item p-10 flex flex-col justify-between min-h-[420px] group cursor-pointer" onclick="navigate('narrative-parallel.html')">
+                        <div>
+                            <span class="text-xs text-[#608BC1] font-mono tracking-widest uppercase opacity-70" data-i18n="card_04_label">04 / Narrative Layer</span>
+                            <h2 class="card-title text-3xl mt-6 font-bold text-white" data-i18n="card_04_title">叙事实验</h2>
+                            <p class="text-sm mt-8 text-gray-400 leading-loose" data-i18n="card_04_desc">散文、诗词、小说创作。在无尽好奇心驱动下，构建超越当下维度的平行现实空间。</p>
+                        </div>
+                        <span class="text-[#608BC1] text-xs font-bold tracking-widest mt-8 uppercase" data-i18n="card_04_action">Explore Worlds -></span>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="site-footer w-full py-32 px-8 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <button class="border border-[#608BC1] text-[#608BC1] px-16 py-6 hover:bg-[#608BC1] hover:text-white transition-all duration-1000 text-xs tracking-[0.4em] font-bold mb-20 mx-auto" 
+                            data-i18n="initiate_partnership">
+                        INITIATE PARTNERSHIP
+                    </button>
+
+                    <div class="mb-20 space-y-10">
+                        <div class="text-sm tracking-[0.2em]">
+                            <span class="text-gray-500">EMAIL: </span>
+                            <a href="mailto:xuyamu@gmail.com" class="text-white hover:text-[#608BC1] transition underline underline-offset-8 decoration-gray-800">xuyamu@gmail.com</a>
+                        </div>
+                        
+                        <div class="flex justify-center space-x-12 text-[11px] md:text-xs font-bold tracking-[0.3em] uppercase">
+                            <a href="https://orcid.org/0009-0006-4938-1643" target="_blank" class="text-gray-400 hover:text-[#608BC1] transition">ORCID</a>
+                            <a href="https://www.zhihu.com/people/lan-hua-cao-9-86" target="_blank" class="text-gray-400 hover:text-[#608BC1] transition">ZHIHU</a>
+                            <a href="https://www.douban.com/people/xuyamu" target="_blank" class="text-gray-400 hover:text-[#608BC1] transition">DOUBAN</a>
+                            <a href="https://space.bilibili.com/811700" target="_blank" class="text-gray-400 hover:text-[#608BC1] transition">BILIBILI</a>
+                        </div>
+                    </div>
+                    
+                    <div class="text-[10px] text-gray-600 tracking-[0.2em] uppercase" data-i18n="footer_rights">
+                        © 2025 YAMU | BIOTECH & HUMANITIES & ART
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- 脚本区域 -->
+    <script src="assets/js/bio-background.js"></script>
+    
+    <!-- 数据文件 -->
+    <script src="assets/js/bio-data.js?v=20260222"></script>
+    <script src="assets/js/logic-data.js?v=20260222"></script>
+    <script src="assets/js/gallery-data.js?v=20260222"></script>
+    <script src="assets/js/narrative-data.js?v=20260222"></script>
+
+    <!-- 多语言数据与逻辑 -->
+    <script src="assets/js/lang-data.js"></script>
+    <script src="assets/js/i18n.js"></script>
+
+    <!-- 路由与交互 -->
+    <script src="assets/js/router.js"></script>
+    
+    <script>
+        // 音乐控制逻辑
+        const music = document.getElementById('bg-music');
+        const musicBtn = document.getElementById('music-toggle');
+
+        musicBtn.onclick = () => {
+            const span = musicBtn.querySelector('span');
+            if (music.paused) { 
+                music.play();
+                span.setAttribute('data-i18n', 'sound_on');
+                span.innerText = (typeof uiTranslations !== 'undefined' && typeof currentLang !== 'undefined') 
+                                 ? uiTranslations[currentLang]['sound_on'] 
+                                 : "SOUND: ON";
+                musicBtn.classList.add('text-white'); 
+            } else { 
+                music.pause(); 
+                span.setAttribute('data-i18n', 'sound_off');
+                span.innerText = (typeof uiTranslations !== 'undefined' && typeof currentLang !== 'undefined') 
+                                 ? uiTranslations[currentLang]['sound_off'] 
+                                 : "SOUND: OFF";
+                musicBtn.classList.remove('text-white'); 
+            }
+        };
+
+        // 首次加载初始化
+        window.addEventListener('DOMContentLoaded', () => {
+            if(typeof bindGlobalSFX === 'function') bindGlobalSFX();
+        });
+    </script>
+</body>
+</html>
