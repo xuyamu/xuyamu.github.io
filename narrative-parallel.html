@@ -1,3 +1,11 @@
+
+<script>
+    if (!document.getElementById('bg-music')) {
+        var path = window.location.pathname.split('/').pop() + window.location.search;
+        window.location.replace('/index.html?route=' + encodeURIComponent(path));
+    }
+</script>
+
 <div id="page-content" class="w-full">
     <style>
         .motto-font { font-family: 'Noto Serif SC', serif; }

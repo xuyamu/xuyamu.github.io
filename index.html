@@ -249,10 +249,10 @@
     <script src="assets/js/bio-background.js"></script>
     
     <!-- 数据文件 -->
-    <script src="assets/js/bio-data.js"></script>
-    <script src="assets/js/logic-data.js"></script>
-    <script src="assets/js/gallery-data.js"></script>
-    <script src="assets/js/narrative-data.js"></script>
+    <script src="assets/js/bio-data.js?v=20260222"></script>
+    <script src="assets/js/logic-data.js?v=20260222"></script>
+    <script src="assets/js/gallery-data.js?v=20260222"></script>
+    <script src="assets/js/narrative-data.js?v=20260222"></script>
 
     <!-- 多语言数据与逻辑 -->
     <script src="assets/js/lang-data.js"></script>
@@ -285,9 +285,24 @@
             }
         };
 
-        // 首次加载初始化
+            // 首次加载初始化
         window.addEventListener('DOMContentLoaded', () => {
             if(typeof bindGlobalSFX === 'function') bindGlobalSFX();
+
+            // 👇 新增：检查是否是从子页面重定向过来的
+            const params = new URLSearchParams(window.location.search);
+            const routePage = params.get('route');
+            
+            if (routePage) {
+                // 1. 清除地址栏的 ?route= 参数，让 URL 保持干净美观
+                window.history.replaceState(null, '', window.location.pathname);
+                // 2. 延迟一点点调用路由，加载目标页面
+                setTimeout(() => {
+                    if (typeof navigate === 'function') {
+                        navigate(decodeURIComponent(routePage));
+                    }
+                }, 100); 
+            }
         });
     </script>
 </body>
