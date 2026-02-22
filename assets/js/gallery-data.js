@@ -51,6 +51,7 @@ const galleryData = {
         { 
             title: "水滴之旅", title_en: "Trip of Water Drop",
             path: "assets/3d/animations/Trip-of-Water-Drop.mp4", 
+            path_cf: "https://media.xuyamu.com/Trip-of-Water-Drop.mp4", 
             desc: "软体模拟动画，使用 Blender 制作。", desc_en: "Soft body simulation animation, created with Blender." 
         }
     ],
@@ -232,7 +233,7 @@ const galleryData = {
             title: "黑神话：悟空·千年", 
             title_en: "Black Myth: Wukong · Millennia", 
             path: "assets/img/game-photo/千年·二郎显圣真君念故人06.mp4", 
-            path_cf: "https://pub-xxx.r2.dev/千年·二郎显圣真君念故人压缩.mp4", 
+            path_cf: "https://media.xuyamu.com/%E5%8D%83%E5%B9%B4%C2%B7%E4%BA%8C%E9%83%8E%E6%98%BE%E5%9C%A3%E7%9C%9F%E5%90%9B%E5%BF%B5%E6%95%85%E4%BA%BA%E5%8E%8B%E7%BC%A9.mp4", 
             desc: "《黑神话悟空》同人歌曲，日期：2025年3月", 
             desc_en: "Fan-made music video for 'Black Myth: Wukong'; Date: March 2025" 
         },
@@ -240,7 +241,7 @@ const galleryData = {
             title: "黑神话：悟空·二郎神慢动作剪辑", 
             title_en: "Black Myth: Wukong · Erlang Shen Slow-mo Edit", 
             path: "assets/img/game-photo/二郎神慢动作.mp4", 
-            path_cf: "https://pub-xxx.r2.dev/二郎神慢动作压缩.mp4", 
+            path_cf: "https://media.xuyamu.com/%E4%BA%8C%E9%83%8E%E7%A5%9E%E6%85%A2%E5%8A%A8%E4%BD%9C%E5%8E%8B%E7%BC%A93.mp4", 
             desc: "日期：2024年10月", 
             desc_en: "Slow-motion cinematic edit of Erlang Shen; Date: October 2024" 
         },
@@ -286,6 +287,7 @@ const galleryData = {
             title: "索菲娅在新家", 
             title_en: "Sophia in Her New Home",
             path: "assets/video/footage/2020.1.27(新家).mp4", 
+            path_cf: "https://media.xuyamu.com/2020.1.27(%E6%96%B0%E5%AE%B6).mp4", 
             desc: "索菲娅在新家；日期：2020年1月27日",
             desc_en: "Sophia at the new residence; Date: Jan 27, 2020"
         },
