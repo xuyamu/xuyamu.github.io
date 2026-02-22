@@ -125,17 +125,22 @@
                     const positionStyle = work.pos ? `style="object-position: ${work.pos}"` : '';
                     
                     // --- 核心修改：处理视频多源加载 ---
+
                     let videoContent = '';
                     if (isVideo) {
+                        // 为路径添加 #t=0.001，强制浏览器渲染第一帧作为缩略图
+                        const cfSrc = work.path_cf ? `${work.path_cf}#t=0.001` : '';
+                        const localSrc = `${work.path}#t=0.001`;
+
                         videoContent = `
-                            <video loop muted playsinline class="w-full h-full object-cover">
-                                ${work.path_cf ? `<source src="${work.path_cf}" type="video/mp4">` : ''}
-                                <source src="${work.path}" type="video/mp4">
+                            <video loop muted playsinline preload="metadata" class="w-full h-full object-cover">
+                                ${cfSrc ? `<source src="${cfSrc}" type="video/mp4">` : ''}
+                                <source src="${localSrc}" type="video/mp4">
                             </video>`;
                     } else {
                         videoContent = `<img src="${work.path}" alt="${displayTitle}" loading="lazy" ${positionStyle}>`;
                     }
-                    // ------------------------------
+                                        // ------------------------------
 
                     card.innerHTML = `
                         ${videoContent}
