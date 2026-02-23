@@ -44,29 +44,61 @@
 
             /* --- 针对手机端的深度优化 --- */
             @media (max-width: 768px) {
-                /* 1. 解决“空白太大”：修正 article 的外层间距 */
+                /* 1. 缩小外层容器边距，释放更多空间给文字 */
                 article.max-w-4xl {
-                    padding-left: 0.5rem !important;  /* 缩小外层 article 的左右内边距 */
+                    padding-left: 0.5rem !important;
                     padding-right: 0.5rem !important;
                 }
 
-                /* 2. 解决“装不了几个字”：缩小 prose-box 内部间距 */
+                /* 2. 主容器：只负责占位和布局，不负责磨砂渲染，防止层级冲突 */
                 .prose-box {
-                    padding: 24px 16px !important;  /* 将 45px 缩小为 16px，释放文字空间 */
-                    min-width: 0 !important;        /* 彻底强制取消最小宽度限制 */
+                    padding: 24px 16px !important;
+                    min-width: 0 !important;
                     margin-bottom: 2rem;
+                    background: transparent !important; /* 关键：主层透明 */
+                    border: none !important;
+                    backdrop-filter: none !important;
+                    -webkit-backdrop-filter: none !important;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                /* 3. 独立背景层：专门在底层渲染磨砂，死磕手机端 WebKit 引擎 */
+                .prose-box::before {
+                    content: "";
+                    position: absolute;
+                    inset: 0; /* 自动撑满父容器 */
+                    z-index: -1; /* 躲在文字后面 */
                     
-                    /* 3. 解决“没有磨砂”：针对移动端渲染引擎的强制指令 */
-                    isolation: isolate;             /* 创建独立的层叠上下文 */
-                    transform: translateZ(0);       /* 触发 GPU 硬件加速 */
-                    -webkit-transform: translateZ(0);
+                    /* 保持你要求的极致轻薄 0.03 透明度，绝不加深 */
+                    background: rgba(255, 255, 255, 0.03) !important;
+                    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+                    border-radius: 12px;
+
+                    /* 强制开启 GPU 3D 渲染，解决“磨砂消失”的终极手段 */
+                    transform: translate3d(0, 0, 0);
+                    -webkit-transform: translate3d(0, 0, 0);
+                    
+                    /* 极致模糊 */
+                    backdrop-filter: blur(25px) saturate(180%) !important;
+                    -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+                    
+                    /* 渲染优化提示 */
                     will-change: backdrop-filter;
                 }
 
-                /* 4. 优化文字排版 */
+                /* 4. 文字微调：保证在极薄背景下，遇到背景亮星时依然清晰 */
                 .prose-content {
-                    font-size: 16px !important;     /* 确保手机端阅读舒适 */
-                    line-height: 1.6;
+                    font-size: 16px !important;
+                    line-height: 1.7;
+                    /* 增加一层极淡的阴影，视觉上不可察，但能显著增强可读性 */
+                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); 
+                }
+
+                /* 5. 插图补丁：防止图片加载时带崩磨砂层 */
+                .prose-content img, .prose-content figure {
+                    transform: translateZ(0); 
+                    margin: 1.5rem 0 !important;
                 }
             }
 
