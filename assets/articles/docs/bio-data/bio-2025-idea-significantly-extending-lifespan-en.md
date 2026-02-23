@@ -8,11 +8,11 @@
 
   I previously introduced the genetic advantages of long-lived species such as Brandt's bat, naked mole-rats, bowhead whales, giant tortoises, and human centenarians in the following article:
 
-  [Analysis of Advantageous Genes in Long-Lived Animals (Link)](https://zhuanlan.zhihu.com/p/373766352)
+  [Analysis of Advantageous Genes in Long-Lived Animals (Link)](https://xuyamu.com/dossier.html?id=bio-2021-analysis-of-advantageous-genes-in-long-lived-animals)
 
   In this article, I introduced the genetic advantages of _Turritopsis dohrnii_, which can reverse aging:
 
-  [Miscellaneous Discussions on Immortal Jellyfish (Link)](https://www.zhihu.com/question/1925165628454593296/answer/1925182668292720046)
+  [Miscellaneous Discussions on Immortal Jellyfish (Link)](https://xuyamu.com/dossier.html?id=bio-2025-notes-on-the-turritopsis-dohrnii-jellyfish)
 
   For _Turritopsis dohrnii_ (Chinese translation: 多赫灯塔水母, nickname: Immortal jellyfish), the paper _Comparative genomics of mortal and immortal cnidarians unveils novel keys behind rejuvenation_ tested genetic differences across multiple species, comparing the genetic differences between _Turritopsis rubra_ (nickname: Crimson jelly) and _Turritopsis dohrnii_. The paper identified a series of gene variations and amplifications related to gene replication, DNA repair, telomere maintenance, the redox environment, stem cell populations, and intercellular communication. Interestingly, during the process of _Turritopsis dohrnii_ reversing aging, pluripotency-associated genes such as NANOG, OCT4, SOX2, and MYC are highly expressed. This indicates that _Turritopsis dohrnii_ undergoes reprogramming during its age-reversal process.
 

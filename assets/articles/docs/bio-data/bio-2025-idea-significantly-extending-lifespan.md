@@ -9,11 +9,11 @@
 &emsp;&emsp;我之前在以下这篇文章里介绍了布氏鼠耳蝙蝠、裸鼹鼠、弓头鲸、象龟等长寿物种及长寿老人的基因优势：
 
 
-&emsp;&emsp;[长寿动物优势基因分析（链接）](https://zhuanlan.zhihu.com/p/373766352)
+&emsp;&emsp;[长寿动物优势基因分析（链接）](https://xuyamu.com/dossier.html?id=bio-2021-analysis-of-advantageous-genes-in-long-lived-animals)
 
 &emsp;&emsp;我在这篇文章里介绍了能够逆转衰老的多赫灯塔水母的基因优势：
 
-&emsp;&emsp;[灯塔水母杂谈（链接）](https://www.zhihu.com/question/1925165628454593296/answer/1925182668292720046)
+&emsp;&emsp;[灯塔水母杂谈（链接）](https://xuyamu.com/dossier.html?id=bio-2025-notes-on-the-turritopsis-dohrnii-jellyfish)
 
 &emsp;&emsp;Turritopsis dohrnii（中文译名：多赫灯塔水母，外号：Immortal jellyfish/永生灯塔水母），Comparative genomics of mortal and immortal cnidarians unveils novel keys behind rejuvenation（对有限生命与永生刺胞动物的比较基因组学研究，揭示了其返老还童现象背后的新关键）这篇论文测试了多个物种的基因差异，对比了 Turritopsis rubra （外号：Crimson jelly/深红灯塔水母）和 Turritopsis dohrnii 两种灯塔水母的基因差异，论文鉴定出了一系列与基因复制、DNA修复、端粒维护、氧化还原环境、干细胞种群和细胞间通讯相关的基因变异和扩增。有意思的是，在 Turritopsis dohrnii 逆转衰老的过程中，NANOG、OCT4、SOX2 和 MYC 等多能性相关基因高表达，这说明 Turritopsis dohrnii 在逆转衰老的过程中进行了重编程。
 
