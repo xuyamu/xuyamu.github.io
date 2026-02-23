@@ -13,7 +13,7 @@
 
 　　这个延寿效果在众多抗衰老物质中只能说还行、凑合，谈不上特别神奇。谈谈最近延寿效果比较好的一个实验：
 
-　　2021年6月，BioViva 在未经同行评议的预印本网站 bioRxiv 上，公布了早在 2018 年启动的延缓衰老研究项目的结果，称首次证明了巨细胞病毒（Cytomegalovirus，CMV）可以通过鼻内给药或注射途径以基因治疗的方式延长小鼠的寿命。研究人员称，携带外源性 TERT 或 FST (MCMVTERT 或 MCMVFST)的小鼠巨细胞病毒(MCMV)的平均寿命分别延长了41.4% 和32.5% 。
+　　2021年6月，BioViva 在未经同行评议的预印本网站 bioRxiv 上，公布了早在 2018 年启动的延缓衰老研究项目的结果，称首次证明了巨细胞病毒（Cytomegalovirus，CMV）可以通过鼻内给药或注射途径以基因治疗的方式延长小鼠的寿命。研究人员称，携带外源性 TERT 或 FST (MCMVTERT 或 MCMVFST)的小鼠巨细胞病毒(MCMV)的实验组小鼠平均寿命分别延长了41.4% 和32.5% 。
 
 　　那么，原花青素C1（PCC1）是什么及来自哪里？
 
@@ -26,7 +26,7 @@
 
 　　This open access paper runs through a range of data for the assessment of procyanidin C1 as a senolytic compound capable of selectively destroying senescent cells, both in cell studies and in animal studies. Procyanidin C1 clearly isn't as good as dasatinib and quercetin (or fisetin alone) in mice, but it does extend mouse life span by a little under 10%. The mechanism of action appears to involve induction of mitochondrial dysfunction in senescent cells, leading to programmed cell death, but there is a good deal of work remaining in order to fully understand how procyanidin C1 achieves this outcome, and whether or not it is synergistic with other senolytics.
 
-　　翻译：这篇开放获取的论文通过一系列数据评估了原花青素C1作为一种能够选择性破坏衰老细胞的解衰老化合物在细胞研究和动物研究中的作用。在小鼠体内，原花青素C1显然不如达沙替尼和槲皮素（或单独使用非瑟酮）好，但它确实能将小鼠寿命延长10%以下。其作用机制似乎涉及衰老细胞中线粒体功能障碍的诱导，导致细胞程序性死亡，但为了充分了解原花青素C1如何实现这一结果，以及它是否与其他抗衰老药物协同作用，还有大量工作要做。
+　　翻译：这篇开放获取的论文通过一系列数据评估了原花青素C1作为一种能够选择性破坏衰老细胞的解衰老化合物在细胞研究和动物研究中的作用。在小鼠体内，原花青素C1显然不如达沙替尼和槲皮素（或单独使用非瑟酮）好，但它确实能将小鼠寿命延长略低于10%。其作用机制似乎涉及衰老细胞中线粒体功能障碍的诱导，导致细胞程序性死亡，但为了充分了解原花青素C1如何实现这一结果，以及它是否与其他抗衰老药物协同作用，还有大量工作要做。
 
 　　Senolytic Compound 是指一类能够清除衰老细胞的药物，这其中包括达沙替尼和槲皮素组合、非瑟酮等。清除衰老细胞的药物是最近几年抗衰老领域的研究热点。
 

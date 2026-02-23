@@ -14,7 +14,7 @@
 
 　　花费：免费
 
-　　运动有益于健康是个人尽皆知的常识。关于运动和寿命的研究不少。这里举个粒子：根据《梅奥诊所学报》（mayoclinic progressions）的研究，哥本哈根城市心脏研究（CCHS）的数据显示，某些运动可以帮助你活得更强壮、更长。在对8500多人的25年跟踪调查中，他们发现，与久坐的同龄人相比，这些运动和活动增加了积极参与者的预期寿命：
+　　运动有益于健康是个人尽皆知的常识。关于运动和寿命的研究不少。这里举个例子：根据《梅奥诊所学报》（mayoclinic progressions）的研究，哥本哈根城市心脏研究（CCHS）的数据显示，某些运动可以帮助你活得更强壮、更长。在对8500多人的25年跟踪调查中，他们发现，与久坐的同龄人相比，这些运动和活动增加了积极参与者的预期寿命：
 
 　　Tennis: 9.7 years
 
@@ -52,13 +52,13 @@
 
 ISRIB：
 
-　　2020年12月份发布于Elife的论文“Small molecule cognitive enhancer reverses age-related memory decline in mice”中研究了一种叫ISRIB的化合物对于衰老小鼠的记忆力的影响，论文发现ISRIB可以逆转小鼠脑部衰老，而ISRIB正是一种ISR抑制剂，其是一种PERK抑制剂，通过抑制PERK可以调控elF2α磷酸化。小分子 ISRIB 通过抑制elF2α磷酸化从而激活eLF2B，起到拮抗综合应激反应 (ISR) 的激活作用。
+　　2020年12月份发布于Elife的论文“Small molecule cognitive enhancer reverses age-related memory decline in mice”中研究了一种叫ISRIB的化合物对于衰老小鼠的记忆力的影响，论文发现ISRIB可以逆转小鼠脑部衰老，而ISRIB正是一种ISR抑制剂，其是一种PERK抑制剂，通过抑制PERK可以调控elF2α磷酸化。小分子 ISRIB 通过抑制elF2α磷酸化从而激活eIF2B，起到拮抗综合应激反应 (ISR) 的激活作用。
 
 　　ISRIB除了抗衰老外，也具有预防新冠后遗症的作用。根据SARS-CoV-2 infection induces beta cell transdifferentiation（SARS-CoV-2感染诱导β细胞转分化）这篇论文，SARS-CoV-2感染后，β细胞胰岛素表达降低，α和腺泡细胞标记物（包括胰高血糖素和胰蛋白酶1）表达升高，表明细胞转分化。轨迹分析表明，SARS-CoV-2诱导了eIF2途径介导的β细胞转分化，这种表型可通过反式整合应激反应抑制剂（trans-ISRIB）逆转。
 
 PKR抑制剂（C16）：
 
-　　PKR也是磷酸化eIF2α的四种激酶之一 ，抑制PKR也能改善记忆力吗？是的，目前已经有一些相关研究，比如说在PKR Inhibition Rescues Memory Deficit and ATF4 Overexpression in ApoE ε4 Human Replacement Mice（PKR抑制拯救ApoEε4人类替代小鼠的记忆缺陷和ATF4过度表达）这篇研究中，研究中通过给ApoE4小鼠注射PKR抑制剂，发现其可挽救记忆损伤并减弱ATF4在ApoE4小鼠中mRNA表达增加。在Suppression of PKR Promotes Network Excitability and Enhanced Cognition by Interferon-γ-Mediated Disinhibition（抑制PKR可通过干扰素-γ介导的去抑制促进网络兴奋性和增强认知能力）这篇研究中，作者探索了PKR和记忆力的关系，研究发现，PKR的缺失增加了海马脑片中长时程突触增强（L-LTP）。这些效应是由γ-干扰素（IFN-γ）介导的选择性减少GABA能突触作用引起的。总之，该研究结果表明，PKR可以很好地调节网络活动，而这些活动必须在学习过程中存储给定的片段。由于PKR活性在几种神经系统疾病中发生改变，这种激酶为治疗认知功能障碍提供了一个有希望的新靶点。作为这一方向的第一步，该研究证明选择性PKR抑制剂可以起到和PKR缺失小鼠类似的表现。
+　　PKR也是磷酸化eIF2α的四种激酶之一 ，抑制PKR也能改善记忆力吗？是的，目前已经有一些相关研究，比如说在PKR Inhibition Rescues Memory Deficit and ATF4 Overexpression in ApoE ε4 Human Replacement Mice（PKR抑制拯救ApoEε4人类替代小鼠的记忆缺陷和ATF4过度表达）这篇研究中，通过给ApoE4小鼠注射PKR抑制剂，发现其可挽救记忆损伤并减弱ATF4在ApoE4小鼠中mRNA表达增加。在Suppression of PKR Promotes Network Excitability and Enhanced Cognition by Interferon-γ-Mediated Disinhibition（抑制PKR可通过干扰素-γ介导的去抑制促进网络兴奋性和增强认知能力）这篇研究中，作者探索了PKR和记忆力的关系，研究发现，PKR的缺失增加了海马脑片中长时程突触增强（L-LTP）。这些效应是由γ-干扰素（IFN-γ）介导的选择性减少GABA能突触作用引起的。总之，该研究结果表明，PKR可以很好地调节网络活动，而这些活动必须在学习过程中存储给定的片段。由于PKR活性在几种神经系统疾病中发生改变，这种激酶为治疗认知功能障碍提供了一个有希望的新靶点。作为这一方向的第一步，该研究证明选择性PKR抑制剂可以起到和PKR缺失小鼠类似的表现。
 
 **五、细胞治疗**
 
@@ -91,7 +91,7 @@ PKR抑制剂（C16）：
 
 　　2020年12月，哈佛大学医学院研究团队在Nature杂志上发表了一篇封面论文,题为“Reprogramming to recover youthful epigenetic information and restore vision”。这篇论文对抗衰老研究而言是个重磅研究，为什么说这篇论文很重要呢？因为这篇文章提出了一个解决了用山中因子对活体重编程致瘤风险问题的方法。
 
-　　山中因子这个名字源于日本科学家山中伸弥，2012年10月，山中伸弥因为发明制作诱导多功能干细胞（iPScell）的方法而获得诺贝尔生理或医学奖，山中伸弥发现，通过让体细胞表达Oct3/4、Sox2、c-Myc和Klf4四种因子可以让体细胞变成多功能干细胞，在这个过程中，体细胞通过重编程逆转了表观遗传，恢复到类似到胚胎干细胞的状态。那么我们可以利用山中因子让活体返老还童吗？实验表明可以，早在2016年，通过 In Vivo Amelioration of Age-Associated Hallmarks by Partial Reprogramming 这篇论文中的实验，Salk研究所的研究人员就发现，通过对早衰小鼠进行短期的重编程处理可以将其寿命延长30％。
+　　山中因子这个名字源于日本科学家山中伸弥，2012年10月，山中伸弥因为发明制作诱导多功能干细胞（iPS cell）的方法而获得诺贝尔生理或医学奖，山中伸弥发现，通过让体细胞表达Oct3/4、Sox2、c-Myc和Klf4四种因子可以让体细胞变成多功能干细胞，在这个过程中，体细胞通过重编程逆转了表观遗传，恢复到类似到胚胎干细胞的状态。那么我们可以利用山中因子让活体返老还童吗？实验表明可以，早在2016年，通过 In Vivo Amelioration of Age-Associated Hallmarks by Partial Reprogramming 这篇论文中的实验，Salk研究所的研究人员就发现，通过对早衰小鼠进行短期的重编程处理可以将其寿命延长30％。
 
 　　这篇论文里用了一个所谓的partial reprogramming（局部重编程）技术，这个技术通过循环短暂地诱导山中因子来实现局部重编程，为什么要循环短暂地诱导山中因子？因为持续不断地诱导山中因子表达，会使活体产生肿瘤。近来一篇发表于《Stem Cell Report》的论文用的也是这种方法：
 

@@ -1,4 +1,4 @@
-　　发布于JAMA Psychiatry的一篇论文How COVID-19 Affects the Brain（COVID-19如何影响大脑）指出：在德国和英国进行的随访发现，20% 至 70% 的患者（甚至是年轻人）在 COVID-19 后出现神经精神症状 (NPs) ，并且在呼吸道症状消失后持续数月，表明大脑受累持续存在。 SARS-CoV-2通过血管紧张素转换酶 2 受体进入，可损伤内皮细胞，导致炎症、血栓和脑损伤。此外，全身性炎症导致单胺和营养因子减少以及小胶质细胞激活，从而导致谷氨酸和N-甲基-d-天冬氨酸 (NMDA) 3增加和兴奋性毒性。文中提到可通过相应的机制来指导干预以减少长期 NP。
+　　发布于JAMA Psychiatry的一篇论文How COVID-19 Affects the Brain（COVID-19如何影响大脑）指出：在德国和英国进行的随访发现，20% 至 70% 的患者（甚至是年轻人）在 COVID-19 后出现神经精神症状 (NPs) ，并且在呼吸道症状消失后持续数月，表明大脑受累持续存在。 SARS-CoV-2通过血管紧张素转换酶 2 受体进入，可损伤内皮细胞，导致炎症、血栓和脑损伤。此外，全身性炎症导致单胺和营养因子减少以及小胶质细胞激活，从而导致谷氨酸和N-甲基-d-天冬氨酸 (NMDA) 增加和兴奋性毒性。文中提到可通过相应的机制来指导干预以减少长期 NP。
 
 　　2022年7月发布于《细胞》上的一篇论文Mild respiratory COVID can cause multi-lineage neural cell and myelin dysregulation（轻度呼吸道 COVID 可引起多谱系神经细胞和髓鞘失调）详细阐述了COVID-19感染对神经元的影响。这篇论文指出，轻度的SARS-CoV-2感染就会引起海马神经发生持续受损、少突胶质细胞减少和髓鞘丢失明显，同时 CSF 细胞因子/趋化因子（包括 CCL11）升高。
 
@@ -57,7 +57,7 @@
 
 　　此外， 在SARS-CoV-2病毒蛋白中，依赖 RNA 的 RNA 聚合酶 (RdRp) 负责病毒基因组复制，并已成为针对 SARS-CoV-2 进行药物干预的最有希望的靶标之一。 论文Quercetin and luteolin are single-digit micromolar inhibitors of the SARS-CoV-2 RNA-dependent RNA polymerase （槲皮素和木犀草素是 SARS-CoV-2 RNA 依赖性 RNA 聚合酶的单位数微摩尔抑制剂）发现木犀草素和槲皮素具有抑制 RdRp 酶的能力。木犀草素抑制SARS-CoV-2 RdRp的 IC 50为 4.6 ± 0.3 µM，槲皮素的 IC 50为 6.9 ± 1.0 µM。
 
-　　（木犀草素在国外作为膳食补充剂，莲花清瘟里含槲皮素和木犀草素，但含量较少）
+　　（木犀草素在国外作为膳食补充剂，连花清瘟里含槲皮素和木犀草素，但含量较少）
 
 **异丁司特**
 

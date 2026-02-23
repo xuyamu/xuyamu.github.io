@@ -106,3 +106,35 @@ Explore
 &emsp;&emsp;Telomeres are special structures at the ends of chromosomes in eukaryotic cells. Every time a cell divides, the telomere shortens a bit. When the telomere shortens to a certain extent, the cell will lose its ability to divide. Maintaining telomere integrity is very important for cell survival, so to live a long life, the telomere maintenance ability must be strong. This may explain why telomere-related genes in long-lived animals generally have a positive selection advantage. As animals develop and grow, DNA faces the risk of damage due to various internal factors (mitochondria producing reactive oxygen free radicals that damage DNA) and external factors (various toxic molecules entering the body and destroying DNA). DNA mutations can cause various problems such as telomere shortening, cellular senescence, apoptosis, and cancer. Therefore, DNA repair ability is crucial for animals to maintain a healthy body. If an animal gets cancer, it will die quickly, so to live long, the anti-cancer ability must be strong.
 
 &emsp;&emsp;The advantages of longevity genes are slowly formed over a long evolutionary process. On this blue planet, no species has ever known the secrets of genes like humans do. In today's era, we have initially mastered the technology to regulate genes. In recent years, gene therapy technology has been developing rapidly, especially the COVID-19 pandemic, which has brought nucleic acid drugs into the view of the public and investors. In the near future, we may be able to make ourselves healthier and longer-lived by regulating genes.
+
+References：
+
+[1] Lan J , Rollins J , Wu D , et al. Translational regulation of non-autonomous mitochondrial stress response promotes longevity[J]. Cell Reports, 2019, 28(4):1050-1062.e6.
+
+[2] Seim I , Fang X , Xiong Z , et al. Genome analysis reveals insights into physiology and longevity of the Brandt's bat Myotis brandtii[J]. Nature Communications, 2013, 4:2212-2212.
+
+[3] Qian M , Liu Z , Peng L , et al. Boosting ATM activity alleviates ageing and extends lifespan in a mouse model of progeria[J]. eLife Sciences, 2018, 7:e34836-.
+
+[4] Huang Z , Jebb D , Teeling E C . Blood miRNomes and transcriptomes reveal novel longevity mechanisms in the long-lived bat, Myotis myotis[J]. Bmc Genomics, 2016, 17(1):906.
+
+[5] Foley N M , Hughes G M , Huang Z , et al. Growing old, yet staying young: The role of telomeres in bats' exceptional longevity[J]. Science Advances, 2018, 4(2):eaao0926.
+
+[6] Kim E B , Fang X , Fushan A A , et al. Genome sequencing reveals insights into physiology and longevity of the naked mole rat.
+
+[7] Augereau A , Mariotti M , Pousse M , et al. Naked mole rat TRF1 safeguards glycolytic capacity and telomere replication under low oxygen[J]. Science Advances, 2021, 7(8):eabe0174.
+
+[8] Evdokimov A , Kutuzov M , Petruseva I , et al. Naked mole rat cells display more efficient excision repair than mouse cells[J]. Aging, 2018, 10(6):1454-1473.
+
+[9] Tian X , D Firsanov, Zhang Z , et al. SIRT6 Is Responsible for More Efficient DNA Double-Strand Break Repair in Long-Lived Species[J]. Cell, 2019, 177(3):622-638.e22.
+
+[10] Leonida S , Bennett N C , Leitch A R , et al. Patterns of telomere length with age in African mole-rats: New insights from quantitative fluorescence in situ hybridisation (qFISH)[J]. PeerJ, 2020, 8(13):e10498.
+
+[11] Deuker M M , Lewis K N , Ingaramo M , et al. Unprovoked Stabilization and Nuclear Accumulation of the Naked Mole-Rat p53 Protein[J]. Scientific Reports, 2020, 10(1).
+
+[12] Keane M , Semeiks J , Webb A E , et al. Insights into the Evolution of Longevity from the Bowhead Whale Genome[J]. Cell Reports, 2015, 10(1):112-122.
+
+[13] Firsanov D, Zacher M, Tian X, Sformo TL, Zhao Y, Tombline G, Lu JY, Zheng Z, Perelli L, Gurreri E, Zhang L, Guo J, Korotkov A, Volobaev V, Biashad SA, Zhang Z, Heid J, Maslov A, Sun S, Wu Z, Gigas J, Hillpot E, Martinez J, Lee M, Williams A, Gilman A, Hamilton N, Haseljic E, Patel A, Straight M, Miller N, Ablaeva J, Tam LM, Couderc C, Hoopman M, Moritz R, Fujii S, Hayman DJ, Liu H, Cai Y, Leung AKL, Simons MJP, Zhang Z, Nelson CB, Abegglen LM, Schiffman JD, Gladyshev VN, Modesti M, Genovese G, Vijg J, Seluanov A, Gorbunova V. DNA repair and anti-cancer mechanisms in the long-lived bowhead whale. bioRxiv [Preprint]. 2024 Nov 5:2023.05.07.539748. doi: 10.1101/2023.05.07.539748. PMID: 39574710; PMCID: PMC11580846.
+
+[14] Quesada V , S Freitas-Rodríguez, Miller J , et al. Giant tortoise genomes provide insights into longevity and age-related disease[J]. Nature Ecology & Evolution.
+
+[15] Garagnani P , Marquis J , Delledonne M , et al. Whole-genome sequencing analysis of semi-supercentenarians[J]. eLife Sciences, 2021, 10:e57849.

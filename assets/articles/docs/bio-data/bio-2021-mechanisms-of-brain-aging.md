@@ -2,7 +2,7 @@
 
 **一、cAMP/CREB/BDNF信号改变可能导致了年龄相关的突触传递和 LTP 损伤。**
 
-　　cAMP应答元件结合蛋白（cAMP response element binding protein，CREB）是一种转录增强因子，在神经元生成、突触可塑性及学习记忆等方面都具有重要的调节作用。CREB调控一种与大脑功能关系非常大的蛋白的表达——脑源性神经营养因子（brain-derived neurotrophic factor，BDNF）。脑源性神经营养因子(BDNF)属于神经营养因子家族的重要成员，能够促进神经元的存活、分化、树突和轴突的生长，尤其在调节突触的可塑性中起关键作用，而神经元突触可塑性对神经环路的建立和控制脑的认知功能及复杂行为具有重要作用。BDNF对于神经元的功能维持非常重要，其一方面可以增加突触可塑性，进而影响长时程增强(long-term-ptentiati，LTP)，一方面可以促进神经发生尤其是海马的神经发生，另一方面可以促进神经元的生存，特别是多巴胺与五羟色胺相关的神经元。这里发一张BDNF的通路图来说明BDNF是如何影响神经元功能的：
+　　cAMP应答元件结合蛋白（cAMP response element binding protein，CREB）是一种转录增强因子，在神经元生成、突触可塑性及学习记忆等方面都具有重要的调节作用。CREB调控一种与大脑功能关系非常大的蛋白的表达——脑源性神经营养因子（brain-derived neurotrophic factor，BDNF）。脑源性神经营养因子(BDNF)属于神经营养因子家族的重要成员，能够促进神经元的存活、分化、树突和轴突的生长，尤其在调节突触的可塑性中起关键作用，而神经元突触可塑性对神经环路的建立和控制脑的认知功能及复杂行为具有重要作用。BDNF对于神经元的功能维持非常重要，其一方面可以增加突触可塑性，进而影响长时程增强(long-term-potentiation，LTP)，一方面可以促进神经发生尤其是海马的神经发生，另一方面可以促进神经元的生存，特别是多巴胺与五羟色胺相关的神经元。这里发一张BDNF的通路图来说明BDNF是如何影响神经元功能的：
 
 <figure>
     <img src="assets/articles/images/bio-data/bio-brain-aging01.png">
@@ -69,7 +69,7 @@ A 等位基因编码 Met（T）。
 
 　　研究显示，不同族群之间的BDNF基因型频率之间存在差异，60-65% 的白人人口具有“CC”基因型，而这种基因型出现在不到 30% 的中国人口中。与此相关的是，大约 90% 的黑人人口具有“CC”基因型——而一些非洲种族群体的“CC”基因型比例高达 98%（例如约鲁巴人）。
 
-　　我们前面提到，BDNF与睡眠有关系，那么BDNF基因影响睡眠吗，根据The BDNF Val66Met Polymorphism Modulates Sleep Intensity: EEG Frequency- and State-Specificity这篇研究，拥有BDMF rs6265的“CC”（纯合）基因型的人，每晚大约多 20 分钟的“慢波”睡眠（第 3 阶段和第 4 阶段睡眠），同时“浅表”阶段（第 2 阶段睡眠）和整体“睡眠强度”增加（与“CT”相比) ，清醒时有更多的 alpha脑电波活动，以及REM（快速眼动期）睡眠期间有更多的alpha-、theta-和sigma脑电波活动（与“CT”相比）。
+　　我们前面提到，BDNF与睡眠有关系，那么BDNF基因影响睡眠吗，根据The BDNF Val66Met Polymorphism Modulates Sleep Intensity: EEG Frequency- and State-Specificity这篇研究，拥有BDNF rs6265的“CC”（纯合）基因型的人，每晚大约多 20 分钟的“慢波”睡眠（第 3 阶段和第 4 阶段睡眠），同时“浅表”阶段（第 2 阶段睡眠）和整体“睡眠强度”增加（与“CT”相比) ，清醒时有更多的 alpha脑电波活动，以及REM（快速眼动期）睡眠期间有更多的alpha-、theta-和sigma脑电波活动（与“CT”相比）。
 
 　　一些研究发现BDNF rs6265的基因型与认知能力有关，但另一些研究则显示无法找到强力证据。涉及认知能力的基因非常多，BDNF基因的影响还是很有限的。
 
@@ -86,9 +86,9 @@ A 等位基因编码 Met（T）。
     <figcaption>图片来源：Roles of eIF2α kinases in the pathogenesis of Alzheimer’s disease</figcaption>
 </figure>
 
-　　eIF2α是eLF2的α亚基，修饰eIF2α的蛋白酶就是eIF2α激酶，eIF2α的磷酸化不利于蛋白质翻译。目前发现了四种磷酸化eIF2α的丝氨酸琳氨酸蛋白激酶，分别是HRI，PERK，PKR及GCN2（如上图所示），这四种蛋白激酶通过磷酸化真核起始因子eIF2的α亚基来减弱mRNA翻译，这其中就包括磷酸化cAMP反应元件结合蛋白（p-CREB）水平的下降，而正如我们在上文种提到的那样，CREB和LTP关系很大。如图所示，eIF2α的磷酸化也会提升β-淀粉样蛋白（amyloid β-protein，Aβ），我们知道，具有神经毒性的Aβ的沉积是包括阿尔茨海默症（老年痴呆症）、帕金森症等神经退行性疾病的重要特征。
+　　eIF2α是eLF2的α亚基，修饰eIF2α的蛋白酶就是eIF2α激酶，eIF2α的磷酸化不利于蛋白质翻译。目前发现了四种磷酸化eIF2α的丝氨酸苏氨酸蛋白激酶，分别是HRI，PERK，PKR及GCN2（如上图所示），这四种蛋白激酶通过磷酸化真核起始因子eIF2的α亚基来减弱mRNA翻译，这其中就包括磷酸化cAMP反应元件结合蛋白（p-CREB）水平的下降，而正如我们在上文种提到的那样，CREB和LTP关系很大。如图所示，eIF2α的磷酸化也会提升β-淀粉样蛋白（amyloid β-protein，Aβ），我们知道，具有神经毒性的Aβ的沉积是包括阿尔茨海默症（老年痴呆症）、帕金森症等神经退行性疾病的重要特征。
 
-　　2020年12月份发布于Elife的论文“Small molecule cognitive enhancer reverses age-related memory decline in mice”中研究了一种叫ISRIB的化合物对于衰老小鼠的记忆力的影响，论文发现ISRIB可以逆转小鼠脑部衰老，而ISRIB正是一种ISR抑制剂，其是一种PERK抑制剂，通过抑制PERK可以调控elF2α磷酸化。小分子 ISRIB 通过抑制elF2α磷酸化从而激活eLF2B，起到拮抗综合应激反应 (ISR) 的激活作用。
+　　2020年12月份发布于Elife的论文“Small molecule cognitive enhancer reverses age-related memory decline in mice”中研究了一种叫ISRIB的化合物对于衰老小鼠的记忆力的影响，论文发现ISRIB可以逆转小鼠脑部衰老，而ISRIB正是一种ISR抑制剂，其是一种PERK抑制剂，通过抑制PERK可以调控elF2α磷酸化。小分子 ISRIB 通过抑制elF2α磷酸化从而激活eIF2B，起到拮抗综合应激反应 (ISR) 的激活作用。
 
 　　PKR也是磷酸化eIF2α的四种激酶之一 ，抑制PKR也能改善记忆力吗？是的，目前已经有一些相关研究，比如说在PKR Inhibition Rescues Memory Deficit and ATF4 Overexpression in ApoE ε4 Human Replacement Mice（PKR抑制拯救ApoEε4人类替代小鼠的记忆缺陷和ATF4过度表达）这篇研究中，研究中通过给ApoE4小鼠注射PKR抑制剂，发现其可挽救记忆损伤并减弱ATF4在ApoE4小鼠中mRNA表达增加。在Suppression of PKR Promotes Network Excitability and Enhanced Cognition by Interferon-γ-Mediated Disinhibition（抑制PKR可通过干扰素-γ介导的去抑制促进网络兴奋性和增强认知能力）这篇研究中，作者探索了PKR和记忆力的关系，研究发现，PKR的缺失增加了海马脑片中长时程突触增强（L-LTP）。这些效应是由γ-干扰素（IFN-γ）介导的选择性减少GABA能突触作用引起的。总之，该研究结果表明，PKR可以很好地调节网络活动，而这些活动必须在学习过程中存储给定的片段。由于PKR活性在几种神经系统疾病中发生改变，这种激酶为治疗认知功能障碍提供了一个有希望的新靶点。作为这一方向的第一步，该研究证明选择性PKR抑制剂可以起到和PKR缺失小鼠类似的表现。
 
