@@ -2,11 +2,9 @@
 
 　　不同灯塔水母返老还童的能力差异比较大，目前已知有三种灯塔水母逆转衰老能力比较强（能够在繁殖后恢复青春）：Turritopsis dohrnii（中文译名：多赫灯塔水母，外号：Immortal jellyfish/永生灯塔水母）、Turritopsis sp.5 和 Turritopsis sp.2，其中，Turritopsis dohrnii 逆转衰老的能力最强。
 
-　　Comparative genomics of mortal and immortal cnidarians unveils novel keys behind rejuvenation（对有限生命与永生刺胞动物的比较基因组学研究，揭示了其返老还童现象背后的新关键）这篇论文测试了多个物种的基因差异，对比了 Turritopsis rubra （外号：Crimson jelly/深红灯塔水母）和 Turritopsis dohrnii 两种灯塔水母的基因差异，论文鉴定出了一系列与基因复制、DNA修复、端粒维护、氧化还原环境、干细胞种群和细胞间通讯相关的基因变异和扩增。
+　　Comparative genomics of mortal and immortal cnidarians unveils novel keys behind rejuvenation（对有限生命与永生刺胞动物的比较基因组学研究，揭示了其返老还童现象背后的新关键）这篇论文测试了多个物种的基因差异，对比了 Turritopsis rubra （外号：Crimson jelly/深红灯塔水母）和 Turritopsis dohrnii 两种灯塔水母的基因差异，论文鉴定出了一系列与基因复制、DNA修复、端粒维护、氧化还原环境、干细胞种群和细胞间通讯相关的基因变异和扩增。有意思的是，论文发现，Turritopsis dohrnii 在逆转衰老的过程中进行了重编程。
 
 　　我之前在《长寿动物优势基因分析》里谈到了长寿动物基因优势，我们将 Turritopsis dohrnii 与其他长寿动物进行对比，能够发现一个共同点：这些长寿动物在DNA修复、端粒维护方面都具有基因优势。
-
-　　有意思的是，在 Turritopsis dohrnii 逆转衰老的过程中，NANOG、OCT4、SOX2 和 MYC 等多能性相关基因高表达，这说明 Turritopsis dohrnii 在逆转衰老的过程中进行了重编程。
 
 　　论文里给出了 Turritopsis rubra 和 Turritopsis dohrnii 的图片对比：
 <figure>

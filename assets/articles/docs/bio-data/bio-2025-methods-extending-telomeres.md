@@ -28,7 +28,7 @@
 ![端粒长度1](assets/articles/images/bio-data/bio-telomere-2021.webp)
 &emsp;&emsp;*(2021年端粒长度检测结果)*
 
-![端粒长度1](assets/articles/images/bio-data/bio-telomere-2025.webp)
+![端粒长度2](assets/articles/images/bio-data/bio-telomere-2025.webp)
 &emsp;&emsp;*(2025年端粒长度检测结果)*
 
-&emsp;&emsp;如图所示，在2021年的检测报告中，我的端粒相对长度是0.62，仅超过37%同龄人，细胞年龄是33.5，在2025年的检测报告中，我的端粒相对长度是1.739，超过84%同龄人，细胞年龄是31岁。
+&emsp;&emsp;如图所示，在2021年的检测报告中，我的端粒相对长度是0.62，仅超过37%同龄人，细胞年龄是33.5岁，在2025年的检测报告中，我的端粒相对长度是1.739，超过84%同龄人，细胞年龄是31岁。
