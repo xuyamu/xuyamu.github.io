@@ -93,12 +93,6 @@ DNA maintenance related genes: GAPDH gene, NEIL1 gene, RMI2 gene, and XRCC6 gene
 
 **Comprehensive Analysis**
 
-![telomere shortening and cellular senescence, AI generated](https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSMporfPFKimTrUncMKmn0agFtnVP6qaNatL_LPDVFpkjeK873slPGlaPBo_2Bgj512d5wIOmbYSHxy7VAb7Fj9ErUP8vR9bt59tLgMxb_HHg-XErA)
-
-Shutterstock
-
-Explore
-
 &emsp;&emsp;Based on the above studies of different long-lived animals, it is easy to see that long-lived animals generally share the following commonalities:
 
 &emsp;&emsp;Powerful telomere maintenance function, powerful DNA repair ability, and powerful anti-cancer ability. Why are these three major factors related to lifespan? Let's look at how these three factors affect lifespan:
