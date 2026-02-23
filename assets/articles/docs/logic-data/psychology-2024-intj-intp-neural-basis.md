@@ -16,7 +16,7 @@
 
 　　 神经质（neuroticism）：神经质是指有强烈负面情绪的倾向，例如愤怒、焦虑或抑郁。有时称为情绪不稳定，或反过来称为情绪稳定。
 
-　　The Big Five Facets and the MBTI: The Relationship between the 30 NEO-PI(R) Facets and the Four Myers-Briggs Type Indicator (MBTI) Scores（大五人格和 MBTI：30 个 NEO-PI(R) 方面与四个 Myers-Briggs 类型指标 (MBTI) 分数之间的关系）这篇近期的论文基于超过 9000 名成年人的样本对这个课题做了研究。论文结果显示，EI 与外向性的相关性最强，MBTI的E维度与外向性正相关。 SN 变量表明，感知型人群的宜人性较高，而开放性和尽责性较低。所有五个因素都与 TF 维度相关，表明尽责性与思维维度呈正相关，而其他大五人格特质则与思维维度呈负相关。
+　　The Big Five Facets and the MBTI: The Relationship between the 30 NEO-PI(R) Facets and the Four Myers-Briggs Type Indicator (MBTI) Scores（大五人格和 MBTI：30 个 NEO-PI(R) 方面与四个 Myers-Briggs 类型指标 (MBTI) 分数之间的关系）这篇近期的论文基于超过 9000 名成年人的样本对这个课题做了研究。论文结果显示，EI 与外向性的相关性最强，MBTI的E维度与外向性正相关。 SN 变量表明，感知型人群的宜人性较高，而开放性和尽责性较低。所有五个因素都与 TF 维度相关，表明尽责性与思维维度呈正相关，而所有其他五个主要特征均与思维维度呈负相关。
 
 【外向性（Extraversion）与经验开放性（openness to experience）的神经基础】
 
@@ -36,7 +36,7 @@
 
 　　从描述上来看，MBTI中的思维（Thinking）/情感（Feeling）似乎与系统化商数/共情心商数有相关性，由于并没有关于二者相关性的直接研究，我们无法直接知道它们之间的直接相关性是多少，但是有一系列数据可以证明二者的相关性。
 
-　　根据西蒙·拜伦-科恩的The systemizing quotient: an investigation of adults with Asperger syndrome or high-functioning autism, and normal sex differences（系统化商数：对成年人的调查患有阿斯伯格综合症或高功能自闭症，和正常的性别差异）这篇研究，女性在 EQ 上的平均得分更高（女性平均是47，男性则是38），而男性在 SQ 上的平均得分更高（男性30，女性24），而阿斯伯格综合征及高功能自闭症患者在 SQ 上比控制组取得更高的分数（男性平均分是36，而女性则是34），并且与控制组相比有更低的 EQ（男性18，女性23）。
+　　根据西蒙·拜伦-科恩的The systemizing quotient: an investigation of adults with Asperger syndrome or high-functioning autism, and normal sex differences（系统化商数：对患有阿斯伯格综合征或高功能自闭症的成年人的调查，以及正常的性别差异）这篇研究，女性在 EQ 上的平均得分更高（女性平均是47，男性则是38），而男性在 SQ 上的平均得分更高（男性30，女性24），而阿斯伯格综合征及高功能自闭症患者在 SQ 上比控制组取得更高的分数（男性平均分是36，而女性则是34），并且与控制组相比有更低的 EQ（男性18，女性23）。
 
 The Empathy and Systemizing Quotient: The Psychometric Properties of the Dutch Version and a Review of the Cross-Cultural Stability （共情与系统化商数：荷兰版的心理测量特性及跨文化稳定性的评述）这篇论文列举了不同论文和量表中提供的 SQ 和 EQ 的平均值和标准差。
 
@@ -90,13 +90,13 @@ The Empathy and Systemizing Quotient: The Psychometric Properties of the Dutch V
 
 　　Human Lineage–Specific Amplification, Selection, and Neuronal Expression of DUF1220 Domains（DUF1220 结构域的人类谱系特异性扩增、选择和神经元表达）这篇发布于《科学杂志》的论文是早期富有影响力的对于 DUF1220 的研究，该论文指出：DUF1220 结构域在与较高认知功能相关的大脑区域中高度表达，并且在大脑中优先在细胞体和树突中显示神经元特异性表达。
 
-　　DUF1220 拷贝量是如何影响智力的？根据 DUF1220 copy number is linearly associated with increased cognitive function as measured by total IQ and mathematical aptitude scores（DUF1220 拷贝数与通过总智商和数学能力得分衡量的认知功能增强呈线性相关）这篇论文检查了 DUF1220 亚型 CON1 和 CON2 与认知能力之间的关联，CON2 每增加一个拷贝，WISC IQ 就会增加 3.3 分。研究表明，在北美男性中，CON2 拷贝数的增加与 WISC IQ 的增加相对应，在新西兰人中，CON2 拷贝数的增加与数学能力的增加相关。
+　　DUF1220 拷贝量是如何影响智力的？根据 DUF1220 copy number is linearly associated with increased cognitive function as measured by total IQ and mathematical aptitude scores（DUF1220 拷贝数与通过总智商和数学能力得分衡量的认知功能增强呈线性相关）这篇论文，研究者检查了 DUF1220 亚型 CON1 和 CON2 与认知能力之间的关联，CON2 每增加一个拷贝，WISC IQ 就会增加 3.3 分。研究表明，在北美男性中，CON2 拷贝数的增加与 WISC IQ 的增加相对应，在新西兰人中，CON2 拷贝数的增加与数学能力的增加相关。
 
 　　DUF1220-Domain Copy Number Implicated in Human Brain-Size Pathology and Evolution（DUF1220-结构域拷贝数与人脑大小的病理学和进化有关）这篇论文指出，DUF1220 拷贝数与大脑灰质体积具有相关性。
 
 　　Phylogenetic Analysis Supports a Link between DUF1220 Domain Number and Primate Brain Expansion（系统发育分析支持 DUF1220 结构域数量与灵长类动物大脑扩展之间的联系）这篇研究发现，DUF1220 与新皮质体积呈正相关，但与小脑体积无关。
 
-　　DUF1220 copy number is associated with schizophrenia risk and severity: implications for understanding autism and schizophrenia as related diseases（DUF1220 拷贝数与精神分裂症风险和严重程度相关：对理解自闭症和精神分裂症相关疾病的影响）这篇研究提到：CON1 拷贝数的增加之前已被认为与总灰质体积的增加有关，其中最显着的关联与额叶表面积和体积、颞叶体积和厚度以及顶叶厚度有关。
+　　DUF1220 copy number is associated with schizophrenia risk and severity: implications for understanding autism and schizophrenia as related diseases（DUF1220 拷贝数与精神分裂症风险和严重程度相关：对理解自闭症和精神分裂症相关疾病的影响）这篇研究提到：CON1 拷贝数的增加之前已被认为与总灰质体积的增加有关，其中最显著的关联与额叶表面积和体积、颞叶体积和厚度以及顶叶厚度有关。
 
 　　根据 DUF1220 Dosage Is Linearly Associated with Increasing Severity of the Three Primary Symptoms of Autism（DUF1220 剂量与自闭症三种主要症状的严重程度线性相关），在自闭症谱系障碍个体中，CON1 拷贝数也以剂量反应方式与 ASD 三种主要症状的严重程度线性相关：社交缺陷 (p = 0.021)、沟通障碍 (p = 0.030) 和重复行为 (p = 0.047)。每增加一个 CON1 副本，社交诊断分数平均增加 0.25 分 (SE 0.11 p = 0.021)，沟通诊断分数增加 0.18 分 (SE 0.08 p = 0.030)，重复行为诊断分数增加 0.10 分 (SE = 0.05 p = 0.047）。
 
