@@ -44,61 +44,59 @@
 
             /* --- 针对手机端的深度优化 --- */
             @media (max-width: 768px) {
-                /* 1. 缩小外层容器边距，释放更多空间给文字 */
+                /* 1. 布局调整：释放空间 */
                 article.max-w-4xl {
-                    padding-left: 0.5rem !important;
-                    padding-right: 0.5rem !important;
+                    padding-left: 0.8rem !important;
+                    padding-right: 0.8rem !important;
                 }
 
-                /* 2. 主容器：只负责占位和布局，不负责磨砂渲染，防止层级冲突 */
+                /* 2. 核心容器修复 */
                 .prose-box {
-                    padding: 24px 16px !important;
+                    padding: 24px 20px !important;
                     min-width: 0 !important;
-                    margin-bottom: 2rem;
-                    background: transparent !important; /* 关键：主层透明 */
-                    border: none !important;
-                    backdrop-filter: none !important;
-                    -webkit-backdrop-filter: none !important;
-                    position: relative;
-                    z-index: 1;
-                }
+                    margin-bottom: 3rem;
 
-                /* 3. 独立背景层：专门在底层渲染磨砂，死磕手机端 WebKit 引擎 */
-                .prose-box::before {
-                    content: "";
-                    position: absolute;
-                    inset: 0; /* 自动撑满父容器 */
-                    z-index: -1; /* 躲在文字后面 */
+                    /* --- 【关键】保底遮瑕层 --- */
+                    /* 使用较深的颜色和较高的不透明度 (0.75) */
+                    /* 这样即使磨砂失败，文字底下的背景也足够深，能压住星星，保证可读性 */
+                    background: rgba(12, 12, 16, 0.75) !important;
                     
-                    /* 保持你要求的极致轻薄 0.03 透明度，绝不加深 */
-                    background: rgba(255, 255, 255, 0.03) !important;
-                    border: 1px solid rgba(255, 255, 255, 0.1) !important;
-                    border-radius: 12px;
+                    /* 边框稍微调亮一点点，增加深色背景下的轮廓感 */
+                    border: 1px solid rgba(255, 255, 255, 0.15) !important;
 
-                    /* 强制开启 GPU 3D 渲染，解决“磨砂消失”的终极手段 */
-                    transform: translate3d(0, 0, 0);
-                    -webkit-transform: translate3d(0, 0, 0);
-                    
-                    /* 极致模糊 */
+                    /* --- 磨砂效果层 --- */
+                    /* 尝试应用磨砂，能显示最好，不显示就有上面的背景色兜底 */
                     backdrop-filter: blur(25px) saturate(180%) !important;
                     -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+
+                    /* --- 硬件加速强制指令 --- */
+                    /* 创建独立的渲染层级，尽最大努力让浏览器不在滚动时关掉磨砂 */
+                    transform: translate3d(0, 0, 0);
+                    -webkit-transform: translate3d(0, 0, 0);
+                    will-change: transform, backdrop-filter;
                     
-                    /* 渲染优化提示 */
-                    will-change: backdrop-filter;
+                    /* 确保圆角切边 */
+                    overflow: hidden;
+                    border-radius: 16px;
                 }
 
-                /* 4. 文字微调：保证在极薄背景下，遇到背景亮星时依然清晰 */
+                /* 3. 文字与内容的优化 */
                 .prose-content {
                     font-size: 16px !important;
-                    line-height: 1.7;
-                    /* 增加一层极淡的阴影，视觉上不可察，但能显著增强可读性 */
-                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); 
+                    line-height: 1.75;
+                    /* 在深色背景下，去掉文字阴影会让文字更锐利、更干净 */
+                    text-shadow: none !important; 
                 }
-
-                /* 5. 插图补丁：防止图片加载时带崩磨砂层 */
-                .prose-content img, .prose-content figure {
-                    transform: translateZ(0); 
-                    margin: 1.5rem 0 !important;
+                
+                /* 4. 插图隔离补丁：防止图片加载瞬间带崩整个卡片的渲染层 */
+                .prose-content img, 
+                .prose-content figure {
+                    /* 强制图片自己在一个层里呆着 */
+                    transform: translateZ(0);
+                    -webkit-transform: translateZ(0);
+                    margin: 2rem 0 !important;
+                    /* 图片边框也稍微亮一点适配深色底 */
+                    border-color: rgba(255, 255, 255, 0.2) !important; 
                 }
             }
 
