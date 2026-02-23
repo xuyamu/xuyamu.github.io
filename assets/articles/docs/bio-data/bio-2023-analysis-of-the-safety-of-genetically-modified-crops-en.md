@@ -12,7 +12,7 @@
 
 　　(A) The "chromothripsis" model: Chromothripsis involves the generation of DNA double-strand breaks. The DNA repair machinery ligates the fragments together in a random order and orientation. The new chromosomes may contain complex structural rearrangements and structural variations. (B) The episome model: Bidirectional DNA replication results in two replication forks, with the region between them forming a replication bubble. When an error occurs during replication, the replication forks collapse, causing the replication bubble to fall off and form an episome shape. These can be amplified through replication and recombination to form eccDNA. (C) The translocation-excision-deletion-amplification model: Gene translocations occur near chromosomes. Fragments adjacent to the translocation site can be amplified, deleted, and circularized, thereby generating eccDNA.
 
-　　The formation of eccDNA is a probabilistic event. Whether a plant forms eccDNA has nothing to do with whether it contains artificial sequences. The corn genome is huge [see my note below regarding the 1.56 Mb figure], while you usually only insert a few genes during genetic modification. A single gene is typically just a few kb (transcribed into mRNA to synthesize a protein with a specific function), which accounts for a very small proportion. The random errors forming eccDNA from artificial sequences would not exceed the amount of eccDNA formed from the plant's natural sequences, unless your artificial sequence is specifically prone to falling out. Furthermore, plant eccDNA would have to enter your bloodstream to have a profound impact on your cells. The likelihood of DNA from food entering the bloodstream is extremely low, and even if it does, it survives for a very short time. We eat plants and animals every day; if their eccDNA could easily enter the human body and cause harm, how could we still eat them?
+　　The formation of eccDNA is a probabilistic event. Whether a plant forms eccDNA has nothing to do with whether it contains artificial sequences. The corn genome size can be as large as 2.5 Gb, while you usually only insert a few genes during genetic modification. A single gene is typically just a few kb (transcribed into mRNA to synthesize a protein with a specific function), which accounts for a very small proportion. The random errors forming eccDNA from artificial sequences would not exceed the amount of eccDNA formed from the plant's natural sequences, unless your artificial sequence is specifically prone to falling out. Furthermore, plant eccDNA would have to enter your bloodstream to have a profound impact on your cells. The likelihood of DNA from food entering the bloodstream is extremely low, and even if it does, it survives for a very short time. We eat plants and animals every day; if their eccDNA could easily enter the human body and cause harm, how could we still eat them?
 
 ---
 
@@ -36,30 +36,3 @@
 
 　　Answer: miRNAs will not alter your genes unless they undergo reverse transcription. Reverse transcription requires reverse transcriptase, and specific reverse transcriptases transcribe specific RNAs. Plant miRNAs entering the human body will not be reverse-transcribed and integrated into your genome. There is indeed a small amount of evidence suggesting that plant miRNAs can enter the bloodstream, but their impact has not yet been thoroughly studied. GM crops usually have protein-coding genes inserted, which are transcribed into mRNA. If plant mRNA could enter human cells, your cells would produce plant proteins. This could trigger an immune response, or even give you plant characteristics, turning you into a "plant-person"—which is highly unlikely.
 
----
-
-### 笔误与事实错误检查报告
-
-您的逻辑反驳非常精彩且接地气，但在原文中有两处文字笔误和一处生物学数据错误，我在翻译时已经进行了修正和规避，这里特别提醒您：
-
-**1. 文字笔误（已在翻译中纠正）**
-
-- **原文：** “没有证据**标明**转入的基因会变成转座子跳出来”
-    
-    - **纠正：** 应该是“**表明**” (indicate / show)。
-        
-- **原文：** “会不会对人体**造出**危害”
-    
-    - **纠正：** 应该是“**造成**危害” (cause harm)。
-        
-
-**2. 核心数据错误（需特别注意修改中文原稿）**
-
-- **原文：** “玉米基因长达**1.56 Mb**，你转基因一般也就转几个基因……”
-    
-    - **纠正：** 这里的数据有误。如果您指的是“玉米基因组”，玉米的基因组大小（Genome size）大约是 **2.3 到 2.5 Gb** （即 2300 到 2500 Mb），而不是 1.56 Mb（1.56 Mb 连很多细菌的基因组大小都不到）。如果您指的是“单个基因”，绝大多数植物的单个基因长度也只有几 kb 到几十 kb，不可能长达 1.56 Mb。
-        
-    - **建议中文修改为：** “玉米**基因组高达约 2.5 Gb**，你转基因一般也就转几个基因，一个基因一般也就几kb……” 这样更能衬托出您后面“占比很小”的逻辑推论。在英文翻译中，我为了保持语意通顺，暂且去掉了具体的数字，采用了 "The corn genome is huge..." 的表述。
-        
-
-如果您需要我按照“2.5 Gb”的数据重新调整那一句的英文翻译，或者还有其他科学探讨需要梳理，请随时告诉我！
