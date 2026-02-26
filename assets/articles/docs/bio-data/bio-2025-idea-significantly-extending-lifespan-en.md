@@ -14,7 +14,7 @@
 
   [Miscellaneous Discussions on Immortal Jellyfish (Link)](https://xuyamu.com/dossier.html?id=bio-2025-notes-on-the-turritopsis-dohrnii-jellyfish)
 
-  For _Turritopsis dohrnii_ (Chinese translation: 多赫灯塔水母, nickname: Immortal jellyfish), the paper _Comparative genomics of mortal and immortal cnidarians unveils novel keys behind rejuvenation_ tested genetic differences across multiple species, comparing the genetic differences between _Turritopsis rubra_ (nickname: Crimson jelly) and _Turritopsis dohrnii_. The paper identified a series of gene variations and amplifications related to gene replication, DNA repair, telomere maintenance, the redox environment, stem cell populations, and intercellular communication. Interestingly, during the process of _Turritopsis dohrnii_ reversing aging, pluripotency-associated genes such as NANOG, OCT4, SOX2, and MYC are highly expressed. This indicates that _Turritopsis dohrnii_ undergoes reprogramming during its age-reversal process.
+  For _Turritopsis dohrnii_ (Chinese translation: 多赫灯塔水母, nickname: Immortal jellyfish), the paper _Comparative genomics of mortal and immortal cnidarians unveils novel keys behind rejuvenation_ tested genetic differences across multiple species, comparing the genetic differences between _Turritopsis rubra_ (nickname: Crimson jelly) and _Turritopsis dohrnii_. The paper identified a series of gene variations and amplifications related to gene replication, DNA repair, telomere maintenance, the redox environment, stem cell populations, and intercellular communication. 
 
   Based on the aforementioned research on various long-lived animals, it is easy to discover that they generally share the following commonalities:
 
