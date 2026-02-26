@@ -26,21 +26,21 @@ const galleryData = {
         { 
             title: "碰撞余波", 
             title_en: "Collision Aftermath",
-            path: "assets/3d/renders/20221208_256.png", 
+            path: "assets/3d/renders/20221208_256.jpg", 
             desc: "刚体碰撞模拟，使用 Blender 制作。", 
             desc_en: "Rigid body collision simulation created with Blender." 
         },
         { 
             title: "凝蓝", 
             title_en: "Condensed Azure",
-            path: "assets/3d/renders/20230727.png", 
+            path: "assets/3d/renders/20230727.jpg", 
             desc: "软体模拟，使用 Blender 制作。", 
             desc_en: "Soft body physics simulation created with Blender." 
         },
         { 
             title: "溢影", 
             title_en: "Shadow Overflow",
-            path: "assets/3d/renders/20230731.png", 
+            path: "assets/3d/renders/20230731.jpg", 
             desc: "软体模拟，使用 Blender 制作。", 
             desc_en: "Soft body physics simulation created with Blender." 
         }
