@@ -22,7 +22,7 @@ const bioData = {
     "bio": [
 
         {
-            id: "bio-2025-idea-significantly-extending-lifespan",
+            id: "bio-2025-concepts-significantly-extending-lifespan",
             title: "大幅度延长寿命的思路",
             title_en: "Concepts for Significantly Extending Lifespan",
             
