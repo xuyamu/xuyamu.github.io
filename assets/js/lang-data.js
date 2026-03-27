@@ -115,7 +115,29 @@ const uiTranslations = {
 
         "t_s_sketch":"素描", "t_s_water":"水彩", "t_s_3dm":"3D 建模", "t_s_3da":"3D 动画", "t_s_cg":"CG 板绘", "t_s_ph":"摄影", "t_s_vid":"摄像", "t_s_cm":"跨媒体艺术", "t_s_ai":"AI 绘画",
         "t_s_code":"编程", "t_s_quan":"量化交易", "t_s_game":"游戏开发", "t_s_agent":"智能体开发", "t_s_bioe":"生物工程", "t_s_cell":"细胞生物学", "t_s_drug":"计算机辅助药物设计",
-        "t_s_hand":"手工", "t_s_cook":"料理", "t_s_bake":"烘焙"
+        "t_s_hand":"手工", "t_s_cook":"料理", "t_s_bake":"烘焙",
+
+        /* === 将以下内容添加到 "zh" 对象末尾 === */
+        "lc_tag": "Tools / Genomic stability",
+        "lc_title": "基因修复能力推演",
+        "lc_desc": "基于体细胞突变负荷（Somatic Mutation Burden）理论。计算若要实现特定寿命跨度，你的生物系统需要达到的底层修复提升倍数。",
+        "lc_age": "当前年龄",
+        "lc_nat": "预期自然寿命",
+        "lc_tar": "目标寿命",
+        "lc_btn": "开始逻辑推演 / Initiate Deduction",
+        "lc_req": "Required Enhancement",
+        "lc_unit": "倍",
+        "lc_data_title": "Deduction Data",
+        "lc_acc": "已积累突变:",
+        "lc_bud": "剩余预算:",
+        "lc_rate": "未来允许率:",
+        "lc_alert": "目标寿命必须大于当前年龄和预期自然寿命。",
+        "lc_eval_1": "目标在碳基哺乳动物常规干预范围内，保持健康代谢即可。",
+        "lc_eval_2": "任务极其艰巨。你需要将基因修复能力提高到现在的 <strong style='color:#fff;'>{m} 倍</strong>，这相当于得让自己的基因修复能力达到 <strong>弓头鲸 (Bowhead Whale)</strong> 的水平。",
+        "lc_eval_3": "挑战极大。你需要提高修复能力超过 4 倍，这已 <strong>超越弓头鲸</strong> 的生物极限。",
+        "lc_eval_4": "生命奇迹。在 9 倍左右时，你将比肩地表最长寿脊椎动物 <strong>格陵兰鲨 (Greenland Shark)</strong>，需要在细胞层面实现极寒深海级别的稳定性。",
+        "lc_eval_5": "跨物种进化。你需要的修复效率已 <strong>超越格陵兰鲨</strong>，这要求对DNA聚合酶和修复蛋白进行深层工程化改造。",
+        "lc_eval_6": "科幻级跨越。你需要将基因稳定性提升超过 <strong style='color:#fff;'>15 倍</strong>，这要求构建一套 <strong>远远超过格陵兰鲨</strong> 的全新修复机制。"
 
     },
 
@@ -226,7 +248,29 @@ const uiTranslations = {
 
         "t_s_sketch":"Sketch", "t_s_water":"Watercolor", "t_s_3dm":"3D Modeling", "t_s_3da":"3D Animation", "t_s_cg":"Digital Painting", "t_s_ph":"Photography", "t_s_vid":"Videography", "t_s_cm":"Intermedia Art", "t_s_ai":"AI Generation",
         "t_s_code":"Programming", "t_s_quan":"Quant Trading", "t_s_game":"Game Dev", "t_s_agent":"AI Agents", "t_s_bioe":"Bio-Engineering", "t_s_cell":"Cell Biology", "t_s_drug":"CADD",
-        "t_s_hand":"Handicraft", "t_s_cook":"Cuisine", "t_s_bake":"Baking"
+        "t_s_hand":"Handicraft", "t_s_cook":"Cuisine", "t_s_bake":"Baking",
+
+        /* === 将以下内容添加到 "en" 对象末尾 === */
+        "lc_tag": "Tools / Genomic Stability",
+        "lc_title": "Genomic Stability Deduction",
+        "lc_desc": "Based on the Somatic Mutation Burden theory. Calculate the underlying repair enhancement multiplier required for your biological system to achieve a specific lifespan.",
+        "lc_age": "Current Age",
+        "lc_nat": "Expected Lifespan",
+        "lc_tar": "Target Lifespan",
+        "lc_btn": "Initiate Deduction",
+        "lc_req": "Required Enhancement",
+        "lc_unit": "x",
+        "lc_data_title": "Deduction Data",
+        "lc_acc": "Accumulated Mutations:",
+        "lc_bud": "Remaining Budget:",
+        "lc_rate": "Allowed Future Rate:",
+        "lc_alert": "Target lifespan must be greater than your current age and expected natural lifespan.",
+        "lc_eval_1": "Target is within the standard intervention range for carbon-based mammals. Maintain a healthy metabolism.",
+        "lc_eval_2": "Extremely arduous task. You need to increase gene repair capacity to <strong style='color:#fff;'>{m}x</strong>, equivalent to the gene repair capability of a <strong>Bowhead Whale</strong>.",
+        "lc_eval_3": "Massive challenge. An increase of over 4x is required, <strong>surpassing the biological limits of the Bowhead Whale</strong>.",
+        "lc_eval_4": "A biological miracle. At around 9x, you rival the longest-living vertebrate, the <strong>Greenland Shark</strong>, requiring extreme deep-sea level cellular stability.",
+        "lc_eval_5": "Cross-species evolution. The required efficiency <strong>surpasses the Greenland Shark</strong>, necessitating deep genetic engineering of DNA polymerases and repair proteins.",
+        "lc_eval_6": "Sci-fi level leap. A >15x increase demands a completely repair mechanism <strong>far beyond the Greenland Shark</strong>."
 
     }
 };
