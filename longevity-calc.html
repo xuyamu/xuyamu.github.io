@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <script>
+        if (!document.getElementById('bg-music')) {
+            var path = window.location.pathname.split('/').pop() + window.location.search;
+            window.location.replace('/index.html?route=' + encodeURIComponent(path));
+        }
+    </script>
+    <title>YAMU | Longevity - 基因修复能力推演</title>
+</head>
+<body>
+    <div id="page-content" class="w-full" style="background: transparent !important; min-height: 100vh;">
+        
+        <header class="max-w-4xl mx-auto mb-16 pt-32 px-6 md:px-10 w-full">
+            <button onclick="navigate('bio-code.html')" 
+                style="background:transparent; border:none; cursor:pointer; padding:0; display:flex; align-items:center; gap:1rem;"
+                onmouseover="this.querySelector('.line').style.width='3rem'; this.querySelector('.line').style.backgroundColor='#608BC1'; this.querySelector('.txt').style.color='#608BC1';"
+                onmouseout="this.querySelector('.line').style.width='2rem'; this.querySelector('.line').style.backgroundColor='#4b5563'; this.querySelector('.txt').style.color='#9ca3af';">
+                <span class="line" style="width:2rem; height:1px; background-color:#4b5563; transition:all 0.3s;"></span>
+                <span class="txt" data-i18n="nav_back_nexus" style="font-family:monospace; font-size:14px; letter-spacing:0.1em; text-transform:uppercase; color:#9ca3af; transition:all 0.3s;">Back To Bio-Code</span>
+            </button>
+
+            <span data-i18n="lc_tag" style="color:#608BC1; font-family:monospace; letter-spacing:0.1em; text-transform:uppercase; font-size:12px; display:block; margin-top:2rem;">Tools / Genomic stability</span>
+            <h1 data-i18n="lc_title" style="font-family:'Noto Serif SC', serif; font-size:2.25rem; color:#fff; margin-top:1rem; font-weight:700;">基因修复能力推演</h1>
+            <p data-i18n="lc_desc" style="color:#9ca3af; margin-top:1.5rem; max-width:42rem; line-height:1.8; font-size:1rem; text-align:justify;">
+                基于体细胞突变负荷（Somatic Mutation Burden）理论。计算若要实现特定寿命跨度，你的生物系统需要达到的底层修复提升倍数。
+            </p>
+        </header>
+
+        <main class="max-w-4xl mx-auto flex flex-col px-6 md:px-10 pb-40 w-full">
+            <div style="background: rgba(12, 12, 16, 0.75); backdrop-filter: blur(24px) saturate(180%); -webkit-backdrop-filter: blur(24px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 16px; padding: 2.5rem 3rem; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+                
+                <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                    <div>
+                        <label data-i18n="lc_age" style="display:block; color:#8E9AAF; font-size:0.75rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.75rem;">当前年龄</label>
+                        <input type="number" id="user_age" value="32" 
+                            style="width:100%; padding:1rem; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:#fff; border-radius:8px; outline:none; transition:all 0.3s; font-size:1rem; box-sizing:border-box;"
+                            onfocus="this.style.borderColor='#608BC1'; this.style.background='rgba(255,255,255,0.12)'"
+                            onblur="this.style.borderColor='rgba(255,255,255,0.2)'; this.style.background='rgba(255,255,255,0.08)'">
+                    </div>
+                    <div>
+                        <label data-i18n="lc_nat" style="display:block; color:#8E9AAF; font-size:0.75rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.75rem;">预期自然寿命</label>
+                        <input type="number" id="nat_life" value="83" 
+                            style="width:100%; padding:1rem; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:#fff; border-radius:8px; outline:none; transition:all 0.3s; font-size:1rem; box-sizing:border-box;"
+                            onfocus="this.style.borderColor='#608BC1'; this.style.background='rgba(255,255,255,0.12)'"
+                            onblur="this.style.borderColor='rgba(255,255,255,0.2)'; this.style.background='rgba(255,255,255,0.08)'">
+                    </div>
+                    <div>
+                        <label data-i18n="lc_tar" style="display:block; color:#8E9AAF; font-size:0.75rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:0.75rem;">目标寿命</label>
+                        <input type="number" id="target_life" value="200" 
+                            style="width:100%; padding:1rem; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:#fff; border-radius:8px; outline:none; transition:all 0.3s; font-size:1rem; box-sizing:border-box;"
+                            onfocus="this.style.borderColor='#608BC1'; this.style.background='rgba(255,255,255,0.12)'"
+                            onblur="this.style.borderColor='rgba(255,255,255,0.2)'; this.style.background='rgba(255,255,255,0.08)'">
+                    </div>
+                </div>
+
+                <button onclick="runDeduction()" data-i18n="lc_btn"
+                    style="width:100%; padding:1.2rem; background-color:transparent; color:#608BC1; border:1px solid rgba(96, 139, 193, 0.5); border-radius:8px; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; cursor:pointer; transition:all 0.4s ease; font-size:0.9rem; margin-top:1rem;"
+                    onmouseover="this.style.backgroundColor='rgba(96, 139, 193, 0.15)'; this.style.borderColor='#608BC1'; this.style.color='#fff'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 10px 30px rgba(96, 139, 193, 0.2)';"
+                    onmouseout="this.style.backgroundColor='transparent'; this.style.borderColor='rgba(96, 139, 193, 0.5)'; this.style.color='#608BC1'; this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+                    开始逻辑推演 / Initiate Deduction
+                </button>
+
+                <div id="result_panel" style="display:none; margin-top: 4rem; padding-top: 3.5rem; border-top: 1px solid rgba(255, 255, 255, 0.15); opacity:0; transition: opacity 0.8s ease;">
+                    <div style="display:flex; flex-wrap:wrap; gap:3rem;">
+                        <div style="flex: 1 1 300px;">
+                            <span data-i18n="lc_req" style="color:#608BC1; font-size:0.8rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase;">Required Enhancement</span>
+                            <div style="font-size:4rem; font-weight:700; color:#fff; margin:1rem 0;">
+                                <span id="res_multiplier">--</span> <span data-i18n="lc_unit" style="font-size:1.5rem; color:#608BC1;">倍</span>
+                            </div>
+                            <p id="res_comment" style="color:#d1d5db; font-style:italic; font-size:0.95rem; line-height:1.8; text-align:justify;"></p>
+                        </div>
+                        
+                        <div style="flex: 1 1 250px; background:rgba(0,0,0,0.4); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:1.5rem; font-family:monospace; color:#a1a1aa; font-size:0.9rem;">
+                            <h4 data-i18n="lc_data_title" style="color:#fff; opacity:0.6; text-transform:uppercase; letter-spacing:0.15em; font-family:sans-serif; font-size:0.75rem; font-weight:700; margin-top:0; margin-bottom:1.5rem;">Deduction Data</h4>
+                            
+                            <div style="display:flex; justify-content:space-between; margin-bottom:1rem;">
+                                <span data-i18n="lc_acc">已积累突变:</span> <span id="data_acc" style="color:#fff; font-weight:bold;">--</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between; margin-bottom:1rem;">
+                                <span data-i18n="lc_bud">剩余预算:</span> <span id="data_bud" style="color:#fff; font-weight:bold;">--</span>
+                            </div>
+                            <div style="display:flex; justify-content:space-between;">
+                                <span data-i18n="lc_rate">未来允许率:</span> <span id="data_rate" style="color:#608BC1; font-weight:bold;">--</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <script>
+            // 确保每次打开页面或切换语言时，如果结果面板开着，评论也能更新
+            window.lastDeductionMultiplier = null;
+
+            window.runDeduction = function() {
+                const age = parseFloat(document.getElementById('user_age').value);
+                const nat = parseFloat(document.getElementById('nat_life').value);
+                const tar = parseFloat(document.getElementById('target_life').value);
+
+                // 动态获取当前语言字典
+                const lang = window.currentLang || 'zh';
+                const t = typeof uiTranslations !== 'undefined' ? uiTranslations[lang] : null;
+
+                if (tar <= age || tar <= nat) { 
+                    alert(t ? t.lc_alert : "目标寿命必须大于当前年龄和预期自然寿命。"); 
+                    return; 
+                }
+
+                const humanRate = 47;
+                const threshold = humanRate * nat;
+                const currentAcc = humanRate * age;
+                const budget = threshold - currentAcc;
+                const yearsLeft = tar - age;
+                const allowedRate = budget / yearsLeft;
+                const multiplier = humanRate / allowedRate;
+                
+                window.lastDeductionMultiplier = multiplier;
+
+                document.getElementById('res_multiplier').innerText = multiplier.toFixed(2);
+                document.getElementById('data_acc').innerText = Math.round(currentAcc);
+                document.getElementById('data_bud').innerText = Math.round(budget);
+                document.getElementById('data_rate').innerText = allowedRate.toFixed(1) + " /yr";
+
+                updateDeductionComment(multiplier, t);
+                
+                const panel = document.getElementById('result_panel');
+                panel.style.display = 'block';
+                setTimeout(() => { panel.style.opacity = '1'; }, 50);
+
+                const clickSfx = document.getElementById('sound-click');
+                if (clickSfx) clickSfx.play();
+            };
+
+            // 独立提取出评价更新逻辑，方便在切换语言时调用
+            function updateDeductionComment(multiplier, t) {
+                if (multiplier === null) return;
+                let comment = "";
+                if (multiplier <= 1.2) {
+                    comment = t ? t.lc_eval_1 : "目标在碳基哺乳动物常规干预范围内，保持健康代谢即可。";
+                } else if (multiplier <= 3.5) {
+                    comment = t ? t.lc_eval_2.replace('{m}', multiplier.toFixed(1)) : `任务极其艰巨。你需要将基因修复能力提高到现在的 <strong style="color:#fff;">${multiplier.toFixed(1)} 倍</strong>，这相当于得让自己的生物系统达到 <strong>弓头鲸 (Bowhead Whale)</strong> 的水平。`;
+                } else if (multiplier <= 4.5) {
+                    comment = t ? t.lc_eval_3 : `挑战极大。你需要提高修复能力超过 4 倍，这已 <strong>超越弓头鲸</strong> 的生物极限。`;
+                } else if (multiplier <= 9.5) {
+                    comment = t ? t.lc_eval_4 : `生命奇迹。在 9 倍左右时，你将比肩地表最长寿脊椎动物 <strong>格陵兰鲨 (Greenland Shark)</strong>，需要在细胞层面实现极寒深海级别的稳定性。`;
+                } else if (multiplier <= 15) {
+                    comment = t ? t.lc_eval_5 : `跨物种进化。你需要的修复效率已 <strong>超越格陵兰鲨</strong>，这要求对DNA聚合酶和修复蛋白进行深层工程化改造。`;
+                } else {
+                    comment = t ? t.lc_eval_6 : `科幻级跨越。你需要将基因稳定性提升超过 <strong style="color:#fff;">15 倍</strong>，这要求构建一套 <strong>远远超过格陵兰鲨</strong> 的全新非天然修复机制，彻底突破碳基生命的演化禁区。`;
+                }
+                document.getElementById('res_comment').innerHTML = comment;
+            }
+
+            // 监听全局的语言切换事件，实时翻译下方生成的评价文案
+            window.addEventListener('langChanged', () => {
+                if (window.lastDeductionMultiplier !== null && typeof uiTranslations !== 'undefined') {
+                    const lang = window.currentLang || 'zh';
+                    updateDeductionComment(window.lastDeductionMultiplier, uiTranslations[lang]);
+                }
+            });
+            
+            // 首次加载时立刻执行一次静态翻译
+            setTimeout(() => { 
+                if (typeof applyLanguage === 'function') applyLanguage(); 
+                if (typeof updateContent === 'function') updateContent();
+            }, 50);
+        </script>
+    </div>
+</body>
+</html>
