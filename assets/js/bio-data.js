@@ -22,6 +22,19 @@ const bioData = {
     "bio": [
 
         {
+            id: "bio-2026-genomic-stability-calculator",
+            title: "基因修复能力计算器：跨物种的长生逻辑",
+            title_en: "Genomic Stability Calculator: Cross-Species Longevity Logic",
+            
+            date: "2026-03",
+            // 因为这是站内工具，link 可以指向我们新建的 html 页面
+            link: "longevity-calc.html", 
+            
+            excerpt: "基于哺乳动物体细胞突变负荷（Somatic Mutation Burden）理论，量化从人类自然寿命跨越到弓头鲸甚至格陵兰鲨等级所需的基因修复技术倍数。",
+            excerpt_en: "Based on the Somatic Mutation Burden theory, this tool quantifies the leap in gene repair capacity required to transcend human biological limits to the levels of bowhead whales or Greenland sharks."
+        },
+
+        {
             id: "bio-2025-concepts-significantly-extending-lifespan",
             title: "大幅度延长寿命的思路",
             title_en: "Concepts for Significantly Extending Lifespan",
