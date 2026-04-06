@@ -20,7 +20,7 @@ const logicData = {
         { 
             id: "philosophy-2014-human-cloning", 
             title: "克隆人相关讨论", 
-            title_en: "Discussions related to human cloning",
+            title_en: "Discussions Related to Human Cloning",
             date: "2014-06-29",
             link: "https://www.douban.com/note/364491598", 
             excerpt: "本文从生物进化的基因传递需求、个体心理动机以及法律规制等多个维度，探讨了克隆人所面临的社会困境与合法性难题。",
@@ -71,7 +71,7 @@ const logicData = {
             id: "art-2014-reflections",
             title: "艺术家的最高任务是与政治相对抗？——读程美信的《邱志杰不过是个陪嫁伴娘》有感", 
             // 内部改为单引号
-            title_en: "Reflections after reading Cheng Meixin's 'Qiu Zhijie is merely a bridesmaid at the wedding'", 
+            title_en: "Reflections After Reading Cheng Meixin's 'Qiu Zhijie Is Merely a Bridesmaid at the Wedding'", 
             date: "2014-07-04", 
             link: "https://www.douban.com/note/366053345", 
             excerpt: "本文通过反驳程美信关于“艺术必须通过政治对抗才能获得自由”的观点，论证了艺术价值的多元本质，并指出将政治标准作为评判艺术唯一尺度的做法本身就是一种思维的局限。",
@@ -150,7 +150,7 @@ const logicData = {
         { 
             id: "psychology-2021-dopamine-and-national-character",
             title: "多巴胺和民族性格", 
-            title_en: "Dopamine and national character",
+            title_en: "Dopamine and National Character",
             date: "2021-09-04", 
             link: "https://www.zhihu.com/question/380200645/answer/2072678502", 
             excerpt: "本文探究了不同单胺相关基因在不同民族群体中的差异及对于民族群体整体个性的潜在影响。",

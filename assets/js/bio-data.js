@@ -4,8 +4,8 @@ const bioData = {
         {
             id: "paper-2025-01",
             // 论文标题通常保留英文原文，或者您也可以提供中文翻译
-            title: "Optimized Yamanaka factors combined with TERT gene therapy for enhanced anti-aging effects",
-            title_en: "Optimized Yamanaka factors combined with TERT gene therapy for enhanced anti-aging effects",
+            title: "Optimized Yamanaka Factors Combined with TERT Gene Therapy for Enhanced Anti-Aging Effects",
+            title_en: "Optimized Yamanaka Factors Combined with TERT Gene Therapy for Enhanced Anti-Aging Effects",
             
             tags: ["Peer Reviewed", "Published"],
             date: "2025-05",
@@ -62,7 +62,7 @@ const bioData = {
         {
             id: "bio-2025-notes-on-the-turritopsis-dohrnii-jellyfish",
             title: "灯塔水母杂谈",
-            title_en: "Miscellaneous notes on the Turritopsis dohrnii jellyfish",
+            title_en: "Miscellaneous Notes on the Turritopsis Dohrnii Jellyfish",
             
             date: "2025-07",
             link: "https://www.zhihu.com/question/1925165628454593296/answer/1925182668292720046", 
@@ -74,7 +74,7 @@ const bioData = {
         {
             id: "bio-2025-limitations-of-current-anti-aging-technologies",
             title: "目前抗衰老技术的局限性与未来发展方向",
-            title_en: "Limitations of current anti-aging technologies and future development directions",
+            title_en: "Limitations of Current Anti-Aging Technologies and Future Development Directions",
             
             date: "2025-04",
             link: "https://www.zhihu.com/question/1894821555785167625/answer/1894852335878009371", 
@@ -98,7 +98,7 @@ const bioData = {
         {
             id: "bio-2023-analysis-of-the-safety-of-genetically-modified-crops",
             title: "关于转基因作物的安全性分析",
-            title_en: "Analysis of the safety of genetically modified crops",
+            title_en: "Analysis of the Safety of Genetically Modified Crops",
             
             date: "2023-08",
             link: "https://zhuanlan.zhihu.com/p/652808286", 
@@ -111,7 +111,7 @@ const bioData = {
         {
             id: "bio-2023-universal-dietary-supplement-combination-for-combating-covid-19",
             title: "抗新冠通用膳食补充剂组合",
-            title_en: "Universal dietary supplement combination for combating COVID-19.",
+            title_en: "Universal Dietary Supplement Combination for Combating COVID-19",
             
             date: "2023-01",
             link: "https://www.douban.com/note/844037979", 
@@ -124,7 +124,7 @@ const bioData = {
         {
             id: "bio-2023-mechanisms-of-COVID-19-induced-brain-fog",
             title: "新冠引起脑雾的机制与潜在改善的方法",
-            title_en: "The mechanisms of COVID-19-induced brain fog and potential methods for improvement.",
+            title_en: "The Mechanisms of COVID-19-Induced Brain Fog and Potential Methods for Improvement",
             
             date: "2023-01",
             link: "https://www.zhihu.com/question/576640187/answer/2853490446", 
@@ -136,7 +136,7 @@ const bioData = {
         {
             id: "bio-2022-methods-to-reduce-the-side-effects-of-rapamycin",
             title: "减少雷帕霉素的副作用但同时达到抗衰老效果的办法",
-            title_en: "Methods to reduce the side effects of rapamycin while still achieving its anti-aging effects",
+            title_en: "Methods to Reduce the Side Effects of Rapamycin While Still Achieving Its Anti-Aging Effects",
             
             date: "2022-05",
             link: "https://www.zhihu.com/question/529937596/answer/2458130467", 
@@ -148,7 +148,7 @@ const bioData = {
         {
             id: "bio-2022-scientific-methods-for-extending-lifespan",
             title: "延长寿命的科学方法",
-            title_en: "Scientific methods for extending lifespan",
+            title_en: "Scientific Methods for Extending Lifespan",
             
             date: "2022-04",
             link: "https://www.zhihu.com/question/469050664/answer/1978441491", 
@@ -160,7 +160,7 @@ const bioData = {
         {
             id: "bio-2022-anti-aging-roadmap-from-zero-cost",
             title: "从零成本到高科技的抗衰路线图",
-            title_en: "The anti-aging roadmap: from zero cost to high-tech solutions.",
+            title_en: "The Anti-Aging Roadmap: From Zero Cost to High-Tech Solutions",
             
             date: "2022-03",
             link: "https://www.zhihu.com/question/435796187/answer/2442817172", 
@@ -172,7 +172,7 @@ const bioData = {
         {
             id: "bio-2022-issues-related-to-senolytic-compounds",
             title: "衰老细胞清除类化合物相关问题探讨",
-            title_en: "Discussion of issues related to senolytic compounds",
+            title_en: "Discussion of Issues Related to Senolytic Compounds",
             
             date: "2022-03",
             link: "https://www.zhihu.com/question/504315964/answer/2376857676", 
@@ -185,7 +185,7 @@ const bioData = {
         {
             id: "bio-2021-mechanisms-of-brain-aging",
             title: "脑部衰老的机制与逆转脑部衰老的方法",
-            title_en: "Mechanisms of brain aging and methods to reverse brain aging",
+            title_en: "Mechanisms of Brain Aging and Methods to Reverse Brain Aging",
             
             date: "2021-12",
             link: "https://www.zhihu.com/question/504448122/answer/2263648146", 
@@ -210,7 +210,7 @@ const bioData = {
         {
             id: "bio-2021-how-to-choose-anti-aging-supplements",
             title: "谈谈如何挑选抗衰老补充剂",
-            title_en: "How to choose anti-aging supplements",
+            title_en: "How to Choose Anti-Aging Supplements",
             
             date: "2021-06",
             link: "https://www.zhihu.com/question/22830178/answer/1944970441", 
@@ -222,7 +222,7 @@ const bioData = {
         {
             id: "bio-2021-analysis-of-advantageous-genes-in-long-lived-animals",
             title: "长寿动物优势基因分析",
-            title_en: "Analysis of advantageous genes in long-lived animals",
+            title_en: "Analysis of Advantageous Genes in Long-Lived Animals",
             
             date: "2021-05",
             link: "https://zhuanlan.zhihu.com/p/373766352", 
@@ -235,7 +235,7 @@ const bioData = {
         {
             id: "bio-2021-summary-of-the-mechanisms-of-aging-in-eukaryotes",
             title: "真核生物衰老的机制总结和通往永生的可能道路",
-            title_en: "A summary of the mechanisms of aging in eukaryotes and possible paths to immortality.",
+            title_en: "A Summary of the Mechanisms of Aging in Eukaryotes and Possible Paths to Immortality",
             
             date: "2021-03",
             link: "https://www.zhihu.com/question/417913464/answer/1783434180", 
