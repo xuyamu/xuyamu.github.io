@@ -129,6 +129,15 @@ const logicData = {
     // 心理学 PSYCHOLOGY
     psychology: [
         { 
+            id: "psychology-2026-explorations-into-mental-health-issues",
+            title: "对于人工智能时代的心理健康问题的一些探讨", 
+            title_en: "Some Explorations into Mental Health Issues in the Age of Artificial Intelligence",
+            date: "2026-05-04", 
+            link: "https://www.zhihu.com/question/2034614995724543663/answer/2034637814399243311", 
+            excerpt: "本文探讨了人工智能对人类心理的影响及我们该如何应对这些影响。",
+            excerpt_en: "This article explores the psychological impact of artificial intelligence on humans and how we should address these effects." 
+        },
+        { 
             id: "psychology-2025-analysis-of-the-reasons-why-Feng-Ji-is-single",
             title: "对于冯骥单身原因的分析", 
             title_en: "An Analysis of the Reasons Behind Feng Ji's Single Status",
