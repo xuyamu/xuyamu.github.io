@@ -144,9 +144,7 @@
 
 　　Against this backdrop, we can imagine a cyber-tragedy:
 
-　　*An AI recommends an ideal human partner to a clever AI user, based on historical human romance patterns. Because the user has been taking drugs to reduce ΔFosB accumulation, they still retain an interest in real human relationships. They plan meticulously and finally find the person the AI recommended.*
-
-　　*However, the reward threshold of the recommended person has been significantly raised by digital entertainment and blockchain technology, and they are heavily reliant on generative AI for information and companionship. They have already lost interest in real interpersonal relationships. Meanwhile, the first person, having developed expectations for this "ideal partner" based on a perfect predictive model, finds it difficult to ever feel anticipation for anyone else. In this story, it is a case of "Success by AI, Failure by AI."*
+　　*An AI recommends an ideal human partner to a clever AI user, based on historical human romance patterns. Because the user has been taking drugs to reduce ΔFosB accumulation, they still retain an interest in real human relationships. They plan meticulously and finally find the person the AI recommended.However, the reward threshold of the recommended person has been significantly raised by digital entertainment and blockchain technology, and they are heavily reliant on generative AI for information and companionship. They have already lost interest in real interpersonal relationships. Meanwhile, the first person, having developed expectations for this "ideal partner" based on a perfect predictive model, finds it difficult to ever feel anticipation for anyone else. In this story, it is a case of "Success by AI, Failure by AI."*
 
 **Our Future**
 
