@@ -40,6 +40,8 @@
 
 The Empathy and Systemizing Quotient: The Psychometric Properties of the Dutch Version and a Review of the Cross-Cultural Stability （共情与系统化商数：荷兰版的心理测量特性及跨文化稳定性的评述）这篇论文列举了不同论文和量表中提供的 SQ 和 EQ 的平均值和标准差。
 
+　　根据CPP出版的 MBTI Manual 中的数据，各类型的人口比例为：
+
 ![INTJINTP01](assets/articles/images/logic-data/INTJINTP01.webp)
 
 从图表中我们可以看到，F 型女性在女性中占比 75.5%，F 型男性在男性中占比 43.4%，I 型女性在女性中占比 47.3%，I 型男性在男性中占比 54%，这组数据显示，T/F 维度在男女性别上存在很大的差距。和女性在 EQ 上得分比男性高，而在 SQ 上得分比男性低这个现象具有一致的性别倾向性。

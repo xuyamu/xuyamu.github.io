@@ -40,6 +40,10 @@
 
 &emsp;&emsp;The paper *The Empathy and Systemizing Quotient: The Psychometric Properties of the Dutch Version and a Review of the Cross-Cultural Stability* lists the means and standard deviations of SQ and EQ provided in various papers and scales.
 
+&emsp;&emsp;According to data from the *MBTI Manual* published by CPP, the population proportions for each type are as follows:
+
+![INTJINTP01](assets/articles/images/logic-data/INTJINTP01.webp)
+
 &emsp;&emsp;From the charts, we can see that F-type females account for 75.5% of women, F-type males account for 43.4% of men, I-type females account for 47.3% of women, and I-type males account for 54% of men. This set of data shows a significant gender gap in the T/F dimension. This is consistent with the gender tendency phenomenon where women score higher than men in EQ and lower than men in SQ.
 
 &emsp;&emsp;The paper *Regional Gray Matter Volume Is Associated with Empathizing and Systemizing in Young Adults* investigated the correlation of regional gray matter volume (rGMV) with empathizing and systemizing. The study showed that rGMV in the default mode network (DMN) regions correlates with empathizing, whereas rGMV in the external attention system (EAS) regions correlates with systemizing. The DMN regions are active during resting states and generally suspended during externally directed, attention-demanding tasks. The EAS regions, responsible for external attention, respond in the opposite manner during these tasks. Regions such as the medial prefrontal cortex (mPFC), precuneus, and superior temporal sulcus (STS) belong to the DMN, while regions like the lateral prefrontal cortex, inferior parietal lobule, dorsal anterior cingulate cortex (dACC), supplementary motor area, and temporoparietal cortex belong to the EAS.
@@ -82,7 +86,7 @@
 
 &emsp;&emsp;In the evolutionary history of the human brain, there is a genetic sequence that influenced brain volume. This sequence encodes the DUF1220 protein domain (also known as Olduvai; the name comes from the Olduvai Gorge in East Africa, the source of major anthropological discoveries in the early to mid-1900s).  This sequence forms the core of the NBPF gene. An increase in the copy number (dosage) of DUF1220 is a major contributor to the evolutionary increase in brain size, neuron number, and cognitive abilities associated with primates.
 
-![DUF1220](assets/articles/images/logic-data/DUF1220-3-Figure1-1.png）
+![DUF1220](assets/articles/images/logic-data/DUF1220-3-Figure1-1.png)
 
 &emsp;&emsp;Homo sapiens have up to 270 copies of DUF1220, whereas Neanderthals could reach up to 350 copies. Neanderthals are the mammals with the highest number of DUF1220 gene copies.
 
@@ -98,7 +102,7 @@
 
 &emsp;&emsp;According to *DUF1220 Dosage Is Linearly Associated with Increasing Severity of the Three Primary Symptoms of Autism*, in individuals with autism spectrum disorder, the copy number of CON1 is also linearly associated with the severity of the three primary ASD symptoms in a dose-response manner: social deficits (p = 0.021), communicative impairments (p = 0.030), and repetitive behaviors (p = 0.047). On average, for every additional CON1 copy, the social diagnostic score increases by 0.25 points (SE 0.11 p = 0.021), the communication diagnostic score increases by 0.18 points (SE 0.08 p = 0.030), and the repetitive behavior diagnostic score increases by 0.10 points (SE = 0.05 p = 0.047).
 
-![INTJINTP02](assets/articles/images/logic-data/INTJINTP02.webp）
+![INTJINTP02](assets/articles/images/logic-data/INTJINTP02.webp)
 
 &emsp;&emsp;In the NBPF sequence, every CON2 is strictly paired with one to three CON1s. This means that if you want to increase your IQ by adding CON2, you have to endure the risk of autism brought on by the increase in CON1.
 
@@ -123,11 +127,11 @@ According to the data provided in that answer, INTJ/INTP personalities indeed ha
 
 &emsp;&emsp;Furthermore, here is the MBTI type distribution data for members of the Sheng Han Society (a high-IQ society in China) circulating on the internet:
 
-![INTJINTP03](assets/articles/images/logic-data/INTJINTP03.jpg）
-![INTJINTP04](assets/articles/images/logic-data/INTJINTP04.jpg）
+![INTJINTP03](assets/articles/images/logic-data/INTJINTP03.jpg)
+![INTJINTP04](assets/articles/images/logic-data/INTJINTP04.jpg)
 
 &emsp;&emsp;According to web snapshots, this data likely originates from Chen Wenjin's Weibo:
-![INTJINTP05](assets/articles/images/logic-data/INTJINTP05.jpg）
+![INTJINTP05](assets/articles/images/logic-data/INTJINTP05.jpg)
 Chen Wenjin is the founder of Sheng Han; thus, the data he provides has a relatively high degree of credibility (it is highly likely to be the actual test results of real Sheng Han members).
 
 &emsp;&emsp;In summary, we can reasonably hypothesize: the higher a person's IQ, the more likely they are to carry risk genes for high-IQ autism, making them more susceptible to autism, and the more likely they are to test as INTJ or INTP on the MBTI test.
@@ -179,7 +183,7 @@ https://medicine.uiowa.edu/content/autism-combined-high-iq-increases-risk-suicid
 
  &emsp;&emsp;The paper *Autism Spectrum Disorder and IQ – A Complex Interplay* provides a chart of IQ distribution among autistic patients:
  
- ![INTJINTP06](assets/articles/images/logic-data/INTJINTP06.webp）
+![INTJINTP06](assets/articles/images/logic-data/INTJINTP06.webp)
 
 > Upper part: IQ level distribution of the sample described in Wolff et al. (2022) as well as of a typical normative sample. The y-axis shows percentages, and the x-axis shows IQ values, aggregated by IQ levels 7 – 1 (from left to right) according to the multiaxial system (20, 21). Lower part: N = number of included individuals per ADOS module and sub-cohort, a = mean age (in years) of included individuals. The IQ level distribution shows the classification according to the psychiatric multiaxial schema (20, 21). In this schema, individuals can be categorized on axis 3 "intelligence level" according to the following classification: IQ Level 1 = IQ > 129, IQ Level 2 = IQ = 115 – 129, IQ Level 3 = IQ = 85 – 114, IQ Level 4 = IQ = 70 – 84, IQ Level 5 = IQ = 50 – 69, IQ Level 6 = IQ = 25 – 49, IQ Level 7 = IQ = 20 – 34, IQ Level 8 (not shown here as we had no participants labeled with IQ level 8) = IQ < 20. We also present the IQ level distribution in a normative sample.
 
