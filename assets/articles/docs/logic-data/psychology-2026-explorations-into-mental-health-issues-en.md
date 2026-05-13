@@ -174,7 +174,7 @@
 *"If the spring breeze has any pity for the flowers, could it permit me to be a youth once more?"*
 *— Anonymous (Modern/Contemporary), "Chanting of the Grey Beard"*
 
-　　My friend BeeMiner&Fund (formerly a subordinate of Friedcat) once shared an interesting anecdote with me: In 2014, when Vitalik came to Shenzhen to promote the concept of Ethereum, he took Vitalik to Huaqiangbei to buy a 50-yuan USB flash drive. Vitalik was extremely happy about it, which left a deep impression on BeeMiner&Fund. In his eyes, Vitalik was still that simple and kind "Little V(小 V)." However, times have changed. After acquiring immense wealth through Ethereum and becoming a world-renowned industry leader, it is inevitable that Vitalik's reward threshold has risen significantly. So I fear he may no longer be that youth who could feel excited over such a small thing.
+　　My friend BeeMiner&Fund (formerly a subordinate of Friedcat) once shared an interesting anecdote with me: In 2014, when Vitalik came to Shenzhen to promote the concept of Ethereum, he took Vitalik to Huaqiangbei to buy a 50-yuan USB flash drive. Vitalik was extremely happy about it, which left a deep impression on BeeMiner&Fund. In his eyes, Vitalik was still that simple and kind "Little V(小 V)." However, much has changed. Having amassed immense wealth and become a world-renowned industry leader through Ethereum, one wonders: is Vitalik still that same young man who can find genuine joy in the smallest of things?
 
 ----------------------------
 
