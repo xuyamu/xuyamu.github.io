@@ -170,13 +170,22 @@ const logicData = {
     // 人工智能 AI
     ai: [
         { 
+            id: "ai-2026-some-observations-on-the-depreciation",
+            title: "对于AI时代人类劳动价值贬值现象的一些观察", 
+            title_en: "Some Observations on the Depreciation of Human Labor Value in the AI ​​Era",
+            date: "2026-05-21", 
+            link: "https://www.zhihu.com/question/2021541763731464677/answer/2040910198185906918", 
+            excerpt: "本文探讨了AI时代人类劳动价值贬值及阶级固化等现象，剖析了其对人类多巴胺奖赏机制和自我价值感带来的心理危机，并前瞻性地提出了通过设立“限制AI的人类自治区”来为人类进行“丰容”和保留火种的应对策略。",
+            excerpt_en: "This article explores phenomena such as the devaluation of human labor and social stratification in the AI era, analyzes the psychological crises it inflicts on human dopamine reward mechanisms and self-worth, and forward-looking proposes coping strategies to provide 'behavioral enrichment' and preserve the sparks of humanity by establishing 'AI-restricted human autonomous zones.'" 
+        },
+        { 
             id: "ai-2023-nature-of-intelligence",
             title: "关于智能的本质及超越人类的智能的思考", 
             title_en: "Reflections on the Nature of Intelligence and Superintelligence",
             date: "2023-06-19", 
             link: "https://zhuanlan.zhihu.com/p/637286356", 
-            excerpt: "定义智能的底层代码：当碳基经验遭遇硅基算力，智能是否能摆脱生物性的枷锁？",
-            excerpt_en: "Defining the underlying code of intelligence: Can intelligence break free from biological shackles when carbon-based experience meets silicon-based computing power?" 
+            excerpt: "本文深入探讨了智能的数学与神经本质，指出智能、自由意志与意识可以相互剥离，并前瞻性地构想了人类通过基因与材料调控智能，以及超级机器智能在多模态大吞吐量并行处理、低耗能架构和分布式机器人实体控制等方向的未来演进形态。",
+            excerpt_en: "This article deeply explores the mathematical and neural nature of intelligence, pointing out that intelligence, free will, and consciousness can be decoupled, while forward-looking conceiving the future evolution of human intelligence via genetic and material modulation, as well as super machine intelligence characterized by multimodal massive-throughput parallel processing, low-energy architectures, and distributed robotic entity control." 
         },
         { 
             id: "ai-2023-llm-neuroscience-mechanisms",
