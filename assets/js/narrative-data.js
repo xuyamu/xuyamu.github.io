@@ -103,7 +103,7 @@ const narrativeData = {
             title_en: "On universal love",
             date: "2008-07-03",
             link: "https://www.douban.com/note/14169708", 
-            excerpt: "当一颗博爱的灵魂仰望灿烂的星空，他会知道自己的渺小与微不足道，他会心生崇敬。。",
+            excerpt: "当一颗博爱的灵魂仰望灿烂的星空，他会知道自己的渺小与微不足道，他会心生崇敬。",
             excerpt_en: "When a compassionate soul looks up at the brilliant starry sky, he will know his own insignificance and triviality, and he will feel reverence."
         }
     ]
