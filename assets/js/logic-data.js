@@ -171,11 +171,11 @@ const logicData = {
     ai: [
         { 
             id: "ai-2026-some-observations-on-the-depreciation",
-            title: "对于AI时代人类劳动价值贬值现象的一些观察", 
+            title: "对于人工智能时代人类劳动价值贬值现象的一些观察", 
             title_en: "Some Observations on the Depreciation of Human Labor Value in the AI ​​Era",
             date: "2026-05-21", 
             link: "https://www.zhihu.com/question/2021541763731464677/answer/2040910198185906918", 
-            excerpt: "本文探讨了AI时代人类劳动价值贬值及阶级固化等现象，剖析了其对人类多巴胺奖赏机制和自我价值感带来的心理危机。",
+            excerpt: "本文探讨了人工智能时代人类劳动价值贬值及阶级固化等现象，剖析了其对人类多巴胺奖赏机制和自我价值感带来的心理危机。",
             excerpt_en: "This article explores phenomena such as the devaluation of human labor and social stratification in the AI era, analyzes the psychological crises it inflicts on human dopamine reward mechanisms and self-worth." 
         },
         { 
