@@ -18,7 +18,21 @@
     
     <style>
         :root { --accent-blue: #608BC1; --bg-dark: #020205; }
-        body, html { margin: 0; padding: 0; background: var(--bg-dark) !important; color: #e5e5e5; font-family: 'Inter', sans-serif; }
+        
+        /* --- 核心修复 1：全局盒模型重置 --- */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+        
+        body, html { 
+            margin: 0; 
+            padding: 0; 
+            background: var(--bg-dark) !important; 
+            color: #e5e5e5; 
+            font-family: 'Inter', sans-serif; 
+            /* --- 核心修复 2：彻底锁死横向滚动，防止左右晃动 --- */
+            overflow-x: hidden; 
+        }
     </style>
 </head>
 <body>
@@ -28,17 +42,15 @@
             .motto-font { font-family: 'Noto Serif SC', serif; }
 
             /* 核心：磨砂玻璃卡片样式 */
-            /* --- PC端样式保持不动，仅修正原代码中的 min-width 问题 --- */
             .prose-box { 
                 background: rgba(255, 255, 255, 0.03); 
-                backdrop-filter: blur(25px) saturate(180%); /* 增加饱和度补偿，有助于在 0.03 透明度下显现磨砂感 */
+                backdrop-filter: blur(25px) saturate(180%); 
                 -webkit-backdrop-filter: blur(25px) saturate(180%);
                 border: 1px solid rgba(255, 255, 255, 0.1); 
                 border-radius: 12px; 
                 padding: 45px; 
                 min-height: 400px;
                 margin-bottom: 5rem;
-                /* 移除 PC 端的 min-width: 400px，改用 max-width 控制 */
                 width: 100%;
             }
 
@@ -56,26 +68,16 @@
                     min-width: 0 !important;
                     margin-bottom: 3rem;
 
-                    /* --- 【关键】保底遮瑕层 --- */
-                    /* 使用较深的颜色和较高的不透明度 (0.75) */
-                    /* 这样即使磨砂失败，文字底下的背景也足够深，能压住星星，保证可读性 */
                     background: rgba(12, 12, 16, 0.75) !important;
-                    
-                    /* 边框稍微调亮一点点，增加深色背景下的轮廓感 */
                     border: 1px solid rgba(255, 255, 255, 0.15) !important;
 
-                    /* --- 磨砂效果层 --- */
-                    /* 尝试应用磨砂，能显示最好，不显示就有上面的背景色兜底 */
                     backdrop-filter: blur(25px) saturate(180%) !important;
                     -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
 
-                    /* --- 硬件加速强制指令 --- */
-                    /* 创建独立的渲染层级，尽最大努力让浏览器不在滚动时关掉磨砂 */
                     transform: translate3d(0, 0, 0);
                     -webkit-transform: translate3d(0, 0, 0);
                     will-change: transform, backdrop-filter;
                     
-                    /* 确保圆角切边 */
                     overflow: hidden;
                     border-radius: 16px;
                 }
@@ -84,23 +86,37 @@
                 .prose-content {
                     font-size: 16px !important;
                     line-height: 1.75;
-                    /* 在深色背景下，去掉文字阴影会让文字更锐利、更干净 */
                     text-shadow: none !important; 
                 }
                 
                 /* 4. 插图隔离补丁：防止图片加载瞬间带崩整个卡片的渲染层 */
                 .prose-content img, 
                 .prose-content figure {
-                    /* 强制图片自己在一个层里呆着 */
                     transform: translateZ(0);
                     -webkit-transform: translateZ(0);
                     margin: 2rem 0 !important;
-                    /* 图片边框也稍微亮一点适配深色底 */
                     border-color: rgba(255, 255, 255, 0.2) !important; 
-                }
+                } 
+            } /* --- 核心修复 3：补上之前漏掉的闭合括号 --- */
+
+            /* --- 核心修复 4：长文本和特殊元素的换行与滚动保护 --- */
+            .prose-content { 
+                color: #b0b0b0; 
+                line-height: 1.8; 
+                font-size: 1.05rem; 
+                /* 强制长单词和长链接换行 */
+                overflow-wrap: break-word;
+                word-wrap: break-word;
+                word-break: break-word;
             }
 
-            .prose-content { color: #b0b0b0; line-height: 1.8; font-size: 1.05rem; }
+            /* 防止 Markdown 渲染的代码块或表格撑破屏幕 */
+            .prose-content pre, 
+            .prose-content table {
+                max-width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
             
             /* Markdown 渲染排版规范 */
             .prose-content h1, 
@@ -123,15 +139,12 @@
                 margin: 1.5rem 0;
             }
 
-            /* --- 新增：自定义水平分割线 (---) 的样式 --- */
             .prose-content hr {
-                border: none; /* 清除默认边框 */
-                height: 1px;  /* 设定高度为极细的 1px */
-                /* 使用半透明白色背景，透明度 20%，使其隐约可见而不突兀 */
+                border: none; 
+                height: 1px;  
                 background-color: rgba(255, 255, 255, 0.2); 
-                margin: 3rem 0; /* 增加上下的间距 */
+                margin: 3rem 0; 
             }
-            /* ---------------------------------------- */
             
             .prose-content img { 
                 max-width: 100%; height: auto; display: block; margin: 2rem auto; 
@@ -143,7 +156,6 @@
             
             .prose-content a { color: #608BC1; text-decoration: underline; text-underline-offset: 4px; }
             .prose-content a:hover { color: #fff; }
-
 
             /* --- 基础段落设置 --- */
             .prose-content p { 
@@ -158,7 +170,7 @@
                 padding: 0;
                 display: flex;
                 flex-direction: column;
-                align-items: center; /* 确保图片和文字都居中 */
+                align-items: center; 
             }
 
             /* 2. 图片：去掉底部间距 */
@@ -172,11 +184,11 @@
 
             /* 3. 图注：紧贴图片，样式独立 */
             .prose-content figcaption {
-                margin-top: 0.6rem !important; /* 精准控制距离 */
+                margin-top: 0.6rem !important; 
                 font-size: 0.9rem !important;
                 color: #888 !important;
                 text-align: center !important;
-                text-indent: 0 !important;    /* 彻底消除缩进导致的歪斜 */
+                text-indent: 0 !important;    
                 line-height: 1.4;
             }
         </style>
