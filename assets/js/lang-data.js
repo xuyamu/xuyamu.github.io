@@ -109,7 +109,7 @@ const uiTranslations = {
         "profile_skill_art_label": "ART & VISUALS",
         "profile_skill_art_desc": "精通架上绘画、 CG 技术与摄影，擅长跨媒体方案设计。",
         "profile_skill_tech_label": "TECH & LOGIC",
-        "profile_skill_tech_desc": "擅长生物实验设计，精通多种计算机软件，具备全栈开发能力。",
+        "profile_skill_tech_desc": "擅长生物实验设计，精通多种计算机软件。",
         "profile_skill_life_label": "LIFESTYLE",
         "profile_skill_life_desc": "生活是另一种形式的艺术创作。",
 
@@ -242,7 +242,7 @@ const uiTranslations = {
         "profile_skill_art_label": "ART & VISUALS",
         "profile_skill_art_desc": "Proficient in fine arts, CG techniques, and photography. Expert in cross-media design.",
         "profile_skill_tech_label": "TECH & LOGIC",
-        "profile_skill_tech_desc": "Expertise in biological experiment design, proficient in multiple software, with full-stack development capabilities.",
+        "profile_skill_tech_desc": "Expertise in biological experiment design, proficient in multiple software.",
         "profile_skill_life_label": "LIFESTYLE",
         "profile_skill_life_desc": "Life is another form of artistic creation.",
 
