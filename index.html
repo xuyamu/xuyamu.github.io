@@ -5,6 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YAMU | 雅牧</title>
     
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="description" content="雅牧（YAMU）的个人数字空间 Nexus。融合生命科学、思辨哲学、感官艺术与叙事实验。">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "YAMU | 雅牧",
+      "alternateName": "Xuyamu Nexus",
+      "url": "https://xuyamu.com/",
+      "description": "一个融合生命科学、思辨、感官艺术与叙事实验的个人空间",
+      "author": {
+        "@type": "Person",
+        "name": "雅牧 (YAMU)",
+        "url": "https://xuyamu.com/",
+        "sameAs": [
+          "https://orcid.org/0009-0006-4938-1643",
+          "https://www.zhihu.com/people/lan-hua-cao-9-86",
+          "https://www.douban.com/people/xuyamu",
+          "https://space.bilibili.com/811700"
+        ]
+      },
+      "hasPart": [
+        {
+          "@type": "WebPage",
+          "name": "生命科学 / Organic Layer",
+          "url": "https://xuyamu.com/bio-code.html"
+        },
+        {
+          "@type": "WebPage",
+          "name": "思辨之林 / Logic Layer",
+          "url": "https://xuyamu.com/logic-matrix.html"
+        },
+        {
+          "@type": "WebPage",
+          "name": "感官重构 / Perception Layer",
+          "url": "https://xuyamu.com/visual-synapse.html"
+        },
+        {
+          "@type": "WebPage",
+          "name": "叙事实验 / Narrative Layer",
+          "url": "https://xuyamu.com/narrative-parallel.html"
+        }
+      ]
+    }
+    </script>
+    
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
@@ -74,6 +122,12 @@
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6); 
         }
 
+        /* 确保 a 标签卡片内文字颜色和排版正常 */
+        a.glass-item {
+            text-decoration: none;
+            color: inherit;
+        }
+
         .card-title { transition: color 0.3s ease; }
         .glass-item:hover .card-title { color: var(--accent-blue) !important; }
 
@@ -125,33 +179,25 @@
     <audio id="sound-hover"><source src="assets/audio/hover.mp3" type="audio/mpeg"></audio>
     <audio id="sound-click"><source src="assets/audio/click.mp3" type="audio/mpeg"></audio>
 
-    <!-- 导航栏：增加语言切换功能 -->
     <nav class="fixed w-full z-[100] px-8 py-10 flex justify-between items-center pointer-events-none">
         
-        <!-- [修正处] 这里已改为 profile.html -->
-        <div class="nav-link group text-2xl font-bold tracking-[0.3em] text-white pointer-events-auto cursor-pointer transition-all duration-500 ease-out hover:tracking-[0.45em]" 
-        onclick="navigate('profile.html')">
-       
-       <!-- 文字部分：悬停变蓝 + 增加辉光 -->
-       <span class="transition-colors duration-300 group-hover:text-[#608BC1] group-hover:drop-shadow-[0_0_10px_rgba(96,139,193,0.8)]">
-           雅牧 YAMU
-       </span>
-   
-       <!-- 句号部分：悬停变白 (颜色反转) -->
-       <span class="text-[#608BC1] transition-colors duration-300 group-hover:text-white group-hover:drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">
-           .
-       </span>
-   </div>
+        <a href="profile.html" class="nav-link group text-2xl font-bold tracking-[0.3em] text-white pointer-events-auto cursor-pointer transition-all duration-500 ease-out hover:tracking-[0.45em] block no-underline" 
+        onclick="event.preventDefault(); navigate('profile.html')">
+            <span class="transition-colors duration-300 group-hover:text-[#608BC1] group-hover:drop-shadow-[0_0_10px_rgba(96,139,193,0.8)]">
+                雅牧 YAMU
+            </span>
+            <span class="text-[#608BC1] transition-colors duration-300 group-hover:text-white group-hover:drop-shadow-[0_0_5px_rgba(255,255,255,0.8)]">
+                .
+            </span>
+        </a>
         
         <div class="flex gap-6 pointer-events-auto items-center">
-            <!-- 语言切换按钮 -->
             <button id="lang-toggle" onclick="toggleLanguage()" class="text-[10px] tracking-[0.3em] text-gray-500 hover:text-white transition-all font-mono">
                 <span class="text-white">CN</span> / EN
             </button>
             
             <div class="w-[1px] h-3 bg-gray-700"></div>
 
-            <!-- 声音开关 -->
             <button id="music-toggle" class="text-[10px] tracking-[0.3em] text-gray-500 hover:text-white transition-all font-mono">
                 <span data-i18n="sound_off">SOUND: OFF</span>
             </button>
@@ -174,45 +220,41 @@
             <section class="max-w-7xl mx-auto px-10 pb-40 w-full">
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     
-                    <!-- Card 01: Bio -->
-                    <div class="glass-item p-10 flex flex-col justify-between min-h-[420px] group cursor-pointer" onclick="navigate('bio-code.html')">
+                    <a href="bio-code.html" class="glass-item p-10 flex flex-col justify-between min-h-[420px] group cursor-pointer" onclick="event.preventDefault(); navigate('bio-code.html')">
                         <div>
                             <span class="text-xs text-[#608BC1] font-mono tracking-widest uppercase opacity-70" data-i18n="card_01_label">01 / Organic Layer</span>
                             <h2 class="card-title text-3xl mt-6 font-bold text-white" data-i18n="card_01_title">生命科学</h2>
                             <p class="text-sm mt-8 text-gray-400 leading-loose" data-i18n="card_01_desc">抗衰老机制研究、论文集及生物科普。从第一性原理出发，构建通往长生的潜在路径。</p>
                         </div>
                         <span class="text-[#608BC1] text-xs font-bold tracking-widest mt-8 uppercase" data-i18n="card_01_action">Access Repository -></span>
-                    </div>
+                    </a>
 
-                    <!-- Card 02: Logic -->
-                    <div class="glass-item p-10 flex flex-col justify-between min-h-[420px] group cursor-pointer" onclick="navigate('logic-matrix.html')">
+                    <a href="logic-matrix.html" class="glass-item p-10 flex flex-col justify-between min-h-[420px] group cursor-pointer" onclick="event.preventDefault(); navigate('logic-matrix.html')">
                         <div>
                             <span class="text-xs text-[#608BC1] font-mono tracking-widest uppercase opacity-70" data-i18n="card_02_label">02 / Logic Layer</span>
                             <h2 class="card-title text-3xl mt-6 font-bold text-white" data-i18n="card_02_title">思辨之林</h2>
                             <p class="text-sm mt-8 text-gray-400 leading-loose" data-i18n="card_02_desc">人工智能演化分析、游戏叙事评论、人格心理学与哲学评论。探索智能边界，解析后人类时代的意识代码。</p>
                         </div>
                         <span class="text-[#608BC1] text-xs font-bold tracking-widest mt-8 uppercase" data-i18n="card_02_action">Read Essays -></span>
-                    </div>
+                    </a>
 
-                    <!-- Card 03: Gallery -->
-                    <div class="glass-item p-10 flex flex-col justify-between min-h-[420px] group cursor-pointer" onclick="navigate('visual-synapse.html')">
+                    <a href="visual-synapse.html" class="glass-item p-10 flex flex-col justify-between min-h-[420px] group cursor-pointer" onclick="event.preventDefault(); navigate('visual-synapse.html')">
                         <div>
                             <span class="text-xs text-[#608BC1] font-mono tracking-widest uppercase opacity-70" data-i18n="card_03_label">03 / Perception Layer</span>
                             <h2 class="card-title text-3xl mt-6 font-bold text-white" data-i18n="card_03_title">感官重构</h2>
                             <p class="text-sm mt-8 text-gray-400 leading-loose" data-i18n="card_03_desc">3D 渲染、摄影与绘画。以视觉语言赋予深刻思考具象之美，复刻世界原貌。</p>
                         </div>
                         <span class="text-[#608BC1] text-xs font-bold tracking-widest mt-8 uppercase" data-i18n="card_03_action">View Gallery -></span>
-                    </div>
+                    </a>
 
-                    <!-- Card 04: Narrative -->
-                    <div class="glass-item p-10 flex flex-col justify-between min-h-[420px] group cursor-pointer" onclick="navigate('narrative-parallel.html')">
+                    <a href="narrative-parallel.html" class="glass-item p-10 flex flex-col justify-between min-h-[420px] group cursor-pointer" onclick="event.preventDefault(); navigate('narrative-parallel.html')">
                         <div>
                             <span class="text-xs text-[#608BC1] font-mono tracking-widest uppercase opacity-70" data-i18n="card_04_label">04 / Narrative Layer</span>
                             <h2 class="card-title text-3xl mt-6 font-bold text-white" data-i18n="card_04_title">叙事实验</h2>
                             <p class="text-sm mt-8 text-gray-400 leading-loose" data-i18n="card_04_desc">散文、诗词、小说创作。在无尽好奇心驱动下，构建超越当下维度的平行现实空间。</p>
                         </div>
                         <span class="text-[#608BC1] text-xs font-bold tracking-widest mt-8 uppercase" data-i18n="card_04_action">Explore Worlds -></span>
-                    </div>
+                    </a>
                 </div>
             </section>
 
@@ -245,20 +287,16 @@
         </div>
     </div>
 
-    <!-- 脚本区域 -->
     <script src="assets/js/bio-background.js"></script>
     
-    <!-- 数据文件 -->
     <script src="assets/js/bio-data.js?v=20260406"></script>
     <script src="assets/js/logic-data.js?v=2026052102"></script>
     <script src="assets/js/gallery-data.js?v=20260226"></script>
     <script src="assets/js/narrative-data.js?v=20260222"></script>
 
-    <!-- 多语言数据与逻辑 -->
     <script src="assets/js/lang-data.js"></script>
     <script src="assets/js/i18n.js"></script>
 
-    <!-- 路由与交互 -->
     <script src="assets/js/router.js"></script>
     
     <script>
@@ -285,18 +323,16 @@
             }
         };
 
-            // 首次加载初始化
+        // 首次加载初始化
         window.addEventListener('DOMContentLoaded', () => {
             if(typeof bindGlobalSFX === 'function') bindGlobalSFX();
 
-            // 👇 新增：检查是否是从子页面重定向过来的
+            // 检查是否是从子页面重定向过来的
             const params = new URLSearchParams(window.location.search);
             const routePage = params.get('route');
             
             if (routePage) {
-                // 1. 清除地址栏的 ?route= 参数，让 URL 保持干净美观
                 window.history.replaceState(null, '', window.location.pathname);
-                // 2. 延迟一点点调用路由，加载目标页面
                 setTimeout(() => {
                     if (typeof navigate === 'function') {
                         navigate(decodeURIComponent(routePage));
