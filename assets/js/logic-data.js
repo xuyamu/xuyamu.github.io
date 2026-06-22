@@ -71,12 +71,12 @@ const logicData = {
             id: "art-2014-reflections",
             title: "艺术家的最高任务是与政治相对抗？——读程美信的《邱志杰不过是个陪嫁伴娘》有感", 
             // 内部改为单引号
-            title_en: "Reflections After Reading Cheng Meixin's 'Qiu Zhijie Is Merely a Bridesmaid at the Wedding'", 
+            title_en: "Reflections After Reading Cheng Meixin's \"Qiu Zhijie Is Merely a Bridesmaid at the Wedding\"",
             date: "2014-07-04", 
             link: "https://www.douban.com/note/366053345", 
             excerpt: "本文通过反驳程美信关于“艺术必须通过政治对抗才能获得自由”的观点，论证了艺术价值的多元本质，并指出将政治标准作为评判艺术唯一尺度的做法本身就是一种思维的局限。",
             // 内部改为单引号
-            excerpt_en: "This article refutes Cheng Meixin's view that 'art must achieve freedom through political confrontation', arguing for the multifaceted nature of artistic value and pointing out that using political criteria as the sole measure for judging art is itself a limitation of thought." 
+            excerpt_en: "This article refutes Cheng Meixin's view that \"art must achieve freedom through political confrontation\", arguing for the multifaceted nature of artistic value and pointing out that using political criteria as the sole measure for judging art is itself a limitation of thought."
         },
 
         { 
@@ -198,6 +198,51 @@ const logicData = {
         }
     ],
 
+    // 评论 REVIEW
+    reviews: [
+        { 
+            id: "reviews-2017-angels-wear-white-film-critique",
+            title: "游走于现实与隐喻之间：评《嘉年华》的叙事得失", 
+            // 如果你希望 title_en 里的电影名也带上引号，也可以把它变成：...of \"Angels Wear White\"
+            title_en: "Between Reality and Metaphor: On the Narrative Success and Shortcomings of Angels Wear White",
+            date: "2017-11-05", 
+            link: "https://movie.douban.com/review/8905450/", 
+            excerpt: "本文从情节张力、人物塑造和符号隐喻三个维度，剖析了电影《嘉年华》在展现女性觉醒过程中的艺术尝试与叙事缺憾。",
+            // 下方单引号已改为 \" \" 格式
+            excerpt_en: "This review analyzes the artistic attempts and narrative shortcomings of the film \"Angels Wear White\" (Carnival) from the perspectives of plot tension, characterization, and symbolic metaphors." 
+        },
+
+        {
+            id: "reviews-2016-big-fish-and-begonia-film-critique",
+            title: "探寻《大鱼海棠》世界观与价值观的进阶可能",
+            title_en: "Exploring the Potential Advancement of Worldview and Values in \"Big Fish & Begonia\"",
+            date: "2016-08-04",
+            link: "https://movie.douban.com/review/8023196/", 
+            excerpt: "本文分析了角色行为动机的内在逻辑。同时指出影片在世界观、人生观和思想深度上存在格局较小的局限，并提出了通过深化哲学探讨、融入《庄子》思想及避免“刻奇”来提升电影质感的改进建议。",
+            excerpt_en: "This review analyzes the internal logic of the characters' behaviors. It also addresses the film's limited scope in its worldview, life philosophy, and ideological depth, suggesting that the film's quality could be elevated by deepening its philosophical reflections, integrating Zhuangzi's philosophy, and avoiding 'kitsch'."
+        },
+
+        {
+            "id": "reviews-2015-the-lost-tomb-tv-series-critique",
+            "title": "从叙事失格到影像降级：全景剖析《盗墓笔记》的艺术溃败",
+            "title_en": "From Narrative Failure to Visual Downgrade: A Panoramic Analysis of the Artistic Collapse in \"The Lost Tomb\"",
+            "date": "2015-06-13",
+            "link": "https://movie.douban.com/review/7498952/",
+            "excerpt": "本文从剧作（角色塑造、剧情逻辑）、调色、摄影、特效、造型和录音等多个维度，全方位剖析了《盗墓笔记》季播剧先导集因缺乏诚意和制作粗糙而导致的问题与艺术缺憾。",
+            "excerpt_en": "This review comprehensively analyzes the poor production quality and lack of sincerity in the pilot episodes of \"The Lost Tomb\" TV series from multiple dimensions, including screenwriting, color grading, cinematography, visual effects, styling, and sound recording."
+        },
+
+        { 
+            id: "reviews-2014-nymphomaniac-vol-ii-film-critique",
+            title: "反庸俗化的女权主义及无性恋相关话题", 
+            title_en: "Anti-vulgarization Feminism and Topics Related to Sexuality",
+            date: "2014-06-27", 
+            link: "https://movie.douban.com/review/6718902/", 
+            excerpt: "本文结合电影《女性瘾者：第二部》中角色对话，探讨了女权主义与‘庸俗化女权主义’的界限，并分析了无性恋、禁欲主义的心理机制及影片结局的合理性。",
+            excerpt_en: "This review discusses the boundary between feminism and 'vulgarized feminism' based on 'Nymphomaniac: Vol. II', and analyzes the psychological mechanisms of asexuality, asceticism, and the movie's ending." 
+        }
+    ],
+
     // 其他
     other: [
         { 
@@ -205,8 +250,10 @@ const logicData = {
             title: "长寿网络城市规划书（第一阶段）", 
             title_en: "Longevity Network City Planning Proposal (Phase 1)",
             date: "2026-04-05", 
-            excerpt: "本文通过与 TimePie 的对比分析指出 Viva City 的现有局限，并为其规划了向数字化‘网络城市’转型的组织架构、居民服务及用户增长策略。",
-            excerpt_en: "This proposal identifies the limitations of Viva City by benchmarking it against TimePie, and outlines a strategic framework to transition it into a digital 'Network City' with robust organizational structures and user growth plans." 
+            // 中文内部的单引号改成了中文双引号 “ ”，不需要转义
+            excerpt: "指出 Viva City 的现有局限，并为其规划了向数字化“网络城市”转型的组织架构、居民服务及用户增长策略。",
+            // 英文内部的单引号改成了反斜杠转义的 \" \"
+            excerpt_en: "This proposal identifies the limitations of Viva City and outlines a strategic framework to transition it into a digital \"Network City\" with robust organizational structures and user growth plans." 
         }
         
     ]
