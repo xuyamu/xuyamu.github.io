@@ -203,6 +203,7 @@ const uiTranslations = {
         "filter_games": "GAMES / 游戏",
         "filter_psy": "PSYCHOLOGY / 心理学",
         "filter_ai": "AI / 人工智能",
+        "filter_other": "OTHER / 其他",
 
         /* --- Layer 03: Visual-Synapse --- */
         "layer_03_tag": "Layer 03 / Perception",

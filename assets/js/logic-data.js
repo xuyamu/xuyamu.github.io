@@ -196,5 +196,18 @@ const logicData = {
             excerpt: "探讨大语言模型相关的神经科学研究。",
             excerpt_en: "Exploring current neuroscientific research pertaining to the emergent properties and structures of Large Language Models." 
         }
-    ]
+    ],
+
+        // 其他
+        other: [
+            { 
+                id: "other-2026-long-network-city-planning-proposal-phase-1",
+                title: "长寿网络城市规划书（第一阶段）", 
+                title_en: "Longevity Network City Planning Proposal (Phase 1)",
+                date: "2026-04-05", 
+                excerpt: "本文探讨了人工智能时代人类劳动价值贬值及阶级固化等现象，剖析了其对人类多巴胺奖赏机制和自我价值感带来的心理危机。",
+                excerpt_en: "This article explores phenomena such as the devaluation of human labor and social stratification in the AI era, analyzes the psychological crises it inflicts on human dopamine reward mechanisms and self-worth." 
+            }
+           
+        ]
 };
