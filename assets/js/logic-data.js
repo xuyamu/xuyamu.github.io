@@ -227,7 +227,7 @@ const logicData = {
             "title": "从叙事失格到影像降级：全景剖析《盗墓笔记》的艺术溃败",
             "title_en": "From Narrative Failure to Visual Downgrade: A Panoramic Analysis of the Artistic Collapse in \"The Lost Tomb\"",
             "date": "2015-06-13",
-            "link": "https://movie.douban.com/review/7498952/",
+            "link": "https://www.douban.com/group/topic/76348404/?_i=2170367KfhBKv2",
             "excerpt": "本文从剧作（角色塑造、剧情逻辑）、调色、摄影、特效、造型和录音等多个维度，全方位剖析了《盗墓笔记》季播剧先导集因缺乏诚意和制作粗糙而导致的问题与艺术缺憾。",
             "excerpt_en": "This review comprehensively analyzes the poor production quality and lack of sincerity in the pilot episodes of \"The Lost Tomb\" TV series from multiple dimensions, including screenwriting, color grading, cinematography, visual effects, styling, and sound recording."
         },
