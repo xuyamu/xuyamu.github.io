@@ -14,7 +14,7 @@ const logicData = {
             date: "2016-09-08",
             link: "https://www.douban.com/note/580618088", 
             excerpt: "本文探讨了人类改善先天条件的渴望与“生育平等权”之间的伦理博弈，揭露了出生选择权缺失下个体难以逃脱的宿命悲剧。",
-            excerpt_en: "An exploration of the ethical gamble between the desire to improve innate conditions and the 'equal right to birth,' revealing the tragic destiny of individuals lacking choice over their own existence." 
+            excerpt_en: "An exploration of the ethical gamble between the desire to improve innate conditions and the \"equal right to birth,\" revealing the tragic destiny of individuals lacking choice over their own existence." 
         },
 
         { 
@@ -34,7 +34,7 @@ const logicData = {
             date: "2011-03-14",
             link: "https://www.douban.com/note/139672115", 
             excerpt: "本文通过对关于真理的朴素观念进行批判性审视，并回顾作者个人的认知历程，阐明了一种概念上的转变：将真理视为一个“永无止境的探索过程”，而不是一个“绝对客观的实体”。",
-            excerpt_en: "Through a critical examination of naive conceptions of truth and a retrospective of the author's personal cognitive journey, this text illustrates a conceptual shift: viewing truth not as an 'absolute objective entity' but as an 'interminable process of exploration'." 
+            excerpt_en: "Through a critical examination of naive conceptions of truth and a retrospective of the author's personal cognitive journey, this text illustrates a conceptual shift: viewing truth not as an \"absolute objective entity\" but as an \"interminable process of exploration\"." 
         },
         { 
             id: "philosophy-2010-fear-of-existence", 
@@ -60,8 +60,9 @@ const logicData = {
             date: "2010-08-21",
             link: "https://www.douban.com/note/86646047/", 
             excerpt: "本文运用索绪尔的“能指”和“所指”框架，分析概念的构建过程和认知路径，同时批判大众话语中由于缺乏精确思考而导致的对“物质”和“理性”等抽象术语的“庸俗”误解。",
-            excerpt_en: "By employing Saussure’s framework of 'signifier' and 'signified,' this text analyzes the construction and cognitive pathways of concepts, while critiquing the 'vulgar' misinterpretations of abstract terms—such as 'matter' and 'rationality'—that arise from a lack of precise speculation in popular discourse." 
+            excerpt_en: "By employing Saussure's framework of \"signifier\" and \"signified,\" this text analyzes the construction and cognitive pathways of concepts, while critiquing the \"vulgar\" misinterpretations of abstract terms—such as \"matter\" and \"rationality\"—that arise from a lack of precise speculation in popular discourse." 
         }
+
     ],
 
     // 艺术 ART
@@ -115,14 +116,14 @@ const logicData = {
 
     // 游戏 GAMES
     games: [
-        { 
+{ 
             id: "games-2024-black-myth-wukong-analysis",
             title: "《黑神话：悟空》剧情不合理之处分析", 
             title_en: "Analysis of Narrative Inconsistencies in Black Myth: Wukong",
             date: "2024-12-31", 
             link: "https://www.zhihu.com/question/8106790581/answer/68366258300", 
             excerpt: "从文学、政治组织学、历史学角度分析《黑神话：悟空》剧情中关于权力逻辑的不合理之处。",
-            excerpt_en: "An analysis of the flawed logic of power within the plot of 'Black Myth: Wukong' through the lenses of literature, political science, and history." 
+            excerpt_en: "An analysis of the flawed logic of power within the plot of \"Black Myth: Wukong\" through the lenses of literature, political science, and history." 
         }
     ],
 
@@ -203,23 +204,21 @@ const logicData = {
         { 
             id: "reviews-2017-angels-wear-white-film-critique",
             title: "游走于现实与隐喻之间：评《嘉年华》的叙事得失", 
-            // 如果你希望 title_en 里的电影名也带上引号，也可以把它变成：...of \"Angels Wear White\"
-            title_en: "Between Reality and Metaphor: On the Narrative Success and Shortcomings of Angels Wear White",
+            title_en: "Between Reality and Metaphor: On the Narrative Success and Shortcomings of \"Angels Wear White\"",
             date: "2017-11-05", 
             link: "https://movie.douban.com/review/8905450/", 
             excerpt: "本文从情节张力、人物塑造和符号隐喻三个维度，剖析了电影《嘉年华》在展现女性觉醒过程中的艺术尝试与叙事缺憾。",
-            // 下方单引号已改为 \" \" 格式
             excerpt_en: "This review analyzes the artistic attempts and narrative shortcomings of the film \"Angels Wear White\" (Carnival) from the perspectives of plot tension, characterization, and symbolic metaphors." 
         },
 
-        {
+{
             id: "reviews-2016-big-fish-and-begonia-film-critique",
             title: "探寻《大鱼海棠》世界观与价值观的进阶可能",
             title_en: "Exploring the Potential Advancement of Worldview and Values in \"Big Fish & Begonia\"",
             date: "2016-08-04",
             link: "https://movie.douban.com/review/8023196/", 
             excerpt: "本文分析了角色行为动机的内在逻辑。同时指出影片在世界观、人生观和思想深度上存在格局较小的局限，并提出了通过深化哲学探讨、融入《庄子》思想及避免“刻奇”来提升电影质感的改进建议。",
-            excerpt_en: "This review analyzes the internal logic of the characters' behaviors. It also addresses the film's limited scope in its worldview, life philosophy, and ideological depth, suggesting that the film's quality could be elevated by deepening its philosophical reflections, integrating Zhuangzi's philosophy, and avoiding 'kitsch'."
+            excerpt_en: "This review analyzes the internal logic of the characters' behaviors. It also addresses the film's limited scope in its worldview, life philosophy, and ideological depth, suggesting that the film's quality could be elevated by deepening its philosophical reflections, integrating Zhuangzi's philosophy, and avoiding \"kitsch\"."
         },
 
         {
@@ -238,8 +237,8 @@ const logicData = {
             title_en: "Anti-vulgarization Feminism and Topics Related to Sexuality",
             date: "2014-06-27", 
             link: "https://movie.douban.com/review/6718902/", 
-            excerpt: "本文结合电影《女性瘾者：第二部》中角色对话，探讨了女权主义与‘庸俗化女权主义’的界限，并分析了无性恋、禁欲主义的心理机制及影片结局的合理性。",
-            excerpt_en: "This review discusses the boundary between feminism and 'vulgarized feminism' based on 'Nymphomaniac: Vol. II', and analyzes the psychological mechanisms of asexuality, asceticism, and the movie's ending." 
+            excerpt: "本文结合电影《女性瘾者：第二部》中角色对话，探讨了女权主义与“庸俗化女权主义”的界限，并分析了无性恋、禁欲主义的心理机制及影片结局的合理性。",
+            excerpt_en: "This review discusses the boundary between feminism and \"vulgarized feminism\" based on \"Nymphomaniac: Vol. II\", and analyzes the psychological mechanisms of asexuality, asceticism, and the movie's ending." 
         }
     ],
 
