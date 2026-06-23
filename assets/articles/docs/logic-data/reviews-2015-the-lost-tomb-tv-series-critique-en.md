@@ -89,7 +89,7 @@
 **Shot 2 (Opening Credits):**
 
 <figure>
-    <img src="assets/articles/images/logic-data/lost_tomb/p31312823.webp">
+    <img src="assets/articles/images/logic-data/lost_tomb/p31312843.webp">
     <figcaption>Shot 2</figcaption>
 </figure>
 

@@ -86,7 +86,7 @@
 　　 镜头2（出现在片头曲中）：
 
 <figure>
-    <img src="assets/articles/images/logic-data/lost_tomb/p31312823.webp">
+    <img src="assets/articles/images/logic-data/lost_tomb/p31312843.webp">
     <figcaption>镜头2</figcaption>
 </figure>
 
