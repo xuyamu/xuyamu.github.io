@@ -81,7 +81,7 @@
 
 <figure>
     <img src="assets/articles/images/logic-data/lost_tomb/p31312823.webp">
-    <figcaption>Still from *The Hobbit: An Unexpected Journey*</figcaption>
+    <figcaption>Still from <em>The Hobbit: An Unexpected Journey</em></figcaption>
 </figure>
 
 　　Granted, it is unfair to compare a mid-budget television drama to a Hollywood mega-blockbuster. I bring up *The Hobbit* as a benchmark merely to show what the golden standard looks like (even if we're still crawling in the mud, we should keep our eyes on the stars!). But here is the kicker: despite the finished products looking worlds apart, *The Lost Tomb* web series and Peter Jackson’s *The Hobbit* trilogy were actually filmed on the exact same camera system—the RED Epic. How is it that one team uses this camera to capture sweeping cinematic epics, while the other captures footage that looks like a glorified home video? Having read this critique so far, I suspect readers can put two and two together. Regardless, an ugly shot like the one above has no business making the final cut. My educated guess is that it was filmed by a splinter B-unit crew that didn't want to haul the heavy rigs out; but even if portability was the priority, shooting on a compact body like the Blackmagic Pocket Cinema Camera would have yielded infinitely better results than this. Then again, shots like this litter the show—the post-production team may have simply ripped some generic stock footage off the internet and crammed it into the timeline. Either way, this single shot proves a severe lack of professional pride among certain members of the crew.
@@ -99,7 +99,7 @@
 
 <figure>
     <img src="assets/articles/images/logic-data/lost_tomb/p31312901.webp">
-    <figcaption>Still from *The Hobbit: An Unexpected Journey*</figcaption>
+    <figcaption>Still from <em>The Hobbit: An Unexpected Journey</em></figcaption>
 </figure>
 
 　　Of course, top-tier CGI costs an arm and a leg, so let's give them a pass on the visual effects. Next, let's look at some shots that fail basic cinematography:
@@ -128,7 +128,7 @@
 
 <figure>
     <img src="assets/articles/images/logic-data/lost_tomb/p31465156.webp">
-    <figcaption>*The Cell*</figcaption>
+    <figcaption><em>The Cell</em></figcaption>
 </figure>
 
 　　**Analysis:** The Golden Ratio framing establishes a wonderful sense of visual equilibrium, the saturated colors are a joy to look at, and the zero-distortion image demonstrates the cinematographer's meticulous lens selection and the director's uncompromising pursuit of quality. *The Cell* is packed with exquisitely constructed, wildly imaginative imagery; I highly recommend watching it.
@@ -137,7 +137,7 @@
 
 <figure>
     <img src="assets/articles/images/logic-data/lost_tomb/p31465134.webp">
-    <figcaption>*The Hobbit: An Unexpected Journey*</figcaption>
+    <figcaption><em>The Hobbit: An Unexpected Journey</em></figcaption>
 </figure>
 
 　　**Analysis:** The rich, earthy green terrain pops without looking gaudy; a dedicated production team brought the majesty of Middle-earth to life in breathtaking fashion.
@@ -156,12 +156,12 @@
 
 <figure>
     <img src="assets/articles/images/logic-data/lost_tomb/p31313051.webp">
-    <figcaption>*Design of Death* poster</figcaption>
+    <figcaption><em>Design of Death</em> poster</figcaption>
 </figure>
 
 <figure>
     <img src="assets/articles/images/logic-data/lost_tomb/p31313075.webp">
-    <figcaption>*Design of Death* still</figcaption>
+    <figcaption><em>Design of Death</em> still</figcaption>
 </figure>
 
 **Shot 6 (Pilot Part 1):**
@@ -179,7 +179,7 @@
 
 <figure>
     <img src="assets/articles/images/logic-data/lost_tomb/p31313143.webp">
-    <figcaption>Still from *Silent Hill*</figcaption>
+    <figcaption>Still from <em>Silent Hill<em></figcaption>
 </figure>
 
 　　**Analysis:** The scenery naturally degrades in sharpness the further back it recedes; this layered depth creates a wonderfully immersive sense of space.
@@ -199,7 +199,7 @@
 
 <figure>
     <img src="assets/articles/images/logic-data/lost_tomb/p31313198.webp">
-    <figcaption>Still from *Sherlock*</figcaption>
+    <figcaption>Still from <em>Sherlock</em></figcaption>
 </figure>
 
 　　**Analysis:** Sherlock’s flat is cluttered too, but it isn't visually loud. The background and foreground coexist in harmony, with nothing aggressively stealing the spotlight from the actors.
