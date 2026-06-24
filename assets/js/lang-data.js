@@ -115,7 +115,7 @@ const uiTranslations = {
         "profile_skill_life_label": "LIFESTYLE",
         "profile_skill_life_desc": "生活是另一种形式的艺术创作。",
 
-        "t_s_sketch":"素描", "t_s_water":"水彩", "t_s_3dm":"3D 建模", "t_s_3da":"3D 动画", "t_s_cg":"CG 板绘", "t_s_ph":"摄影", "t_s_vid":"摄像", "t_s_cm":"跨媒体艺术", "t_s_ai":"AI 绘画",
+        "t_s_sketch":"素描", "t_s_water":"水彩", "t_s_3dm":"3D 建模", "t_s_3da":"3D 动画", "t_s_cg":"CG 板绘", "t_s_design":"设计", "t_s_ph":"摄影", "t_s_vid":"摄像","t_s_post":"后期","t_s_cm":"跨媒体艺术", "t_s_ai":"AI 绘画",
         "t_s_code":"编程", "t_s_quan":"量化交易", "t_s_game":"游戏开发", "t_s_agent":"智能体开发", "t_s_bioe":"生物工程", "t_s_cell":"细胞生物学", "t_s_drug":"计算机辅助药物设计",
         "t_s_hand":"手工", "t_s_cook":"料理", "t_s_bake":"烘焙",
 
@@ -250,9 +250,10 @@ const uiTranslations = {
         "profile_skill_life_label": "LIFESTYLE",
         "profile_skill_life_desc": "Life is another form of artistic creation.",
 
-        "t_s_sketch":"Sketch", "t_s_water":"Watercolor", "t_s_3dm":"3D Modeling", "t_s_3da":"3D Animation", "t_s_cg":"Digital Painting", "t_s_ph":"Photography", "t_s_vid":"Videography", "t_s_cm":"Intermedia Art", "t_s_ai":"AI Generation",
+        "t_s_sketch":"Sketch", "t_s_water":"Watercolor", "t_s_3dm":"3D Modeling", "t_s_3da":"3D Animation", "t_s_cg":"Digital Painting", "t_s_design":"Design","t_s_ph":"Photography", "t_s_vid":"Videography", "t_s_post":"Post-production","t_s_cm":"Intermedia Art", "t_s_ai":"AI Generation",
         "t_s_code":"Programming", "t_s_quan":"Quant Trading", "t_s_game":"Game Dev", "t_s_agent":"AI Agents", "t_s_bioe":"Bio-Engineering", "t_s_cell":"Cell Biology", "t_s_drug":"CADD",
         "t_s_hand":"Handicraft", "t_s_cook":"Cuisine", "t_s_bake":"Baking",
+
 
         /* === 将以下内容添加到 "en" 对象末尾 === */
         "lc_tag": "Tools / Genomic Stability",
