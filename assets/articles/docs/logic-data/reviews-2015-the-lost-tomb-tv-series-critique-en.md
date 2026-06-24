@@ -179,7 +179,7 @@
 
 <figure>
     <img src="assets/articles/images/logic-data/lost_tomb/p31313143.webp">
-    <figcaption>Still from <em>Silent Hill<em></figcaption>
+    <figcaption>Still from <em>Silent Hill</em> </figcaption>
 </figure>
 
 　　**Analysis:** The scenery naturally degrades in sharpness the further back it recedes; this layered depth creates a wonderfully immersive sense of space.

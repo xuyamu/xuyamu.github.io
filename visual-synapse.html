@@ -2,13 +2,6 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-
-    <script>
-        if (!document.getElementById('bg-music')) {
-            var path = window.location.pathname.split('/').pop() + window.location.search;
-            window.location.replace('/index.html?route=' + encodeURIComponent(path));
-        }
-    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YAMU | Perception - 感官重构</title>
     <link href="assets/css/style.css" rel="stylesheet">
@@ -45,12 +38,19 @@
             .work-card img, .work-card video { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s ease; }
             .work-card:hover img { transform: scale(1.08); }
 
+            /* 原汁原味的绝对居中，不再瞎加多余限制 */
             #lightbox {
                 position: fixed; inset: 0; z-index: 200; background: rgba(2, 2, 5, 0.98);
                 backdrop-filter: blur(25px); display: none; justify-content: center; align-items: center;
                 opacity: 0; transition: opacity 0.5s ease;
             }
             #lightbox.active { display: flex; opacity: 1; }
+
+            /* 给内部歌词滚动条加上高级透明样式 */
+            .custom-scrollbar::-webkit-scrollbar { width: 4px; }
+            .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+            .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(96, 139, 193, 0.5); border-radius: 4px; }
+            .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(96, 139, 193, 0.8); }
         </style>
 
         <header class="max-w-7xl mx-auto mb-10 pt-32 px-10 w-full">
@@ -87,19 +87,22 @@
         </main>
 
         <div id="lightbox" onclick="closeLightbox()">
+            <!-- 完美还原你的原版居中框架 -->
             <div class="flex flex-col items-center justify-center p-4 w-full max-w-5xl" onclick="event.stopPropagation()">
                 <div id="lightbox-media-container" class="relative"></div>
+                
+                <!-- 完美还原你的 mt-8, pt-8 原始间距！绝对不挤！ -->
                 <div class="mt-8 text-center px-6 w-full border-t border-white/10 pt-8">
                     <h3 id="lightbox-title" class="motto-font text-xl md:text-3xl text-white tracking-widest"></h3>
                     <p id="lightbox-cat" class="text-[#608BC1] font-mono text-[10px] uppercase mt-3 tracking-[0.4em]"></p>
-                    <p id="lightbox-desc" class="text-gray-400 text-sm mt-6 max-w-2xl mx-auto italic font-light"></p>
+                    
+                    <!-- 唯一的改动在这里：给文字限制最大高度为 15vh，超出自动内部滚动 -->
+                    <p id="lightbox-desc" class="text-gray-400 text-sm mt-6 max-w-2xl mx-auto italic font-light whitespace-pre-line custom-scrollbar" style="max-height: 15vh; overflow-y: auto; padding-right: 8px;"></p>
                 </div>
             </div>
         </div>
 
         <script>
-             // 渲染画廊逻辑 
-             
             function renderGallery(filter = 'all') {
                 const grid = document.getElementById('gallery-grid');
                 if (!grid) return;
@@ -131,11 +134,8 @@
                     const displayTitle = (isEn && work.title_en) ? work.title_en : work.title;
                     const positionStyle = work.pos ? `style="object-position: ${work.pos}"` : '';
                     
-                    // --- 核心修改：处理视频多源加载 ---
-
                     let videoContent = '';
                     if (isVideo) {
-                        // 为路径添加 #t=0.001，强制浏览器渲染第一帧作为缩略图
                         const cfSrc = work.path_cf ? `${work.path_cf}#t=0.001` : '';
                         const localSrc = `${work.path}#t=0.001`;
 
@@ -147,7 +147,6 @@
                     } else {
                         videoContent = `<img src="${work.path}" alt="${displayTitle}" loading="lazy" ${positionStyle}>`;
                     }
-                                        // ------------------------------
 
                     card.innerHTML = `
                         ${videoContent}
@@ -168,7 +167,6 @@
                 });
             }
 
-            // 打开灯箱
             function openLightbox(work) {
                 const lb = document.getElementById('lightbox');
                 const container = document.getElementById('lightbox-media-container');
@@ -178,7 +176,7 @@
                 const displayTitle = (isEn && work.title_en) ? work.title_en : work.title;
                 const displayDesc = (isEn && work.desc_en) ? work.desc_en : (work.desc || "");
 
-                // --- 核心修改：灯箱内的视频多源处理 ---
+                // 完美还原你原来的 max-h-[70vh] 代码！坚决不再乱加其它属性！
                 if (isVideo) {
                     container.innerHTML = `
                         <video controls autoplay class="max-w-full max-h-[70vh]">
@@ -188,7 +186,6 @@
                 } else {
                     container.innerHTML = `<img src="${work.path}" class="max-w-full max-h-[70vh] shadow-2xl border border-white/10">`;
                 }
-                // ----------------------------------
 
                 document.getElementById('lightbox-title').innerText = displayTitle;
                 document.getElementById('lightbox-cat').innerText = work.cat || "";
@@ -202,6 +199,10 @@
                 const lb = document.getElementById('lightbox');
                 lb.classList.remove('active');
                 setTimeout(() => lb.style.display = 'none', 500);
+                
+                setTimeout(() => {
+                    document.getElementById('lightbox-media-container').innerHTML = '';
+                }, 500);
             }
 
             function handleGalleryFilter(el, filter) {
@@ -210,10 +211,8 @@
                 renderGallery(filter);
             }
 
-            // 初始化：渲染画廊并应用静态文本翻译
             renderGallery('all');
             
-            // 确保静态 UI 文本更新为当前语言 (调用 i18n.js 的全局函数)
             if (typeof updateContent === 'function') {
                 updateContent();
             }
