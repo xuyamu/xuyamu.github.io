@@ -4,17 +4,17 @@
 
 <figure>
     <img src="assets/articles/images/logic-data/blackmyth/2358720_20241215004201_1.jpg">
-    <figcaption>Zodiac Village New Year Greeting Card #1 (Source: Yamu)</figcaption>
+    <figcaption>Liuliu Village New Year Greeting Card #1 (Source: Yamu)</figcaption>
 </figure>
 
 <figure>
     <img src="assets/articles/images/logic-data/blackmyth/2358720_20241215031527_1.jpg">
-    <figcaption>Zodiac Village New Year Greeting Card #2 (Source: Yamu)</figcaption>
+    <figcaption>Liuliu Village New Year Greeting Card #2 (Source: Yamu)</figcaption>
 </figure>
 
 <figure>
     <img src="assets/articles/images/logic-data/blackmyth/2358720_20241215033840_1.jpg">
-    <figcaption>Zodiac Village New Year Greeting Card #3 (Source: Yamu)</figcaption>
+    <figcaption>Liuliu Village New Year Greeting Card #3 (Source: Yamu)</figcaption>
 </figure>
 
 　　While playing the game, I noticed several inconsistencies in the narrative. In my October post, "Psychological Analysis of Erlang Shen and Related Plot Analysis in Black Myth: Wukong" (a 30,000-word piece), I briefly touched upon these issues. Lately, while taking anti-aging supplements alongside various nootropics, I’ve found myself even more sensitive to plot holes. I’ll be diving into those details more thoroughly here.
