@@ -97,7 +97,7 @@ const galleryData = {
             title_en: "Vintage Store · Windowside", 
             path: "assets/img/photo/20200526-DSC7934.jpg", 
             desc: "索菲娅二世在厦门旧物仓；日期：2020年5月26日", 
-            desc_en: "Sophia II at the 'Goodone Olditem' Warehouse, Xiamen; Date: May 26, 2020", 
+            desc_en: "Sophia II at the \"Goodone Olditem\" Warehouse, Xiamen; Date: May 26, 2020", 
             pos: "50% 45%" 
         },
         { 
@@ -105,7 +105,7 @@ const galleryData = {
             title_en: "Vintage Store · Summer", 
             path: "assets/img/photo/20200526-DSC8120.jpg", 
             desc: "索菲娅二世在厦门旧物仓；日期：2020年5月26日", 
-            desc_en: "Sophia II at the 'Goodone Olditem' Warehouse, Xiamen; Date: May 26, 2020" 
+            desc_en: "Sophia II at the \"Goodone Olditem\" Warehouse, Xiamen; Date: May 26, 2020" 
         },
         { 
             title: "冬日窗边", 
@@ -178,7 +178,7 @@ const galleryData = {
             title_en: "Cat Shadow in the Willows", 
             path: "assets/img/photo/20120702-IMG_3277.jpg", 
             desc: "索菲娅一世在柳浪闻莺；日期：2012年7月2日", 
-            desc_en: "Sophia I at 'Oriole Singing in the Willows' (West Lake); Date: Jul 2, 2012" 
+            desc_en: "Sophia I at \"Oriole Singing in the Willows\" (West Lake); Date: Jul 2, 2012" 
         },
         { 
             title: "猩红挽歌", 
@@ -308,7 +308,7 @@ const galleryData = {
             title_en: "Angelina Portrait",
             path: "assets/img/cg/安洁莉娜肖像.jpg", 
             desc: "《饥荒》角色安洁莉娜的肖像；日期：2019年", 
-            desc_en: "Portrait of Angelina from 'Don't Starve'; Date: 2019",
+            desc_en: "Portrait of Angelina from \"Don't Starve\"; Date: 2019",
             pos: "50% 20%"  
         },
         { 
@@ -340,7 +340,7 @@ const galleryData = {
             title_en: "Wilson Portrait",
             path: "assets/img/cg/Wilson.jpg", 
             desc: "《饥荒》角色威尔逊的肖像；日期：2016年", 
-            desc_en: "Portrait of Wilson from 'Don't Starve'; Date: 2016",
+            desc_en: "Portrait of Wilson from \"Don't Starve\"; Date: 2016",
             pos: "50% 10%"  
         },
         { 
