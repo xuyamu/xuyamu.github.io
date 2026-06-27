@@ -234,7 +234,7 @@ const uiTranslations = {
         /* --- Profile 个人主页 --- */
         "profile_tag": "Researcher & Creator",
         "profile_name": "YAMU",
-        "profile_motto": "“How can a limited human lifespan satisfy my boundless curiosity?”",
+        "profile_motto": "“Human life is finite, how can it satisfy my infinite curiosity?”",
         "profile_mission": "I see my mission; I see the rise and fall of countless lives and species bound by the ultimate fate of death and extinction. I see how humanity evolved from Australopithecus to Homo sapiens, and I see the hope for humanity to cure aging in this century. We will eventually overcome aging and write the miracle of life.",
         "profile_bio_label": "CORE BIOGRAPHY",
         "profile_bio_art_title": "Interdisciplinary Background",
