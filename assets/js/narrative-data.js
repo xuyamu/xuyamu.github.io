@@ -15,7 +15,7 @@ const narrativeData = {
         { 
             id: "poetry-the-time-i-spend-missing-you", 
             title: "思念你的时光", 
-            title_en: "The time I spend missing you",
+            title_en: "The Time I Spend Missing You",
             date: "2012-08",
             excerpt: "往事终成烟雨消散，人生如梦般短暂。我藏不住悲凉，在虚空中无尽流浪。",
             excerpt_en: "The past ultimately fades away like mist and rain; life is as fleeting as a dream. I cannot hide my sorrow, endlessly wandering in the void."
