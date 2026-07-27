@@ -1,4 +1,5 @@
 
+
 地平线吞噬夕阳的辉煌，
 我独自徘徊在沙滩。
 想与你分享这最后的灿烂，
@@ -29,3 +30,14 @@
 请让我长眠在荒原。
 愿你走进我的坟场，
 踏过埋葬我的土壤。
+
+
+
+--------------
+
+<audio src="assets/audio/missing-you.mp3" title="思念你的时光 - Suno " controls></audio>
+
+<figure>
+    <img src="assets/articles/images/narrative-data/思念你的时光封面.png">
+    <figcaption>思念你的时光<br>(图片： Gemini；设计： 雅牧)</figcaption>
+</figure>

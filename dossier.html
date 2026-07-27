@@ -19,7 +19,6 @@
     <style>
         :root { --accent-blue: #608BC1; --bg-dark: #020205; }
         
-        /* --- 核心修复 1：全局盒模型重置 --- */
         *, *::before, *::after {
             box-sizing: border-box;
         }
@@ -30,7 +29,6 @@
             background: var(--bg-dark) !important; 
             color: #e5e5e5; 
             font-family: 'Inter', sans-serif; 
-            /* --- 核心修复 2：彻底锁死横向滚动，防止左右晃动 --- */
             overflow-x: hidden; 
         }
     </style>
@@ -41,7 +39,6 @@
         <style>
             .motto-font { font-family: 'Noto Serif SC', serif; }
 
-            /* 核心：磨砂玻璃卡片样式 */
             .prose-box { 
                 background: rgba(255, 255, 255, 0.03); 
                 backdrop-filter: blur(25px) saturate(180%); 
@@ -54,15 +51,12 @@
                 width: 100%;
             }
 
-            /* --- 针对手机端的深度优化 --- */
             @media (max-width: 768px) {
-                /* 1. 布局调整：释放空间 */
                 article.max-w-4xl {
                     padding-left: 0.5rem !important;
                     padding-right: 0.5rem !important;
                 }
 
-                /* 2. 核心容器修复 */
                 .prose-box {
                     padding: 22px 18px !important;
                     min-width: 0 !important;
@@ -82,14 +76,12 @@
                     border-radius: 16px;
                 }
 
-                /* 3. 文字与内容的优化 */
                 .prose-content {
                     font-size: 16px !important;
                     line-height: 1.75;
                     text-shadow: none !important; 
                 }
                 
-                /* 4. 插图隔离补丁：防止图片加载瞬间带崩整个卡片的渲染层 */
                 .prose-content img, 
                 .prose-content figure {
                     transform: translateZ(0);
@@ -97,20 +89,17 @@
                     margin: 2rem 0 !important;
                     border-color: rgba(255, 255, 255, 0.2) !important; 
                 } 
-            } /* --- 核心修复 3：补上之前漏掉的闭合括号 --- */
+            }
 
-            /* --- 核心修复 4：长文本和特殊元素的换行与滚动保护 --- */
             .prose-content { 
                 color: #b0b0b0; 
                 line-height: 1.8; 
                 font-size: 1.05rem; 
-                /* 强制长单词和长链接换行 */
                 overflow-wrap: break-word;
                 word-wrap: break-word;
                 word-break: break-word;
             }
 
-            /* 防止 Markdown 渲染的代码块或表格撑破屏幕 */
             .prose-content pre, 
             .prose-content table {
                 max-width: 100%;
@@ -118,7 +107,6 @@
                 -webkit-overflow-scrolling: touch;
             }
             
-            /* Markdown 渲染排版规范 */
             .prose-content h1, 
             .prose-content h2, 
             .prose-content h3 { 
@@ -157,14 +145,12 @@
             .prose-content a { color: #608BC1; text-decoration: underline; text-underline-offset: 4px; }
             .prose-content a:hover { color: #fff; }
 
-            /* --- 基础段落设置 --- */
             .prose-content p { 
                 margin-bottom: 1.5rem; 
                 text-align: justify; 
                 line-height: 1.8;
             }
 
-            /* 1. 容器：控制整组图片和说明的上下间距 */
             .prose-content figure {
                 margin: 2.5rem 0 !important;
                 padding: 0;
@@ -173,7 +159,6 @@
                 align-items: center; 
             }
 
-            /* 2. 图片：去掉底部间距 */
             .prose-content figure img {
                 margin: 0 !important;
                 max-width: 100%;
@@ -182,7 +167,6 @@
                 border: 1px solid rgba(255, 255, 255, 0.1);
             }
 
-            /* 3. 图注：紧贴图片，样式独立 */
             .prose-content figcaption {
                 margin-top: 0.6rem !important; 
                 font-size: 0.9rem !important;
@@ -234,6 +218,139 @@
         <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
         <script>
+         // --- 纯 CSS 驱动的极简暗黑播放器 (矢量 SVG + 文字 Baseline 物理对齐版) ---
+            function initCustomAudioPlayers(container) {
+                const audioEls = container.querySelectorAll('audio');
+                audioEls.forEach((audio, index) => {
+                    const src = audio.querySelector('source')?.src || audio.src;
+                    if (!src) return;
+
+                    const songTitle = audio.getAttribute('title') || '思念你的时光 - 雅牧';
+
+                    const playerWrapper = document.createElement('div');
+                    playerWrapper.style.cssText = `
+                        margin: 24px 0;
+                        padding: 16px 20px;
+                        background: rgba(255, 255, 255, 0.03);
+                        border: 1px solid rgba(255, 255, 255, 0.12);
+                        border-radius: 12px;
+                        backdrop-filter: blur(20px);
+                        -webkit-backdrop-filter: blur(20px);
+                        display: flex;
+                        flex-direction: column;
+                        gap: 14px;
+                        box-sizing: border-box;
+                        width: 100%;
+                    `;
+                    
+                    playerWrapper.innerHTML = `
+                        <!-- 1. 顶部栏：使用 align-items: baseline 强制中文与数字文字底线对齐 -->
+                        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 16px; width: 100%; box-sizing: border-box;">
+                            
+                            <!-- 左侧歌名 (矢量 SVG 图标 + 中文标题) -->
+                            <div style="display: flex; align-items: center; gap: 8px; flex: 1; min-width: 0; overflow: hidden;">
+                                <!-- 纯净矢量 SVG 音符，彻底消除系统 Emoji 带来的行高误差 -->
+                                <svg style="width: 13px; height: 13px; flex-shrink: 0; color: #608BC1; transform: translateY(-1px);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 18V5l12-2v13"></path>
+                                    <circle cx="6" cy="18" r="3"></circle>
+                                    <circle cx="18" cy="16" r="3"></circle>
+                                </svg>
+                                <span style="font-weight: 600; color: #608BC1; font-size: 12px; line-height: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; display: inline-block;">
+                                    ${songTitle}
+                                </span>
+                            </div>
+
+                            <!-- 右侧时间：与中文文字底线精准挂钩 -->
+                            <span class="audio-time" style="color: #888; font-size: 11px; font-family: monospace; flex-shrink: 0; white-space: nowrap; line-height: 1; letter-spacing: 0.05em;">
+                                0:00 / 0:00
+                            </span>
+                        </div>
+
+                        <!-- 2. 下方控制栏 -->
+                        <div style="display: flex; align-items: center; gap: 12px; width: 100%;">
+                            <button class="audio-btn" style="
+                                width: 32px; height: 32px;
+                                border-radius: 50%;
+                                border: 1px solid rgba(96, 139, 193, 0.6);
+                                background: transparent;
+                                color: #608BC1;
+                                cursor: pointer;
+                                display: flex; align-items: center; justify-content: center;
+                                font-size: 11px;
+                                padding-left: 2px;
+                                transition: all 0.2s ease;
+                                outline: none;
+                                flex-shrink: 0;
+                            ">▶</button>
+                            <div class="audio-track" style="
+                                flex: 1;
+                                height: 4px;
+                                background: rgba(255, 255, 255, 0.1);
+                                border-radius: 2px;
+                                cursor: pointer;
+                                position: relative;
+                                overflow: hidden;
+                            ">
+                                <div class="audio-progress" style="
+                                    height: 100%;
+                                    background: #608BC1;
+                                    width: 0%;
+                                    border-radius: 2px;
+                                    transition: width 0.08s linear;
+                                "></div>
+                            </div>
+                        </div>
+                    `;
+
+                    const btn = playerWrapper.querySelector('.audio-btn');
+                    const progress = playerWrapper.querySelector('.audio-progress');
+                    const track = playerWrapper.querySelector('.audio-track');
+                    const timeTxt = playerWrapper.querySelector('.audio-time');
+
+                    btn.onmouseover = () => { btn.style.background = 'rgba(96, 139, 193, 0.2)'; btn.style.borderColor = '#608BC1'; };
+                    btn.onmouseout = () => { btn.style.background = 'transparent'; btn.style.borderColor = 'rgba(96, 139, 193, 0.6)'; };
+
+                    audio.removeAttribute('controls');
+                    audio.style.display = 'none';
+
+                    btn.onclick = () => {
+                        if (audio.paused) {
+                            document.querySelectorAll('audio').forEach(a => { if (a !== audio) a.pause(); });
+                            audio.play();
+                            btn.innerText = '❚❚';
+                            btn.style.paddingLeft = '0px';
+                        } else {
+                            audio.pause();
+                            btn.innerText = '▶';
+                            btn.style.paddingLeft = '2px';
+                        }
+                    };
+
+                    audio.ontimeupdate = () => {
+                        if (!audio.duration) return;
+                        const pct = (audio.currentTime / audio.duration) * 100;
+                        progress.style.width = pct + '%';
+                        const fmt = (s) => Math.floor(s/60) + ':' + String(Math.floor(s%60)).padStart(2, '0');
+                        timeTxt.innerText = `${fmt(audio.currentTime)} / ${fmt(audio.duration)}`;
+                    };
+
+                    audio.onended = () => {
+                        btn.innerText = '▶';
+                        btn.style.paddingLeft = '2px';
+                        progress.style.width = '0%';
+                    };
+
+                    track.onclick = (e) => {
+                        const rect = track.getBoundingClientRect();
+                        const pos = (e.clientX - rect.left) / rect.width;
+                        if (audio.duration) audio.currentTime = pos * audio.duration;
+                    };
+
+                    audio.parentNode.insertBefore(playerWrapper, audio);
+                    playerWrapper.appendChild(audio);
+                });
+            }
+
             async function loadArticle() {
                 const params = new URLSearchParams(window.location.search);
                 const artId = params.get('id');
@@ -246,10 +363,8 @@
 
                 if (!artId) return;
 
-                // 1. 获取语言状态
                 const isEn = (window.currentLang === 'en');
 
-                // 2. 文件夹路径识别
                 let subFolder = "";
                 let backTarget = "index.html";
                 let backLabel = isEn ? "RETURN TO NEXUS" : "返回主枢纽";
@@ -271,7 +386,6 @@
                 }
 
                 backBtn.onclick = () => {
-                    // 优先使用浏览器的后退功能，这会触发 router.js 里的 scrollRestore 逻辑
                     if (window.history.length > 1) {
                         history.back();
                     } else {
@@ -281,7 +395,6 @@
                 
                 backText.innerText = backLabel;
 
-                // 3. 查找元数据
                 let currentArt = null;
                 const sources = [
                     typeof bioData !== 'undefined' ? bioData : null,
@@ -307,13 +420,11 @@
                     }
                 }
 
-                // 4. 异步获取 Markdown
                 const targetFile = isEn ? `${artId}-en` : artId;
                 let finalPath = `assets/articles/docs/${subFolder}${targetFile}.md`;
                 
                 try {
                     let response = await fetch(finalPath);
-                    // 英文版缺失回退
                     if (!response.ok && isEn) {
                         finalPath = `assets/articles/docs/${subFolder}${artId}.md`;
                         response = await fetch(finalPath);
@@ -322,6 +433,7 @@
                     if (response.ok) {
                         const markdownText = await response.text();
                         contentEl.innerHTML = marked.parse(markdownText, { breaks: true });
+                        initCustomAudioPlayers(contentEl);
                     } else {
                         contentEl.innerHTML = `<div class="text-center py-20 text-gray-500 font-mono">[ERROR: 404] 档案文件不存在。</div>`;
                     }
@@ -330,12 +442,10 @@
                 }
             }
 
-            // --- 核心修复：监听全局语言切换事件 ---
             window.addEventListener('langChanged', () => {
                 loadArticle();
             });
 
-            // 初始化加载
             loadArticle();
         </script>
     </div>

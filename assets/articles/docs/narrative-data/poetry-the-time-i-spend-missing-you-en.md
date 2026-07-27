@@ -1,3 +1,5 @@
+
+
 The horizon devours the glory of the setting sun, 
 I wander the shoreline all alone. 
 Longing to share this final radiance with you, 
@@ -27,3 +29,13 @@ If madness be my final end,
 Please let me sleep forever in the wilds. 
 May you walk into my graveyard, 
 And tread upon the soil that buries me.
+
+
+--------------
+
+<audio src="assets/audio/missing-you.mp3" title="The time I spend missing you - Suno " controls></audio>
+
+<figure>
+    <img src="assets/articles/images/narrative-data/思念你的时光封面.png">
+    <figcaption>The time I spend missing you<br>(Image: Gemini; Design: Yamu)</figcaption>
+</figure>
