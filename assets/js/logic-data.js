@@ -129,6 +129,17 @@ const logicData = {
 
     // 心理学 PSYCHOLOGY
     psychology: [
+
+        { 
+            id: "psychology-2026-acute-stress-strategies",
+            title: "我经历急性应激反应的体验与应对策略", 
+            title_en: "My Experience with Acute Stress Reaction and Coping Strategies",
+            date: "2026-07-27", 
+            link: "https://www.zhihu.com/question/2065758844609943435/answer/2065769977014137533", 
+            excerpt: "本文探讨了我经历急性应激反应的体验与应对策略，在文中，我描述了通过服用抗衰老药应对急性应激反应的策略。",
+            excerpt_en: "This article explores my experience with acute stress reactions and the coping strategies I employed; specifically, I describe the strategy of using anti-aging drugs to manage these reactions." 
+        },
+
         { 
             id: "psychology-2026-explorations-into-mental-health-issues",
             title: "对于人工智能时代的心理健康问题的一些探讨", 
