@@ -1,4 +1,3 @@
-## Longevity and Mental Health
 
 **Outline**
 
