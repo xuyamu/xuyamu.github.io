@@ -130,6 +130,17 @@ const logicData = {
     // 心理学 PSYCHOLOGY
     psychology: [
 
+
+        { 
+            id: "psychology-2026-longevity-and-mental-health",
+            title: "长寿与心理健康", 
+            title_en: "Longevity and Mental Health",
+            date: "2026-10-12", 
+            link: "https://www.zhihu.com/question/2090063268580804388/answer/2092949047686467911", 
+            excerpt: "本文探讨了长寿与心理健康的关系，附作者通过抗衰老实践改变人格特质及减少自闭症特质的经历。",
+            excerpt_en: "This article explores the relationship between longevity and mental health, accompanied by the author's personal experiences of altering personality traits and reducing autistic traits through anti-aging practices." 
+        },
+
         { 
             id: "psychology-2026-acute-stress-strategies",
             title: "我经历急性应激反应的体验与应对策略", 
