@@ -436,7 +436,9 @@ Additionally, I take several antioxidants (including ergothioneine, vitamin C, a
 
 Based on theoretical foundations and my empirical results, systematic anti-aging engineering (exemplified by multi-target chemical reprogramming regimens) possesses the capacity to treat diverse psychiatric disorders, ameliorate psychological sub-health states, and fundamentally remodel cognitive patterns and behavioral tendencies.
 
-I believe this represents a momentous finding with profound societal and public health implications. I forecast that in the future, systematic anti-aging engineering—spearheaded by _in vivo_ partial chemical reprogramming—will disrupt the therapeutic paradigms of age-related diseases and psychiatric medicine, rendering obsolete a substantial portion of existing treatments.
+Here, I propose a conjecture: if an anti-aging method allows a person with an average lifespan to live to 100, it might alter their personality traits, shifting them in the direction of centenarians.
+
+I forecast that in the future, systematic anti-aging engineering—spearheaded by _in vivo_ partial chemical reprogramming—will disrupt the therapeutic paradigms of age-related diseases and psychiatric medicine, rendering obsolete a substantial portion of existing treatments.
 
 While systematic anti-aging engineering remains at the cutting edge of translational science, I hope these technologies will become broadly accessible in the coming years, empowering humanity to delay senescence, alleviate age-associated pathologies, and elevate psychological well-being.
 
