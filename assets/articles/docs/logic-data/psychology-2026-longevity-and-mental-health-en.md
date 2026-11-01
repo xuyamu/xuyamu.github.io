@@ -438,6 +438,8 @@ Based on theoretical foundations and my empirical results, systematic anti-aging
 
 Here, I propose a conjecture: if an anti-aging method allows a person with an average lifespan to live to 100, it might alter their personality traits, shifting them in the direction of centenarians.
 
+In clinical practice, changes in biological age and telomere length are commonly used to evaluate the efficacy of anti-aging interventions; however, changes in personality traits and psychological well-being may serve as a valuable complementary approach.
+
 I forecast that in the future, systematic anti-aging engineering—spearheaded by _in vivo_ partial chemical reprogramming—will disrupt the therapeutic paradigms of age-related diseases and psychiatric medicine, rendering obsolete a substantial portion of existing treatments.
 
 While systematic anti-aging engineering remains at the cutting edge of translational science, I hope these technologies will become broadly accessible in the coming years, empowering humanity to delay senescence, alleviate age-associated pathologies, and elevate psychological well-being.
