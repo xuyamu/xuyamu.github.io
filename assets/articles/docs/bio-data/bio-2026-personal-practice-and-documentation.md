@@ -13,3 +13,10 @@
 
 （若浏览时发现图片较小导致看不清，可以点击右键然后再点击“在新标签页中打开图像”来查看原图）
 
+　　相关阅读：
+
+　　[*维持或者延长端粒的若干方法*](https://xuyamu.com/dossier.html?id=bio-2025-methods-extending-telomeres)
+　　我在此文中展示了我在抗衰老前后的人格特质变化。
+
+　　[*长寿与心理健康*](https://xuyamu.com/dossier.html?id=psychology-2026-longevity-and-mental-health)
+　　我在此文中展示了我在2022年和2025年的端粒长度检测结果。
