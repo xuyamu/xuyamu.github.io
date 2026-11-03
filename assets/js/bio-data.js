@@ -22,6 +22,16 @@ const bioData = {
     "bio": [
 
         {
+            id: "bio-2026-personal-practice-and-documentation",
+            title: "个人实践与记录：抗衰老药对生理年龄的影响",
+            title_en: "Personal Practice and Documentation: The Impact of Anti-Aging Drugs on Biological Age",
+            date: "2026-11",
+            excerpt: "我在2022年时，使用Aging.Ai检测了我在服用一系列抗衰老药前后生理年龄的变化，在此，我将我的数据公布供大家参考。",
+            excerpt_en: "In 2022, I used Aging.Ai to assess changes in my biological age before and after taking a regimen of anti-aging supplements. I am sharing my data here for your reference."
+        },
+
+
+        {
             id: "bio-2026-genomic-stability-calculator",
             title: "基因修复能力计算器：跨物种的长生逻辑",
             title_en: "Genomic Stability Calculator: Cross-Species Longevity Logic",
