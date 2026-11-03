@@ -19,4 +19,4 @@
 　　我在此文中展示了我在 2022 年和 2025 年的端粒长度检测结果。
 
 　　[*长寿与心理健康*](https://xuyamu.com/dossier.html?id=psychology-2026-longevity-and-mental-health)
-　　我在此文中展示了我在抗衰老前后的人格特质变化。
+　　我在此文中展示了我在抗衰老实践前后的人格特质变化。
