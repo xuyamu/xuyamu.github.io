@@ -167,12 +167,17 @@ Ein-Dor等（2018）关于催产素和糖皮质激素受体基因的表观遗传
 
 **我通过抗衰老改变我的人格特质的经历**
 
-我从2019年开始研究抗衰老并积极服用抗衰老补充剂/抗衰老药。抗衰老实践首先体现在端粒长度的变化，我在这篇文章里列举了具体的数据：  
-<br/>https://xuyamu.com/dossier.html?id=bio-2025-methods-extending-telomeres
+我从2019年开始研究抗衰老并积极服用抗衰老补充剂/抗衰老药。抗衰老实践首先体现在端粒长度的变化，我在这篇文章里列举了具体的数据： 
 
-《维持或者延长端粒的若干方法》
+[*维持或者延长端粒的若干方法*](https://xuyamu.com/dossier.html?id=bio-2025-methods-extending-telomeres)
 
-数据显示，在2021年的检测报告中，我的端粒相对长度是0.62，仅超过37%同龄人，细胞年龄是33.5岁，在2025年的检测报告中，我的端粒相对长度是1.739，超过84%同龄人，细胞年龄是31岁。端粒长度的变化可以一定程度上说明我的衰老得到了逆转。
+数据显示，在2021年的检测报告中，我的端粒相对长度是0.62，仅超过37%同龄人，细胞年龄是33.5岁，在2025年的检测报告中，我的端粒相对长度是1.739，超过84%同龄人，细胞年龄是31岁。端粒长度的变化可以一定程度上说明我的衰老得到了逆转。(由于是在不同机构做的测试，端粒相对长度可能会有误差，但和同龄人长度的对比的变化明显，且细胞年龄数据也有明显变化)
+
+其次，我在2022年时，使用Aging.Ai检测了我在服用一系列抗衰老药前后生理年龄的变化：
+
+[*个人实践与记录：抗衰老药对生理年龄的影响*](https://xuyamu.com/dossier.html?id=bio-2026-personal-practice-and-documentation)
+
+数据显示，雷帕霉素、曲美替尼、CHIR99021、PBA、Repsox、吡非尼酮等小分子能够显著影响体检指标与生理年龄。
 
 抗衰老实践后，我的大五人格也发生了显著变化。这是我在2014年做的大五人格测试结果：  
 
@@ -304,8 +309,7 @@ https://xuyamu.com/dossier.html?id=philosophy-2016-on-the-right-to-choose-ones-b
 
 此外，我做Autism Spectrum Quotient Test（测试地址：https://psychology-tools.com/test/autism-spectrum-quotient） 的结果：  
 2018年：35分  
-2024年：31分（随手一做，没保留记录）
-
+2024年：31分（没保留图片记录，记录在此知乎回答中：[*INTJ/INTP人格形成的神经科学基础*](https://xuyamu.com/dossier.html?id=psychology-2024-intj-intp-neural-basis)）
 2026年：22~24分
 
 2018时的测试结果没保留，记录可见于当时和朋友的聊天记录：  
@@ -358,6 +362,29 @@ https://xuyamu.com/dossier.html?id=philosophy-2016-on-the-right-to-choose-ones-b
 95%你是典型个体的概率（神经典型、NT）
 
 我也不知道2018年我做Aspie-quiz时选了哪些选项。2026年时，我如实选择，已经测不出神经多样性的结果。
+
+2024年12月的 MBTI 测试结果：
+
+<figure>
+    <img src="assets/articles/images/logic-data/longevity_and_mental_health/20241220180902.png">
+    <figcaption><em>MBTI 2024</em></figcaption>
+</figure>
+
+（印象中，2022年以前，我的I这个维度更为明显，可惜更早的测试记录未保留）
+
+2026年10月的 MBTI 测试结果：
+
+<figure>
+    <img src="assets/articles/images/logic-data/longevity_and_mental_health/photo_2026-10-20_01.jpg">
+    <figcaption><em>MBTI 2026 01</em></figcaption>
+</figure>
+
+<figure>
+    <img src="assets/articles/images/logic-data/longevity_and_mental_health/photo_2026-10-20_02.jpg">
+    <figcaption><em>MBTI 2026 02</em></figcaption>
+</figure>
+
+对比测试结果，我们可以看到，发生变化的主要是I/E这个维度，我的MBTI类型由INTJ变成ENTJ，和大五人格外向性增加的变化具有一致性。
 
 综合上述测试结果，我们可以看到，我所有的与自闭症有关的指标都改善了，首先，大五人格的改变和自闭症谱系人士的倾向是反着来的，自闭症相关测试分数也发生了显著的变化。
 
