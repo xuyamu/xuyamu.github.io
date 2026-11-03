@@ -12,7 +12,7 @@
 　　Related Reading:
 
 　　[*Methods for Maintaining or Extending Telomeres*](https://xuyamu.com/dossier.html?id=bio-2025-methods-extending-telomeres)
-　　In this article, I share the changes in my personality traits before and after my anti-aging regimen.
+　　In this article, I present my telomere length test results from 2022 and 2025.
 
 　　[*Longevity and Mental Health*](https://xuyamu.com/dossier.html?id=psychology-2026-longevity-and-mental-health)
-　　In this article, I present my telomere length test results from 2022 and 2025.
+　　In this article, I share the changes in my personality traits before and after my anti-aging regimen.
