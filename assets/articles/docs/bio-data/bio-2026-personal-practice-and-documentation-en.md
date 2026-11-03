@@ -1,4 +1,4 @@
-　　Back in 2022, I used Aging.Ai to track changes in my biological age before and after taking a series of anti-aging drugs. Here, I am sharing my data for everyone's reference.
+　　Back in 2022, I used Aging.AI to track changes in my biological age before and after taking a series of anti-aging drugs. Here, I am sharing my data for everyone's reference.
 
 　　Aging.AI was a suite of deep-learning-based hematological "aging clocks" developed by Insilico Medicine—an AI-driven drug discovery and longevity biotech company co-founded by Dr. Alex Zhavoronkov and colleagues. The website was later taken offline due to corporate business adjustments.
 
